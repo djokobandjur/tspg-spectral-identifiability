@@ -1,0 +1,64 @@
+{
+  "schema": "TSPG_ZENODO_STANDALONE_STAGING_PUBLIC_v1",
+  "date": "2026-08-29",
+  "status": "PASS_8_OF_8",
+  "stage_directory": "<local_release_upload_workspace>/zenodo_standalone",
+  "stage_directory_sanitization": "Absolute host path, username, and host-local directory names are intentionally not published.",
+  "source_private_manifest": {
+    "filename": "TSPG_ZENODO_STANDALONE_STAGING_MANIFEST_v1_0_20260829.json",
+    "size_bytes": 2303,
+    "sha256": "6483ea07f6deefa4db3a08b2af9d22358bc930ad1038842deaeb3135cf9e61c5"
+  },
+  "total_payload_bytes": 3182648718,
+  "artifacts": [
+    {
+      "filename": "TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_v1_0.npy",
+      "size_bytes": 387317888,
+      "sha256": "d02d8a31465912e7239164e965428162fa5f64f09082d5d0a158f6585b439009",
+      "status": "PASS_STAGED_COPY_MATCH"
+    },
+    {
+      "filename": "TSPG_H1_0010_LEARNED_SEED42_QR_TASK320_EXACT_GEOMETRY_v1_1.npz",
+      "size_bytes": 776283320,
+      "sha256": "08f23a6c0d87a58ed49c9f4bda841105f7d45eb848d18f30aa498eb42fb31074",
+      "status": "PASS_STAGED_COPY_MATCH"
+    },
+    {
+      "filename": "TSPG_H1_0011_LEARNED_SEED42_COMPLEMENT_KRYLOV_BASIS_v1_0.npz",
+      "size_bytes": 79126618,
+      "sha256": "4f948e96ec8c8ae911259f923b876864b6ffd83b1cf54669d7fdd00b90b88237",
+      "status": "PASS_STAGED_COPY_MATCH"
+    },
+    {
+      "filename": "TSPG_H1_0015_LEARNED_SEED42_TAIL_RANK5_8_COMPLEMENT_KRYLOV_L4_v1_0.npz",
+      "size_bytes": 232412532,
+      "sha256": "7d78e8584d265ff3a041ce84055720106a1fa49a09e7acc31be38482208e2279",
+      "status": "PASS_STAGED_COPY_MATCH"
+    },
+    {
+      "filename": "TSPG_H1_0016_LEARNED_SEED42_AG2_320_FP64_TASK_GRADIENTS_v1_2.npy",
+      "size_bytes": 387317888,
+      "sha256": "2850c66d13dc45f48baa114f540e29c3ca75903db412ac8f93c048fdb8b930eb",
+      "status": "PASS_STAGED_COPY_MATCH"
+    },
+    {
+      "filename": "TSPG_H1_0016_LEARNED_SEED42_AG1_AG2_TASK_CROSSFOLD_DERIVED_v1_2.npz",
+      "size_bytes": 390626716,
+      "sha256": "afe9a94d1c5c7f7f3d8986348b15c7513013c77969781d54d03c0f8154b4baea",
+      "status": "PASS_STAGED_COPY_MATCH"
+    },
+    {
+      "filename": "TSPG_H1_0019_LEARNED_SEED42_AP640_FP64_TASK_GRADIENTS_v1_0.npy",
+      "size_bytes": 774635648,
+      "sha256": "0398ec1949f7d5ad326902f438c554848b86325d352d73a67078473f7fba3145",
+      "status": "PASS_STAGED_COPY_MATCH"
+    },
+    {
+      "filename": "TSPG_H1_0019_FIT_ARM_BASES_TOP32_v1_0.npz",
+      "size_bytes": 154928108,
+      "sha256": "8bfc5c8e4bc7c677a882974a61b4e66d540f230dbb75b690ffbfe42ea47fa4e3",
+      "status": "PASS_STAGED_COPY_MATCH"
+    }
+  ],
+  "verification_note": "All eight staged copies report PASS_STAGED_COPY_MATCH and their SHA-256 values match the locked standalone artifact identities and the promoted staging checksum manifest."
+}
