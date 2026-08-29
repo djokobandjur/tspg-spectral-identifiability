@@ -1,0 +1,26 @@
+{
+  "schema": "TSPG_H1_0016_STATIC_QA_v1_2",
+  "status": "PASS",
+  "scientific_design_changed": false,
+  "protocol_lock": "v0.45",
+  "run_id": "TSPG-RUN-H1-0016",
+  "implementation_compatibility": {
+    "locked_operator_defines_zeros_native": true,
+    "runner_imports_zeros_native": true,
+    "runner_converts_zero_to_float64": true,
+    "runner_python_syntax": true,
+    "helper_python_syntax": true
+  },
+  "runtime_output_contract": {
+    "runner_writes_gate_v1_2": true,
+    "notebook_reads_gate_v1_2": true,
+    "runner_writes_result_v1_2": true,
+    "notebook_reads_result_v1_2": true,
+    "runner_writes_raw_gradient_v1_2": true,
+    "notebook_evidence_refs_raw_gradient_v1_2": true,
+    "runner_writes_derived_v1_2": true,
+    "notebook_evidence_refs_derived_v1_2": true,
+    "runner_has_no_generated_gate_v1_0": true,
+    "runner_has_no_generated_result_v1_0": true
+  }
+}
