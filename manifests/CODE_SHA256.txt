@@ -1,11 +1,10 @@
 # TSPG public code SHA-256 manifest
 # Date: 2026-08-29
-# Scope: exact final non-superseded M1--M5 analysis code promoted for the reproducibility surface.
-# The hashes below are SHA-256 of the file bytes copied from the locked execution starter packages.
-#
-# Additional required checkpoint model source (recovered and SHA-verified, exact-byte public promotion pending):
-# 83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf  code/model/full_scale_experiment.py  [PENDING_EXACT_BYTE_PROMOTION]
+# Scope: exact checkpoint model source plus final non-superseded M1--M5 analysis code promoted for the reproducibility surface.
+# The analysis-code hashes below are SHA-256 of the file bytes copied from the locked execution starter packages.
+# The model-source hash is the authoritative TSPG checkpoint architecture source recovered from retained runtime/package evidence and promoted byte-for-byte.
 
+83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf  code/model/full_scale_experiment.py
 214bf62cbe67b8ddcd336c687f64ec7be853f0c093a5c554f96e07476147e9c6  code/TSPG_cross_family_pe_operator_v1_0_20260828.py
 0a76e2ba013b34f5b85c2491950466e577ff04f4d9d159d1384c342f9ce9b674  code/TSPG_h1_0003_matrixfree_geometry_operator_v1_1_20260828.py
 4aee9157b5504f657c2b923318666f0dc476bd69e429b83e7a0cf81cf21bd3c1  code/TSPG_h1_0007_dual_blocksolve_ridge_fraction_alibi_control_v1_1_20260828.py
