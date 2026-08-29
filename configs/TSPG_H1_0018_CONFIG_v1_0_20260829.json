@@ -1,0 +1,141 @@
+{
+  "schema": "TSPG_H1_0018_CONFIG_v1_0",
+  "run_id": "TSPG-RUN-H1-0018",
+  "status": "AUTHORIZED_DEVELOPMENT_ONLY",
+  "protocol_lock": "TSPG_PROTOCOL_LOCK_v0_48_20260829.md",
+  "amendment": "TSPG_PROTOCOL_AMENDMENT_A48_H1_0017_CLOSEOUT_AND_H1_0018_FINITE_SAMPLE_STABILITY_AUTHORIZATION_v1_0_20260829.md",
+  "family": "learned",
+  "seed": 42,
+  "native_d": 151296,
+  "dtype": "float64",
+  "val_dir": "/home/djoko.bandjur.ftnkm/datasets/imagenet100/imagenet100_resized/val",
+  "fold_size": 320,
+  "n_ladder": [
+    100,
+    128,
+    160,
+    192,
+    224,
+    256,
+    288,
+    320
+  ],
+  "replicates_per_n": 32,
+  "k_ladder": [
+    4,
+    8,
+    16,
+    32
+  ],
+  "quantiles": [
+    0.05,
+    0.95
+  ],
+  "primary_role": "TRAIN_N_HELD_320",
+  "secondary_role": "TRAIN_320_HELD_N",
+  "sources": {
+    "AG1_gradients": {
+      "filename": "TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_v1_0.npy",
+      "sha256": "d02d8a31465912e7239164e965428162fa5f64f09082d5d0a158f6585b439009",
+      "known_path": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_H1_0007_DUAL_BLOCKSOLVE_RIDGE_FRACTION_ALIBI_CONTROL_PREFLIGHT_STARTER_v1_2_20260828/TSPG_H1_0007_RUNTIME_v1_2_20260828/TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_v1_0.npy",
+      "shape": [
+        320,
+        151296
+      ],
+      "dtype": "float64"
+    },
+    "AG2_gradients": {
+      "filename": "TSPG_H1_0016_LEARNED_SEED42_AG2_320_FP64_TASK_GRADIENTS_v1_2.npy",
+      "sha256": "2850c66d13dc45f48baa114f540e29c3ca75903db412ac8f93c048fdb8b930eb",
+      "known_path": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_H1_0016_LEARNED_AG1_AG2_TASK_SIDE_CROSSFOLD_PREFLIGHT_STARTER_v1_2_20260829/TSPG_H1_0016_RUNTIME_v1_2_20260829/TSPG_H1_0016_LEARNED_SEED42_AG2_320_FP64_TASK_GRADIENTS_v1_2.npy",
+      "shape": [
+        320,
+        151296
+      ],
+      "dtype": "float64"
+    },
+    "split_manifest": {
+      "filename": "TSPG_SPLIT_MANIFEST_IN100_PILOT_v1_0_20260819.json",
+      "sha256": "9488e109f43f23a1bdd1ebda771a707e2b4b1e6f535ce6227bf0705d1834d1af"
+    },
+    "AG1_metadata": {
+      "filename": "TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_METADATA_v1_0.json",
+      "sha256": "720cca9169e7f78641ee875686337085d99ed2c432b61768fc4dce1e71437cc5"
+    },
+    "H1_0016_result": {
+      "filename": "TSPG_H1_0016_RESULT_v1_2_20260829.json",
+      "sha256": "6ea3ed7d85fddaff6e60a0d6c40974f84c13106f67c3508360c0ed37862e4428"
+    },
+    "H1_0016_gate": {
+      "filename": "TSPG_H1_0016_GATE_RESULT_v1_2_20260829.json",
+      "sha256": "97e6e20baa6aa3130385c6c91d5f5d4179925e2f54a48da7bc7eed3c4c656759"
+    }
+  },
+  "class_stratification": {
+    "method": "coverage_first_then_uniform_residual_without_replacement",
+    "minimum_n": 100,
+    "expected_full_fold_unique_classes": 98,
+    "seed_derivation": "SHA256(run_id|direction|role|n|replicate)"
+  },
+  "forecast_640": {
+    "role": "PLANNING_ONLY",
+    "model": "y(n)=a+b/n",
+    "fit_n": [
+      192,
+      224,
+      256,
+      288,
+      320
+    ],
+    "target_n": 640,
+    "decisive_for_H19": false
+  },
+  "hard_validation": {
+    "full_n_phi_abs_error": 1e-09,
+    "full_n_eta_abs_error": 1e-09,
+    "class_histogram_exact_match_H1_0016_gate": true,
+    "full_fold_empirical_rank_min": 320,
+    "minimum_subset_rank_for_k32": 32
+  },
+  "interpretation_locks": {
+    "phi_plateau_means_complete_support_estimated": false,
+    "orientation_sample_limit_carried_primarily_by_eta": true,
+    "secondary_curve_role": "HELD_OUT_SCORING_VARIANCE",
+    "forecast_640_is_evidence": false,
+    "H19_authorized": false
+  },
+  "conditional_H19_guardrails": {
+    "last_estimator_attempt": true,
+    "required_arms": [
+      "unilateral_320",
+      "unilateral_640",
+      "consensus_640"
+    ],
+    "common_heldout": "AP",
+    "consensus_success_requires_exceed_actual_unilateral_640": true,
+    "denominator_must_be_absent_or_orientation_independent_fixed": true,
+    "bbar_required": true,
+    "H18_forecast_role": "prospective_expectation_only"
+  },
+  "output_names": {
+    "runtime_dir": "TSPG_H1_0018_RUNTIME_v1_0_20260829",
+    "result_json": "TSPG_H1_0018_RESULT_v1_0_20260829.json",
+    "replicate_csv": "TSPG_H1_0018_REPLICATE_CURVES_v1_0_20260829.csv",
+    "summary_csv": "TSPG_H1_0018_SUMMARY_CURVES_v1_0_20260829.csv",
+    "derived_npz": "TSPG_H1_0018_DUAL_GRAMS_RESAMPLES_AND_CURVES_v1_0.npz",
+    "evidence_dir": "TSPG_H1_0018_RUNTIME_EVIDENCE_v1_0_20260829",
+    "evidence_zip": "TSPG_H1_0018_RUNTIME_EVIDENCE_v1_0_20260829.zip"
+  },
+  "prohibitions": {
+    "model_scientific_compute": true,
+    "new_task_gradients": true,
+    "new_GA_actions": true,
+    "B_or_B22": true,
+    "split_change": true,
+    "confirmatory": true,
+    "C2": true,
+    "C3": true,
+    "C4": true,
+    "H19_execution": true
+  }
+}
