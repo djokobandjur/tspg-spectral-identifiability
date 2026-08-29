@@ -2,15 +2,16 @@
 
 **Date:** 2026-08-29  
 **Scope:** eight standalone numerical artifacts planned for the Zenodo archival record  
-**Status:** `PASS_SHA_8_OF_8_METADATA_MANIFEST_PENDING`
+**Status:** `PASS_COMPLETE_8_OF_8`
 
 ## Evidence
 
-A generated staged-copy checksum manifest was supplied after running the release-staging workflow:
+The release-staging workflow produced both a staged-copy checksum manifest and a staging metadata JSON:
 
-`STAGING_SHA256.txt`
+- `STAGING_SHA256.txt`
+- `TSPG_ZENODO_STANDALONE_STAGING_MANIFEST_v1_0_20260829.json`
 
-The exact promoted public copy is:
+The exact checksum manifest is promoted publicly as:
 
 `../manifests/TSPG_ZENODO_STANDALONE_STAGING_SHA256_v1_0_20260829.txt`
 
@@ -18,9 +19,17 @@ The supplied checksum file is 1,026 bytes and has SHA-256:
 
 `c809c81e2f8be8a1d93bb473fdb837900cc15ef9592c4a6014ad3dae2fff2f3a`
 
+The supplied staging JSON is 2,303 bytes and has SHA-256:
+
+`6483ea07f6deefa4db3a08b2af9d22358bc930ad1038842deaeb3135cf9e61c5`
+
+Because the raw staging JSON contains a host-local absolute path and username, it is not promoted byte-for-byte. A sanitized semantic public copy preserving the release-relevant metadata and binding back to the exact private JSON by size/SHA-256 is promoted as:
+
+`../manifests/TSPG_ZENODO_STANDALONE_STAGING_MANIFEST_PUBLIC_v1_0_20260829.json`
+
 ## Verification result
 
-All eight staged-copy SHA-256 entries exactly match the already locked standalone artifact identities in `../manifests/LARGE_ARTIFACTS_SHA256.csv` and `../manifests/TSPG_RELEASE_ASSET_PLAN_v1_0_20260829.json`:
+The raw staging metadata reports `PASS_8_OF_8`, aggregate payload size `3,182,648,718` bytes, and `PASS_STAGED_COPY_MATCH` for all eight artifacts. Every staged-copy SHA-256 exactly matches the already locked standalone artifact identity in `../manifests/LARGE_ARTIFACTS_SHA256.csv` and `../manifests/TSPG_RELEASE_ASSET_PLAN_v1_0_20260829.json`:
 
 | Artifact | Staged SHA-256 status |
 |---|---|
@@ -33,18 +42,12 @@ All eight staged-copy SHA-256 entries exactly match the already locked standalon
 | `TSPG_H1_0019_LEARNED_SEED42_AP640_FP64_TASK_GRADIENTS_v1_0.npy` | PASS |
 | `TSPG_H1_0019_FIT_ARM_BASES_TOP32_v1_0.npz` | PASS |
 
-**Result:** `8/8 exact SHA-256 matches`.
+**Result:** standalone Zenodo staging gate `PASS_COMPLETE_8_OF_8`.
 
-The aggregate payload size, from the independently locked per-artifact sizes, is `3,182,648,718` bytes (about 2.964 GiB).
+The exact local stage directory is retained in the private JSON but intentionally redacted from the public semantic copy. This sanitization changes no scientific or integrity-relevant metadata: filenames, byte counts, SHA-256 identities, per-artifact staged-copy status, aggregate payload size, source-manifest identity, and overall pass status are preserved.
 
-## Remaining staging metadata gate
+## Next non-Git staging gate
 
-This checksum manifest proves that the eight hashes recorded for the staged copies are the expected hashes. It does not itself contain the staging directory, per-file size/status fields, or the explicit `PASS_8_OF_8` metadata emitted by the staging script.
-
-The staging workflow also generates:
-
-`TSPG_ZENODO_STANDALONE_STAGING_MANIFEST_v1_0_20260829.json`
-
-That small JSON metadata manifest should be retained/promoted before the standalone staging gate is marked fully closed. Until then, SHA verification is closed `8/8 PASS`, while staging-metadata capture remains pending.
+The standalone numerical payload is fully staged and verified. The remaining release-upload workspace step is to stage and independently rehash the six convenience assets: the Learned seed-42 checkpoint plus the five compact H1-0015--H1-0019 runtime-evidence ZIPs.
 
 No scientific result is changed by this audit. It is a release-integrity/provenance check only.
