@@ -2,7 +2,7 @@
 
 ## Status
 
-This is a **pre-release** reproduction guide. The public evidence/code/config promotion is substantially complete, but the first immutable release must not be tagged until the remaining items in `RELEASE_CHECKLIST.md` are closed. In particular, a clean-environment end-to-end verification is still pending.
+This is a **pre-release** reproduction guide. The public evidence/code/config promotion is substantially complete, including the exact checkpoint model source, but the first immutable release must not be tagged until the remaining items in `RELEASE_CHECKLIST.md` are closed. In particular, a clean-environment end-to-end verification is still pending.
 
 ## 1. Reference environment
 
@@ -66,7 +66,7 @@ python tools/prepare_runtime_root.py \
   --plan-only
 ```
 
-Plan mode validates the public split binding and M1--M5 config/runner interfaces, emits derived runtime-config copies, and reports every still-missing SHA-locked external input. It deliberately does **not** claim to verify the checkpoint, model source, or ImageNet directory.
+Plan mode validates the public split binding and M1--M5 config/runner interfaces, emits derived runtime-config copies, and reports every still-missing SHA-locked external input. It deliberately does **not** perform runtime verification of the checkpoint, model source, or ImageNet directory.
 
 Materialization mode is fail-closed:
 
@@ -74,7 +74,7 @@ Materialization mode is fail-closed:
 python tools/prepare_runtime_root.py \
   --repo-root . \
   --output-root ./tspg_runtime \
-  --model-source /path/to/full_scale_experiment.py \
+  --model-source ./code/model/full_scale_experiment.py \
   --checkpoint /path/to/TSPG_LEARNED_SEED42_best_model.pth \
   --imagenet-val /path/to/imagenet100/val \
   --artifact-dir /path/to/extracted_tspg_archival_assets
@@ -100,7 +100,13 @@ The checkpoint manifest binds the model implementation to SHA-256:
 
 `83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf`
 
-An exact retained copy has been recovered and SHA-verified during release preparation. Its exact-byte promotion into the public reproduction surface is still a release blocker; no reconstructed or approximate substitute should be treated as authoritative.
+The authoritative retained source is publicly promoted byte-for-byte at:
+
+- `../code/model/full_scale_experiment.py`
+- size: `66351` bytes
+- SHA-256: `83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf`
+
+Promotion was fail-closed on both exact size and SHA-256. The public Git blob is byte-identical to the retained TSPG source; no reconstructed or approximate substitute is used.
 
 ## 6. Large/derived artifacts
 
