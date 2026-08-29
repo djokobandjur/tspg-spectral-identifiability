@@ -106,9 +106,9 @@
       },
       {
         "filename": "TSPG_H1_0019_FIT_ARM_BASES_TOP32_v1_0.npz",
-        "size_bytes": null,
+        "size_bytes": 154928108,
         "sha256": "8bfc5c8e4bc7c677a882974a61b4e66d540f230dbb75b690ffbfe42ea47fa4e3",
-        "reason": "pre-AP fit-arm basis lock; exact size remains pending transfer/materialization verification"
+        "reason": "pre-AP fit-arm basis lock; transferred copy independently rehashed PASS on 2026-08-29"
       }
     ],
     "already_contained_no_standalone_duplicate_needed": [
@@ -135,7 +135,7 @@
     ]
   },
   "pre_release_blockers": [
-    "Transfer/materialize every standalone Zenodo numeric asset and independently rehash it; the exact size remains unknown only for the H1-0019 fit-arm bases.",
+    "Transfer/materialize every standalone Zenodo numeric asset and independently rehash it; all planned asset sizes are now known, and the H1-0019 fit-arm-bases transfer/re-hash passed.",
     "Run the portable runtime helper in materialization mode and complete the clean-environment M1-M5 reproduction audit.",
     "Freeze the Git tree and generate the final release-level SHA-256 manifest.",
     "Create the versioned GitHub Release and attach the checkpoint plus compact evidence ZIPs.",
