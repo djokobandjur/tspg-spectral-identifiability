@@ -1,0 +1,96 @@
+{
+  "schema": "TSPG_H1_0017_CONFIG_v1_1",
+  "run_id": "TSPG-RUN-H1-0017",
+  "status": "AUTHORIZED_DEVELOPMENT_ONLY_V1_1",
+  "protocol_lock": "TSPG_PROTOCOL_LOCK_v0_47_20260829.md",
+  "amendment": "TSPG_PROTOCOL_AMENDMENT_A47_H1_0017_NEAR_NULL_RESIDUAL_CERTIFICATION_CORRECTION_v1_0_20260829.md",
+  "family": "learned",
+  "seed": 42,
+  "direction": "AG1_to_AG2",
+  "dtype": "float64",
+  "rank": 320,
+  "k_ladder": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "alpha": 1.6493039157931138e-09,
+  "sources": {
+    "h1_0010_raw": {
+      "filename": "TSPG_H1_0010_LEARNED_SEED42_QR_TASK320_EXACT_GEOMETRY_v1_1.npz",
+      "sha256": "08f23a6c0d87a58ed49c9f4bda841105f7d45eb848d18f30aa498eb42fb31074",
+      "known_path": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_H1_0010_LEARNED_FULL_TASK_SPAN_GEOMETRY_DIAGNOSTIC_STARTER_v1_1_20260828/TSPG_H1_0010_RUNTIME_v1_1_20260828/TSPG_H1_0010_LEARNED_SEED42_QR_TASK320_EXACT_GEOMETRY_v1_1.npz",
+      "required_arrays": [
+        "C320",
+        "A320"
+      ]
+    },
+    "h1_0016_derived": {
+      "filename": "TSPG_H1_0016_LEARNED_SEED42_AG1_AG2_TASK_CROSSFOLD_DERIVED_v1_2.npz",
+      "sha256": "afe9a94d1c5c7f7f3d8986348b15c7513013c77969781d54d03c0f8154b4baea",
+      "known_path": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_H1_0016_LEARNED_AG1_AG2_TASK_SIDE_CROSSFOLD_PREFLIGHT_STARTER_v1_2_20260829/TSPG_H1_0016_RUNTIME_v1_2_20260829/TSPG_H1_0016_LEARNED_SEED42_AG1_AG2_TASK_CROSSFOLD_DERIVED_v1_2.npz",
+      "required_arrays": [
+        "C2",
+        "H21",
+        "eta_task_1_to_2"
+      ]
+    },
+    "h1_0016_result": {
+      "filename": "TSPG_H1_0016_RESULT_v1_2_20260829.json",
+      "sha256": "6ea3ed7d85fddaff6e60a0d6c40974f84c13106f67c3508360c0ed37862e4428"
+    }
+  },
+  "output_names": {
+    "runtime_dir": "TSPG_H1_0017_RUNTIME_v1_1_20260829",
+    "result_json": "TSPG_H1_0017_RESULT_v1_1_20260829.json",
+    "derived_npz": "TSPG_H1_0017_LEARNED_SEED42_AG1_TO_AG2_B_NORMALIZED_CROSSFIT_DERIVED_v1_1.npz",
+    "evidence_dir": "TSPG_H1_0017_RUNTIME_EVIDENCE_v1_1_20260829",
+    "evidence_zip": "TSPG_H1_0017_RUNTIME_EVIDENCE_v1_1_20260829.zip"
+  },
+  "numerical_gates": {
+    "symmetry_max_abs": 1e-10,
+    "B_min_eigenvalue_strictly_positive": true,
+    "B_invsqrt_reconstruction_relative_fro": 1e-10,
+    "B_orthonormality_inf": 1e-10,
+    "principal_cosine_upper": 1.0000000001,
+    "efficiency_upper": 1.0000000001,
+    "task_baseline_reproduction_abs": 1e-09,
+    "self_scaled_generalized_residual_top32": 1e-10,
+    "normwise_generalized_backward_error_all320": 1e-10,
+    "symmetric_backward_error_all320": 1e-10
+  },
+  "predictions_not_gates": {
+    "eta_B_SB_exceeds_existing_eta_task_SE_at_small_k": true,
+    "delta_selection_B_positive_over_much_of_small_k_ladder": true,
+    "delta_selection_task_positive_is_denominator_independent_corroboration": true,
+    "heldout_gamma_small_at_small_k_and_larger_by_k32": true,
+    "B_principal_angles_largest_at_k1_2_then_decrease": true
+  },
+  "interpretation_locks": {
+    "oracle_label": "HELD_OUT_ORACLE_CEILING",
+    "fixed_rho_third_space_authorized": false,
+    "phi_over_Ospan_confirmatory_role": "RETIRED_DEVELOPMENT_ONLY_TRIGGER",
+    "eta_is_subspace_trace_metric": true
+  },
+  "prohibitions": {
+    "gpu": true,
+    "model_load": true,
+    "new_task_gradients": true,
+    "new_GA_actions": true,
+    "B22": true,
+    "alpha_change": true,
+    "split_change": true,
+    "confirmatory": true,
+    "C2": true,
+    "C3": true,
+    "C4": true
+  },
+  "numerical_certification_correction": {
+    "id": "IC05",
+    "original_all320_self_scaled_residual_role": "REPORTED_NOT_GATE",
+    "reason": "near-null tail makes self-scaled denominator ill-conditioned"
+  }
+}
