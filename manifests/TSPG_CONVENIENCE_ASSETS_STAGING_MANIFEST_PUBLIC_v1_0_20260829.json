@@ -1,0 +1,57 @@
+{
+  "schema": "TSPG_CONVENIENCE_ASSETS_STAGING_PUBLIC_v1",
+  "date": "2026-08-29",
+  "status": "PASS_6_OF_6",
+  "stage_directory": "<local_release_upload_workspace>/convenience_assets",
+  "stage_directory_sanitization": "Absolute host path, username, and host-local directory names are intentionally not published.",
+  "source_private_manifest": {
+    "filename": "TSPG_CONVENIENCE_ASSETS_STAGING_MANIFEST_v1_0_20260829.json",
+    "size_bytes": 1689,
+    "sha256": "a5be650c9b595c423819a74d32b4b7b53a6fbf811bf1faadafe8354cf7460176"
+  },
+  "source_checksum_manifest": {
+    "filename": "TSPG_CONVENIENCE_ASSETS_STAGING_SHA256_v1_0_20260829.txt",
+    "size_bytes": 671,
+    "sha256": "a384f56c58ff2ccb320e84ffab40f5ebdc080e14e10b1fa9434bbb9b1887734e"
+  },
+  "total_payload_bytes": 353260167,
+  "artifacts": [
+    {
+      "filename": "TSPG_LEARNED_SEED42_best_model.pth",
+      "size_bytes": 343559209,
+      "sha256": "7fcca75916c2d6f0f64aa5c381812ad3a305ba1a04672e9288f4251ab683c536",
+      "status": "PASS_STAGED_COPY_MATCH"
+    },
+    {
+      "filename": "TSPG_H1_0015_RUNTIME_EVIDENCE_v1_1_20260828.zip",
+      "size_bytes": 24682,
+      "sha256": "8125067b17eee2abe61bf9a3519366d371b2c751e7a481a87b3de0c32ce11c71",
+      "status": "PASS_STAGED_COPY_MATCH"
+    },
+    {
+      "filename": "TSPG_H1_0016_RUNTIME_EVIDENCE_v1_2_20260829.zip",
+      "size_bytes": 144501,
+      "sha256": "0d7c6acfe8e38826fbb36322f30f187f9442d4ea42253e9463328d004062e022",
+      "status": "PASS_STAGED_COPY_MATCH"
+    },
+    {
+      "filename": "TSPG_H1_0017_RUNTIME_EVIDENCE_v1_1_20260829.zip",
+      "size_bytes": 2522591,
+      "sha256": "5fff014e258c2bac92cc61f13ea559ba6cae67b41487d35141f4e00306ee1ae4",
+      "status": "PASS_STAGED_COPY_MATCH"
+    },
+    {
+      "filename": "TSPG_H1_0018_RUNTIME_EVIDENCE_v1_0_20260829.zip",
+      "size_bytes": 2936547,
+      "sha256": "2ab57eeb8c27f229f37ceec1233033cf6c3061dce8943d526cf597f2ede7e567",
+      "status": "PASS_STAGED_COPY_MATCH"
+    },
+    {
+      "filename": "TSPG_H1_0019_RUNTIME_EVIDENCE_v1_0_20260829.zip",
+      "size_bytes": 4072637,
+      "sha256": "f9eaadb43d0054a7d90714f2305b3e34fe3d47eaa34513659e4aed5ab09e62da",
+      "status": "PASS_STAGED_COPY_MATCH"
+    }
+  ],
+  "verification_note": "All six staged convenience assets report PASS_STAGED_COPY_MATCH and their SHA-256 values match the locked checkpoint/evidence identities."
+}
