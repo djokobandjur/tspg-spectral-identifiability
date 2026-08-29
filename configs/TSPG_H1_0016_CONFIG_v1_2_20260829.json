@@ -1,0 +1,132 @@
+{
+  "schema": "TSPG_H1_0016_CONFIG_v1_2",
+  "run_id": "TSPG-RUN-H1-0016",
+  "status": "AUTHORIZED_DEVELOPMENT_ONLY_V1_2",
+  "scientific_H1_status": "NOT_EVALUATED_DEVELOPMENT_ONLY",
+  "confirmatory_H1_status": "BLOCKED_PENDING_H1_0016_REVIEW",
+  "family": "learned",
+  "seed": 42,
+  "native_d": 151296,
+  "dtype": "float64",
+  "sdpa_backend": "math",
+  "active_protocol_lock": "TSPG_PROTOCOL_LOCK_v0_45_20260829.md",
+  "authorization_amendment": "TSPG_PROTOCOL_AMENDMENT_A45_H1_0015_CLOSEOUT_AND_H1_0016_TASK_SIDE_CROSSFOLD_PREFLIGHT_AUTHORIZATION_v1_0_20260829.md",
+  "model_source": {
+    "path": "/home/djoko.bandjur.ftnkm/Notebooks/cross_family_final_n6_FMLE/code/full_scale_experiment.py",
+    "sha256": "83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf"
+  },
+  "val_dir": "/home/djoko.bandjur.ftnkm/datasets/imagenet100/imagenet100_resized/val",
+  "split_manifest": {
+    "filename": "TSPG_SPLIT_MANIFEST_IN100_PILOT_v1_0_20260819.json",
+    "sha256": "9488e109f43f23a1bdd1ebda771a707e2b4b1e6f535ce6227bf0705d1834d1af"
+  },
+  "checkpoint_manifest": {
+    "filename": "TSPG_H1_CONFIRMATORY_20CHECKPOINT_MANIFEST_v1_0_20260828.json",
+    "sha256": "49cf531fde9e4f236abea4b306c4b6206636e2b38771cf38515e9df7a88602a0"
+  },
+  "AG1_source_gradients": {
+    "filename": "TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_v1_0.npy",
+    "sha256": "d02d8a31465912e7239164e965428162fa5f64f09082d5d0a158f6585b439009",
+    "shape": [
+      320,
+      151296
+    ],
+    "dtype": "float64",
+    "known_path": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_H1_0007_DUAL_BLOCKSOLVE_RIDGE_FRACTION_ALIBI_CONTROL_PREFLIGHT_STARTER_v1_2_20260828/TSPG_H1_0007_RUNTIME_v1_2_20260828/TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_v1_0.npy",
+    "metadata_filename": "TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_METADATA_v1_0.json",
+    "metadata_sha256": "720cca9169e7f78641ee875686337085d99ed2c432b61768fc4dce1e71437cc5"
+  },
+  "H1_0010_task_basis_source": {
+    "filename": "TSPG_H1_0010_LEARNED_SEED42_QR_TASK320_EXACT_GEOMETRY_v1_1.npz",
+    "sha256": "08f23a6c0d87a58ed49c9f4bda841105f7d45eb848d18f30aa498eb42fb31074",
+    "size_bytes": 776283320,
+    "known_path": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_H1_0010_LEARNED_FULL_TASK_SPAN_GEOMETRY_DIAGNOSTIC_STARTER_v1_1_20260828/TSPG_H1_0010_RUNTIME_v1_1_20260828/TSPG_H1_0010_LEARNED_SEED42_QR_TASK320_EXACT_GEOMETRY_v1_1.npz",
+    "result_filename": "TSPG_H1_0010_RESULT_v1_1_20260828.json",
+    "result_sha256": "5ef3d77cc5b3ad9a0e71ed5405499c479be91459009c53c573816ee7712cc32f"
+  },
+  "folds": {
+    "AG1_manifest_key": "geometry_A_G_1",
+    "AG2_manifest_key": "geometry_A_G_2",
+    "n_each": 320
+  },
+  "class_composition_hard_gate": {
+    "dataset_classes": 100,
+    "minimum_fraction": 0.95,
+    "minimum_unique_each": 95,
+    "minimum_intersection": 95,
+    "failure_status": "STOP_SPLIT_CLASS_CONFOUND"
+  },
+  "task_gradient": {
+    "definition": "per-example true-label cross-entropy gradient wrt native learned positional perturbation",
+    "reduction": "sum",
+    "batch_size": 1,
+    "progress_every": 10,
+    "new_AG2_gradient_count": 320
+  },
+  "reporting": {
+    "primary_k": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      32
+    ],
+    "secondary_k": [
+      64,
+      128,
+      320
+    ],
+    "store_full_curve_1_to_320": true,
+    "full_span_overlap_is_gate": false,
+    "leading_eigenspace_overlap_role": "ORACLE_VS_ORACLE_GEOMETRIC_DIAGNOSTIC",
+    "transferred_effective_rank_must_be_reported_with_phi": true
+  },
+  "expectations_not_gates": {
+    "phi_range": [
+      0.5,
+      0.9
+    ],
+    "canonical_correlation_shape": "leading roughly 10-30 may be high; tail may approach sqrt(r/d)",
+    "phi_should_exceed_O_span": true,
+    "eta_small_k_expected_high_then_may_decline_over_small_k_ladder": true,
+    "eta_full_rank_identity": 1.0
+  },
+  "review_trigger": {
+    "name": "ENERGY_ENRICHMENT_REVIEW_TRIGGER",
+    "condition": "phi/O_span <= 2 in either direction",
+    "role": "design review trigger only; not claim gate; not automatic scientific failure"
+  },
+  "prohibitions": {
+    "new_GA_action": true,
+    "B_normalized_C1": true,
+    "c_change": true,
+    "c_sweep": true,
+    "confirmatory_execution": true,
+    "fold_resampling_after_results": true,
+    "C2": true,
+    "C3": true,
+    "C4": true
+  },
+  "runtime": {
+    "device": "cuda"
+  },
+  "environment_required": {
+    "USER": "djoko.bandjur.ftnkm",
+    "LOGNAME": "djoko.bandjur.ftnkm",
+    "USERNAME": "djoko.bandjur.ftnkm",
+    "HOME": "/home/djoko.bandjur.ftnkm",
+    "TORCHINDUCTOR_CACHE_DIR": "/tmp/torchinductor_uid1545",
+    "TRITON_CACHE_DIR": "/tmp/triton_uid1545",
+    "XDG_CACHE_HOME": "/tmp/xdg_cache_uid1545"
+  },
+  "version": "v1.2",
+  "implementation_correction": {
+    "id": "IC03",
+    "note": "TSPG_IMPLEMENTATION_CORRECTION_IC03_H1_0016_V1_1_OUTPUT_FILENAME_CONTRACT_v1_0_20260829.md",
+    "scientific_design_changed": false,
+    "run_id_changed": false,
+    "runtime_output_version": "v1_2",
+    "previous_correction": "IC02"
+  }
+}
