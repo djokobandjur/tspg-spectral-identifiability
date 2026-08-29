@@ -1,0 +1,14 @@
+# TSPG authoritative M1--M5 run-result SHA-256 manifest
+# Date: 2026-08-29
+# These are hashes of the exact primary result JSON bytes contained in the
+# SHA-locked runtime evidence archives listed in EVIDENCE_ARCHIVES_SHA256.txt.
+
+ca2b79172d36c14726999be8b64dbfa82ff210ca52bd5b41d2f88d1b1d574d3c  TSPG_H1_0015_RESULT_v1_1_20260828.json  [TSPG_H1_0015_RUNTIME_EVIDENCE_v1_1_20260828.zip]
+6ea3ed7d85fddaff6e60a0d6c40974f84c13106f67c3508360c0ed37862e4428  TSPG_H1_0016_RESULT_v1_2_20260829.json  [TSPG_H1_0016_RUNTIME_EVIDENCE_v1_2_20260829.zip]
+eb64cd67969a73dc47ddee861493f367b32a4f952429a14506c3c022abd26b90  TSPG_H1_0017_RESULT_v1_1_20260829.json  [TSPG_H1_0017_RUNTIME_EVIDENCE_v1_1_20260829.zip]
+c6828d72e918a8f88be8fd9b254f4c2695163e7a84e9db18dac0225bc6f876b8  TSPG_H1_0018_RESULT_v1_0_20260829.json  [TSPG_H1_0018_RUNTIME_EVIDENCE_v1_0_20260829.zip]
+10eba6702a2b0f7af1e29bd40b428605ede58d38970e7f1285fc9d5ca6ee550e  TSPG_H1_0019_RESULT_v1_0_20260829.json  [TSPG_H1_0019_RUNTIME_EVIDENCE_v1_0_20260829.zip]
+
+# Exact primary result files may be represented on GitHub by a human-readable
+# subset plus compact public summaries; the hashes above bind every public
+# claim to the authoritative archived runtime bytes.
