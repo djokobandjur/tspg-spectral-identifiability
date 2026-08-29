@@ -1,0 +1,12 @@
+{
+  "schema": "TSPG_H1_0019_STATIC_QA_RESULT_v1_0",
+  "status": "PASS",
+  "tests": {
+    "python_syntax": true,
+    "fold_swap_invariance": true,
+    "trace_normalized_scalar_rescaling_invariance": true,
+    "commuting_limit_product_identity": true,
+    "arm_orthonormality": true,
+    "paired_bootstrap_deterministic_path": true
+  }
+}
