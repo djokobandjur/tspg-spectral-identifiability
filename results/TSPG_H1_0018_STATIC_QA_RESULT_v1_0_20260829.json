@@ -1,0 +1,12 @@
+{
+  "schema": "TSPG_H1_0018_STATIC_QA_RESULT_v1_0",
+  "status": "PASS",
+  "tests": {
+    "python_syntax": true,
+    "dual_phi_matches_direct": true,
+    "dual_T_U_eta_match_direct": true,
+    "coverage_first_class_preservation": true,
+    "deterministic_seed_path": true,
+    "inverse_n_forecast_executes": true
+  }
+}
