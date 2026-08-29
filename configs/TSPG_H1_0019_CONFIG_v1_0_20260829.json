@@ -1,0 +1,162 @@
+{
+  "schema": "TSPG_H1_0019_CONFIG_v1_0",
+  "run_id": "TSPG-RUN-H1-0019",
+  "status": "AUTHORIZED_DEVELOPMENT_ONLY_LAST_ESTIMATOR",
+  "protocol_lock": "TSPG_PROTOCOL_LOCK_v0_50_20260829.md",
+  "amendment": "TSPG_PROTOCOL_AMENDMENT_A50_H1_0019_LAST_ESTIMATOR_AUTHORIZATION_v1_0_20260829.md",
+  "family": "learned",
+  "seed": 42,
+  "native_d": 151296,
+  "dtype": "float64",
+  "sdpa_backend": "math",
+  "val_dir": "/home/djoko.bandjur.ftnkm/datasets/imagenet100/imagenet100_resized/val",
+  "model_source": {
+    "path": "/home/djoko.bandjur.ftnkm/Notebooks/cross_family_final_n6_FMLE/code/full_scale_experiment.py",
+    "sha256": "83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf"
+  },
+  "checkpoint_manifest": {
+    "filename": "TSPG_H1_CONFIRMATORY_20CHECKPOINT_MANIFEST_v1_0_20260828.json",
+    "sha256": "49cf531fde9e4f236abea4b306c4b6206636e2b38771cf38515e9df7a88602a0"
+  },
+  "split_manifest": {
+    "filename": "TSPG_SPLIT_MANIFEST_IN100_PILOT_v1_0_20260819.json",
+    "sha256": "9488e109f43f23a1bdd1ebda771a707e2b4b1e6f535ce6227bf0705d1834d1af",
+    "AG1_key": "geometry_A_G_1",
+    "AG2_key": "geometry_A_G_2",
+    "AP_key": "independent_attack_A_P"
+  },
+  "fit_sources": {
+    "H18_dual": {
+      "filename": "TSPG_H1_0018_DUAL_GRAMS_RESAMPLES_AND_CURVES_v1_0.npz",
+      "sha256": "228705665d79f4d917c7706059413dbb78a35795ed629a23bab69ac82c3b3855",
+      "required_arrays": [
+        "K11",
+        "K22",
+        "K12",
+        "AG1_labels",
+        "AG2_labels"
+      ]
+    },
+    "AG1_gradients": {
+      "filename": "TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_v1_0.npy",
+      "sha256": "d02d8a31465912e7239164e965428162fa5f64f09082d5d0a158f6585b439009",
+      "known_path": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_H1_0007_DUAL_BLOCKSOLVE_RIDGE_FRACTION_ALIBI_CONTROL_PREFLIGHT_STARTER_v1_2_20260828/TSPG_H1_0007_RUNTIME_v1_2_20260828/TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_v1_0.npy",
+      "shape": [
+        320,
+        151296
+      ],
+      "dtype": "float64"
+    },
+    "AG2_gradients": {
+      "filename": "TSPG_H1_0016_LEARNED_SEED42_AG2_320_FP64_TASK_GRADIENTS_v1_2.npy",
+      "sha256": "2850c66d13dc45f48baa114f540e29c3ca75903db412ac8f93c048fdb8b930eb",
+      "known_path": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_H1_0016_LEARNED_AG1_AG2_TASK_SIDE_CROSSFOLD_PREFLIGHT_STARTER_v1_2_20260829/TSPG_H1_0016_RUNTIME_v1_2_20260829/TSPG_H1_0016_LEARNED_SEED42_AG2_320_FP64_TASK_GRADIENTS_v1_2.npy",
+      "shape": [
+        320,
+        151296
+      ],
+      "dtype": "float64"
+    },
+    "H18_result": {
+      "filename": "TSPG_H1_0018_RESULT_v1_0_20260829.json",
+      "sha256": "c6828d72e918a8f88be8fd9b254f4c2695163e7a84e9db18dac0225bc6f876b8"
+    }
+  },
+  "consensus": {
+    "name": "SYMMETRIC_CROSS_ENERGY_SANDWICH",
+    "trace_normalize_folds": true,
+    "uses_B_or_GA_in_fit": false,
+    "tunable_hyperparameters": 0,
+    "fit_max_k": 32
+  },
+  "reporting": {
+    "secondary_k": [
+      1,
+      2
+    ],
+    "primary_k": [
+      4,
+      8,
+      16,
+      32
+    ],
+    "U320_summary": "ARITHMETIC_MEAN_OF_AG1_AND_AG2_HELDOUT_CAPTURE"
+  },
+  "AP_gate": {
+    "minimum_unique_classes": 95,
+    "minimum_intersection_with_AG1": 95,
+    "minimum_intersection_with_AG2": 95,
+    "resampling_permitted": false
+  },
+  "AP_gradients": {
+    "count": 640,
+    "batch_size": 1,
+    "progress_every": 10,
+    "definition": "per-example true-label cross-entropy gradient wrt native learned positional perturbation"
+  },
+  "success_rule": {
+    "primary_contrast": "T_AP_CONS640_MINUS_U640",
+    "curve_statistic": "MEAN_DELTA_OVER_K_4_8_16_32",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260829019,
+    "bootstrap_CI": [
+      0.025,
+      0.975
+    ],
+    "requires_all_primary_point_estimates_positive": true,
+    "requires_curve_CI_lower_positive": true,
+    "failure_status": "CONSENSUS_NOT_ESTABLISHED_STOP_ESTIMATOR_SEARCH",
+    "success_status": "CONSENSUS_DEVELOPMENT_SUCCESS"
+  },
+  "bbar": {
+    "required": true,
+    "role": "POST_FIT_DIAGNOSTIC_ONLY",
+    "calibration_images": 256,
+    "direction_chunk_size": 4,
+    "max_new_GA_directions": 128,
+    "alpha": 1.6493039157931138e-09,
+    "trace_hat_reference": 2.4953308524383493,
+    "quadratic_consistency_relative_gate": 1e-08
+  },
+  "AP_data_use": {
+    "consumed_as_C1_development_heldout": true,
+    "may_later_be_called_untouched_for_C2_C3_C4": false
+  },
+  "environment_required": {
+    "USER": "djoko.bandjur.ftnkm",
+    "LOGNAME": "djoko.bandjur.ftnkm",
+    "USERNAME": "djoko.bandjur.ftnkm",
+    "HOME": "/home/djoko.bandjur.ftnkm",
+    "TORCHINDUCTOR_CACHE_DIR": "/tmp/torchinductor_uid1545",
+    "TRITON_CACHE_DIR": "/tmp/triton_uid1545",
+    "XDG_CACHE_HOME": "/tmp/xdg_cache_uid1545"
+  },
+  "runtime": {
+    "device": "cuda",
+    "calibration_batch_size": 1
+  },
+  "output_names": {
+    "fit_gate_dir": "TSPG_H1_0019_FIT_GATE_v1_0_20260829",
+    "fit_lock_npz": "TSPG_H1_0019_FIT_LOCK_DUAL_COEFFICIENTS_v1_0_20260829.npz",
+    "fit_gate_json": "TSPG_H1_0019_FIT_GATE_RESULT_v1_0_20260829.json",
+    "runtime_dir": "TSPG_H1_0019_RUNTIME_v1_0_20260829",
+    "AP_gradients": "TSPG_H1_0019_LEARNED_SEED42_AP640_FP64_TASK_GRADIENTS_v1_0.npy",
+    "arm_basis_npz": "TSPG_H1_0019_FIT_ARM_BASES_TOP32_v1_0.npz",
+    "per_example_npz": "TSPG_H1_0019_AP_PER_EXAMPLE_CAPTURE_v1_0.npz",
+    "result_json": "TSPG_H1_0019_RESULT_v1_0_20260829.json",
+    "evidence_dir": "TSPG_H1_0019_RUNTIME_EVIDENCE_v1_0_20260829",
+    "evidence_zip": "TSPG_H1_0019_RUNTIME_EVIDENCE_v1_0_20260829.zip"
+  },
+  "prohibitions": {
+    "alternate_consensus_after_AP": true,
+    "B_or_GA_in_fit": true,
+    "B_or_GA_in_AP_task_score": true,
+    "rank_dropping_after_result": true,
+    "H18_forecast_substitutes_for_U640": true,
+    "new_estimator_after_H19_failure": true,
+    "confirmatory_H1": true,
+    "C2": true,
+    "C3": true,
+    "C4": true
+  }
+}
