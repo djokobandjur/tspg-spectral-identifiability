@@ -115,7 +115,21 @@
       "status": "PASS_8_OF_8",
       "date": "2026-08-29",
       "audit": "audits/TSPG_STANDALONE_LARGE_ARTIFACT_SOURCE_BYTE_VERIFICATION_v1_0_20260829.md",
-      "note": "All eight standalone numerical assets have matching byte counts and SHA-256 identities on the authoritative retained object or an independently transferred copy. Release-upload staging and staged-copy rehash remain pending."
+      "note": "All eight standalone numerical assets have matching byte counts and SHA-256 identities on the authoritative retained object or an independently transferred copy."
+    },
+    "standalone_staging_verification": {
+      "status": "PASS_COMPLETE_8_OF_8",
+      "date": "2026-08-29",
+      "total_payload_bytes": 3182648718,
+      "checksum_manifest": "manifests/TSPG_ZENODO_STANDALONE_STAGING_SHA256_v1_0_20260829.txt",
+      "public_metadata_manifest": "manifests/TSPG_ZENODO_STANDALONE_STAGING_MANIFEST_PUBLIC_v1_0_20260829.json",
+      "source_private_metadata_manifest": {
+        "filename": "TSPG_ZENODO_STANDALONE_STAGING_MANIFEST_v1_0_20260829.json",
+        "size_bytes": 2303,
+        "sha256": "6483ea07f6deefa4db3a08b2af9d22358bc930ad1038842deaeb3135cf9e61c5"
+      },
+      "audit": "audits/TSPG_ZENODO_STANDALONE_STAGING_SHA_VERIFICATION_v1_0_20260829.md",
+      "note": "All eight standalone payload files were staged and their staged-copy SHA-256 values match the locked identities. The host-local stage directory is preserved only in the private manifest and sanitized from the public semantic copy."
     },
     "already_contained_no_standalone_duplicate_needed": [
       {
@@ -141,7 +155,7 @@
     ]
   },
   "pre_release_blockers": [
-    "Stage the exact verified non-Git assets in the release-upload workspace and independently rehash every staged copy before GitHub Release/Zenodo upload.",
+    "Stage and independently rehash the six convenience assets: the verified Learned seed-42 checkpoint plus the five compact H1-0015--H1-0019 runtime-evidence ZIPs.",
     "Run the portable runtime helper in materialization mode and complete the clean-environment M1-M5 reproduction audit.",
     "Freeze the Git tree and generate the final release-level SHA-256 manifest.",
     "Create the versioned GitHub Release and attach the checkpoint plus compact evidence ZIPs.",
