@@ -52,6 +52,25 @@
       "status": "PENDING_UPLOAD"
     }
   ],
+  "convenience_staging_verification": {
+    "status": "PASS_COMPLETE_6_OF_6",
+    "date": "2026-08-29",
+    "total_payload_bytes": 353260167,
+    "checksum_manifest": "manifests/TSPG_CONVENIENCE_ASSETS_STAGING_SHA256_v1_0_20260829.txt",
+    "public_metadata_manifest": "manifests/TSPG_CONVENIENCE_ASSETS_STAGING_MANIFEST_PUBLIC_v1_0_20260829.json",
+    "source_private_metadata_manifest": {
+      "filename": "TSPG_CONVENIENCE_ASSETS_STAGING_MANIFEST_v1_0_20260829.json",
+      "size_bytes": 1689,
+      "sha256": "a5be650c9b595c423819a74d32b4b7b53a6fbf811bf1faadafe8354cf7460176"
+    },
+    "source_checksum_manifest": {
+      "filename": "TSPG_CONVENIENCE_ASSETS_STAGING_SHA256_v1_0_20260829.txt",
+      "size_bytes": 671,
+      "sha256": "a384f56c58ff2ccb320e84ffab40f5ebdc080e14e10b1fa9434bbb9b1887734e"
+    },
+    "audit": "audits/TSPG_CONVENIENCE_ASSETS_STAGING_VERIFICATION_v1_0_20260829.md",
+    "note": "The verified checkpoint plus five compact runtime-evidence ZIPs are staged and all six staged-copy SHA-256 values match their locked release identities. Upload remains pending."
+  },
   "zenodo_assets": {
     "duplicate_from_github_release": [
       "TSPG_LEARNED_SEED42_best_model.pth",
@@ -155,7 +174,6 @@
     ]
   },
   "pre_release_blockers": [
-    "Stage and independently rehash the six convenience assets: the verified Learned seed-42 checkpoint plus the five compact H1-0015--H1-0019 runtime-evidence ZIPs.",
     "Run the portable runtime helper in materialization mode and complete the clean-environment M1-M5 reproduction audit.",
     "Freeze the Git tree and generate the final release-level SHA-256 manifest.",
     "Create the versioned GitHub Release and attach the checkpoint plus compact evidence ZIPs.",
