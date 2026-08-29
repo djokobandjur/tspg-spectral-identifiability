@@ -43,7 +43,7 @@ The archives are the authoritative run-evidence layer. Their internal result/con
 
 These binaries are not duplicated inside the compact evidence archives and therefore require explicit archival upload:
 
-| Artifact | Role | Supports | Recorded size | SHA-256 |
+| Artifact | Role | Supports | Verified size | SHA-256 |
 |---|---|---|---:|---|
 | `TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_v1_0.npy` | raw AG1 task gradients | M2--M5 | 387,317,888 | `d02d8a31465912e7239164e965428162fa5f64f09082d5d0a158f6585b439009` |
 | `TSPG_H1_0010_LEARNED_SEED42_QR_TASK320_EXACT_GEOMETRY_v1_1.npz` | exact task-span geometry | M1--M3 | 776,283,320 | `08f23a6c0d87a58ed49c9f4bda841105f7d45eb848d18f30aa498eb42fb31074` |
@@ -54,9 +54,15 @@ These binaries are not duplicated inside the compact evidence archives and there
 | `TSPG_H1_0019_LEARNED_SEED42_AP640_FP64_TASK_GRADIENTS_v1_0.npy` | raw AP gradients | M5 | 774,635,648 | `0398ec1949f7d5ad326902f438c554848b86325d352d73a67078473f7fba3145` |
 | `TSPG_H1_0019_FIT_ARM_BASES_TOP32_v1_0.npz` | pre-AP fit-arm bases | M5 | 154,928,108 | `8bfc5c8e4bc7c677a882974a61b4e66d540f230dbb75b690ffbfe42ea47fa4e3` |
 
-The H1-0011 size (`79,126,618` bytes) was recovered from the SHA-locked `raw_output` record in `TSPG_H1_0011_RESULT_v1_0_20260828.json` inside the authoritative H1-0011 runtime-evidence archive (archive SHA-256 `4463233f624be483f96d97fd1fd28932386da2e94c13a64f242c57a52a9b73cb`). This closes the metadata gap but does **not** replace transfer-time verification of the NPZ bytes themselves.
+## Source-byte verification completed
 
-The H1-0019 fit-arm-bases object was directly materialized and independently verified on 2026-08-29: size `154,928,108` bytes and SHA-256 `8bfc5c8e4bc7c677a882974a61b4e66d540f230dbb75b690ffbfe42ea47fa4e3`, matching the locked registry identity. The NPZ opens without pickle and contains exactly four FP64 matrices — `U320_AG1`, `U320_AG2`, `U640`, and `CONS640` — each with shape `(151296, 32)`. This closes the final unknown-size metadata gap; remaining pre-release transfer work concerns independent rehashing of the other standalone assets, not identification of this object.
+On 2026-08-29, all eight standalone objects were checked against the locked identities above. Seven retained source objects were streamed through SHA-256 directly on the FMLE source host; each returned the exact expected byte count and SHA-256. The H1-0019 fit-arm-bases object was transferred separately and independently rehashed after transfer. The result is `8/8 PASS`, recorded in `../audits/TSPG_STANDALONE_LARGE_ARTIFACT_SOURCE_BYTE_VERIFICATION_v1_0_20260829.md`.
+
+This closes the identity-discovery/source-byte-verification gate, including the earlier H1-0011 metadata gap. There are no unknown standalone asset sizes and no observed SHA mismatch. Host-local absolute paths are intentionally not part of the public archival contract.
+
+The H1-0019 fit-arm-bases NPZ additionally opens without pickle and contains exactly four FP64 matrices — `U320_AG1`, `U320_AG2`, `U640`, and `CONS640` — each with shape `(151296, 32)`.
+
+The next integrity boundary is release staging: the exact verified objects still need to be copied to the release-upload workspace and every staged copy must be rehashed before GitHub Release/Zenodo upload. Source-host verification is not a substitute for staged-copy verification.
 
 ## Already contained — do not upload twice
 
@@ -77,8 +83,8 @@ A regenerated artifact that is numerically equivalent but not byte-identical bec
 
 ## Integrity rule
 
-For every downloaded or regenerated binary, calculate SHA-256 and compare it with the public manifests. A matching filename with a non-matching SHA-256 is **not** the study artifact.
+For every downloaded, staged, or regenerated binary, calculate SHA-256 and compare it with the public manifests. A matching filename with a non-matching SHA-256 is **not** the study artifact.
 
 ## Release state
 
-All URLs/DOI fields remain pending until the Git tree is frozen, assets are independently rehashed at transfer, the versioned GitHub Release is created, and the matching Zenodo deposit is minted. Only then should the manifests and `CITATION.cff` be updated with permanent release locations.
+All standalone numerical identities are now source-byte verified. URLs/DOI fields remain pending until the exact verified assets are staged and rehashed, the clean-environment reproduction gate is completed, the Git tree is frozen, the versioned GitHub Release is created, and the matching Zenodo deposit is minted. Only then should the manifests and `CITATION.cff` be updated with permanent release locations.
