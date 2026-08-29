@@ -2,7 +2,7 @@
 
 ## Status
 
-This is a **pre-release** reproduction guide. The public evidence/code/config promotion is substantially complete, including the exact checkpoint model source, but the first immutable release must not be tagged until the remaining items in `RELEASE_CHECKLIST.md` are closed. In particular, a clean-environment end-to-end verification is still pending.
+This is a **pre-release** reproduction guide. Public evidence/code/config promotion, non-Git release staging, and clean-environment portable materialization are complete. The first immutable release must not be tagged until sequential M1--M5 execution and numerical comparison are completed, the clean-environment dependency lock is frozen, and the remaining items in `RELEASE_CHECKLIST.md` are closed.
 
 ## 1. Reference environment
 
@@ -12,9 +12,9 @@ The authoritative captured numerical environment is recorded in:
 
 Reference values are Python 3.12.3, PyTorch `2.8.0a0+5228986c39.nv25.06`, CUDA 12.9, cuDNN 9.10.2, and one NVIDIA H200. The manifest also records the relevant PyTorch numerical-backend settings.
 
-The original SHA-locked runtime records additionally contain host/login/absolute-path information. Those fields are intentionally omitted from the public environment manifest because they are not scientific requirements.
+A fresh FMLE materialization test reproduced the core stack as Python 3.12.3, PyTorch `2.8.0a0+5228986c39.nv25.06`, CUDA 12.9, and NVIDIA H200. The exact versions of non-PyTorch Python dependencies have **not yet been frozen as the release lock file**; they will be captured from the completed clean-environment execution test.
 
-The exact versions of non-PyTorch Python dependencies have **not yet been frozen as a clean-environment lock file**. Do not interpret the current repository as claiming bitwise reproduction on an arbitrary compatible stack; the clean-environment test will produce the final portable dependency lock before release tagging.
+The original SHA-locked runtime records additionally contain host/login/absolute-path information. Those fields are intentionally omitted from public manifests and audits because they are not scientific requirements.
 
 ## 2. ImageNet-100 data
 
@@ -37,7 +37,7 @@ Authoritative identity:
 - size: `343559209` bytes
 - SHA-256: `7fcca75916c2d6f0f64aa5c381812ad3a305ba1a04672e9288f4251ab683c536`
 
-The checkpoint is **not** committed to ordinary Git history because it exceeds GitHub's normal Git-object size limit. It will be attached directly to the first versioned GitHub Release. No Google Drive/shared-folder checkpoint dependency is part of the public design.
+The checkpoint is **not** committed to ordinary Git history because it exceeds GitHub's normal Git-object size limit. It will be attached directly to the first versioned GitHub Release and duplicated in the Zenodo archival record. No Google Drive/shared-folder checkpoint dependency is part of the public design.
 
 After downloading the release asset, verify it before any run, for example on Linux:
 
@@ -77,10 +77,14 @@ python tools/prepare_runtime_root.py \
   --model-source ./code/model/full_scale_experiment.py \
   --checkpoint /path/to/TSPG_LEARNED_SEED42_best_model.pth \
   --imagenet-val /path/to/imagenet100/val \
-  --artifact-dir /path/to/extracted_tspg_archival_assets
+  --artifact-dir /path/to/staged_standalone_assets \
+  --artifact-dir /path/to/extracted_runtime_evidence \
+  --stage-mode copy
 ```
 
-It verifies the exact model-source SHA, checkpoint size/SHA, the `100`-class / `5000`-image ImageFolder contract, and every staged external artifact SHA before declaring the runtime root complete. External artifacts are symlinked by default; use `--stage-mode copy` for a self-contained staging directory.
+It verifies the exact model-source SHA, checkpoint size/SHA, the `100`-class / `5000`-image ImageFolder contract, and every staged external artifact SHA before declaring the runtime root complete.
+
+The clean-environment materialization gate has now been executed from a fresh FMLE session against public commit `53c7ff9dc8afcc7ff782a6d2f340d8e183acbcf4`. All five compact evidence archives extracted successfully; the helper returned mode `MATERIALIZED`, targets `M1`--`M5`, `11` staged external artifacts, and `0` missing external artifacts. The public record is `../audits/TSPG_CLEAN_ENVIRONMENT_PORTABLE_MATERIALIZATION_v1_0_20260829.md`.
 
 The helper writes `TSPG_PORTABLE_RUNTIME_PREPARATION_REPORT_v1.json`, recording:
 
@@ -92,7 +96,7 @@ The helper writes `TSPG_PORTABLE_RUNTIME_PREPARATION_REPORT_v1.json`, recording:
 
 Scientific parameters, split sample identities, ranks, gates, tolerances, dtype choices, metric definitions, and locked result values are not changed by the helper.
 
-The M1--M5 runners expose `--config`, `--root`, and `--output-dir` interfaces. H1-0016 and H1-0019 additionally separate the prespecified `gate`/`fit_gate` stages from their full stages. End-to-end execution of this portable path is still required before release tagging.
+The M1--M5 runners expose `--config`, `--root`, and `--output-dir` interfaces. H1-0016 and H1-0019 additionally separate the prespecified `gate`/`fit_gate` stages from their full stages. The remaining clean-environment gate is **actual sequential execution and numerical comparison**, not materialization.
 
 ## 5. Exact model source
 
@@ -112,7 +116,7 @@ Promotion was fail-closed on both exact size and SHA-256. The public Git blob is
 
 See `ARTIFACT_ACQUISITION.md`, `../manifests/LARGE_ARTIFACTS_SHA256.csv`, and `../manifests/TSPG_PORTABLE_RUNTIME_DEPENDENCIES_v1_0_20260829.json`.
 
-Large raw gradients and geometry arrays are never identified by filename alone: the SHA-256 value is the identity. Some late-stage artifacts can be regenerated from earlier locked inputs with the promoted M1--M5 code; earlier expensive dependencies will be supplied in the archival package when reconstruction would otherwise require re-running the pre-M1 development chain.
+Large raw gradients and geometry arrays are never identified by filename alone: the SHA-256 value is the identity. The complete non-Git release-upload workspace has been staged and byte-verified before the clean-environment test. Some late-stage artifacts can be regenerated from earlier locked inputs with the promoted M1--M5 code; earlier expensive dependencies are retained in the archival package when reconstruction would otherwise require re-running the pre-M1 development chain.
 
 ## 7. Verification principle
 
