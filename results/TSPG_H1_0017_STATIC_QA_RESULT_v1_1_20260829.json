@@ -1,0 +1,11 @@
+{
+  "schema": "TSPG_H1_0017_STATIC_QA_v1_1",
+  "status": "PASS",
+  "tests": {
+    "python_syntax": true,
+    "identity_case_cross_scoring": true,
+    "all_three_residual_diagnostics_computed": true,
+    "near_null_normwise_backward_stable": true,
+    "near_null_symmetric_backward_stable": true
+  }
+}
