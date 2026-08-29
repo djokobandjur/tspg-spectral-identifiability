@@ -1,0 +1,120 @@
+{
+  "schema": "TSPG_H1_0015_CONFIG_v1_1",
+  "run_id": "TSPG-RUN-H1-0015",
+  "status": "AUTHORIZED_DEVELOPMENT_ONLY",
+  "scientific_H1_status": "NOT_EVALUATED_DEVELOPMENT_ONLY",
+  "family": "learned",
+  "seed": 42,
+  "native_d": 151296,
+  "dtype": "float64",
+  "sdpa_backend": "math",
+  "active_protocol_lock": "TSPG_PROTOCOL_LOCK_v0_44_20260828.md",
+  "authorization_amendment": "TSPG_PROTOCOL_AMENDMENT_A43_H1_0014_CLOSEOUT_AND_H1_0015_MATCHED_RANK_BOUNDARY_COMPLEMENT_FAIRNESS_AUTHORIZATION_v1_0_20260828.md",
+  "model_source": {
+    "path": "/home/djoko.bandjur.ftnkm/Notebooks/cross_family_final_n6_FMLE/code/full_scale_experiment.py",
+    "sha256": "83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf"
+  },
+  "val_dir": "/home/djoko.bandjur.ftnkm/datasets/imagenet100/imagenet100_resized/val",
+  "split_manifest": "TSPG_SPLIT_MANIFEST_IN100_PILOT_v1_0_20260819.json",
+  "checkpoint_manifest": "TSPG_H1_CONFIRMATORY_20CHECKPOINT_MANIFEST_v1_0_20260828.json",
+  "locked_metric": {
+    "trace_hat": 2.4953308524383493,
+    "tau": 0.00024953308524383496,
+    "alpha_tau_over_d": 1.6493039157931138e-09,
+    "c": 0.0001
+  },
+  "source_raw_artifacts": {
+    "task_span": {
+      "filename": "TSPG_H1_0010_LEARNED_SEED42_QR_TASK320_EXACT_GEOMETRY_v1_1.npz",
+      "sha256": "08f23a6c0d87a58ed49c9f4bda841105f7d45eb848d18f30aa498eb42fb31074",
+      "required_arrays": [
+        "Q320",
+        "C320",
+        "GA_Q320",
+        "A320"
+      ]
+    },
+    "head_complement": {
+      "filename": "TSPG_H1_0011_LEARNED_SEED42_COMPLEMENT_KRYLOV_BASIS_v1_0.npz",
+      "sha256": "4f948e96ec8c8ae911259f923b876864b6ffd83b1cf54669d7fdd00b90b88237",
+      "required_arrays": [
+        "Z_complement",
+        "GA_Z_complement"
+      ],
+      "expected_dimension": 32
+    }
+  },
+  "tail_seed": {
+    "coupling_rank_start_1based": 5,
+    "coupling_rank_stop_1based": 8,
+    "restricted_task_rank_start_1based": 5,
+    "restricted_task_rank_stop_1based": 8,
+    "qr_relative_diagonal_rank_tolerance": 1e-12,
+    "reroll": false
+  },
+  "tail_krylov": {
+    "max_blocks": 4,
+    "reported_depths": [
+      1,
+      2,
+      4
+    ],
+    "ga_direction_chunk_size": 4,
+    "calibration_images": 256,
+    "Q_orthogonality_gate": 1e-10,
+    "Z_orthogonality_gate": 1e-10,
+    "block_quadratic_consistency_gate": 1e-08
+  },
+  "endpoint": {
+    "matched_tail_depth": 4,
+    "top_eigenvalues_report": 12,
+    "top_subspace_k": 4,
+    "combined_qr_relative_diagonal_rank_tolerance": 1e-12,
+    "B_orthonormality_gate": 1e-10,
+    "generalized_residual_gate": 1e-10,
+    "fraction_identity_gate": 1e-10,
+    "named_spectra": [
+      "BASELINE_L0",
+      "HEAD",
+      "TAIL",
+      "COMBINED"
+    ],
+    "baseline_L0_role": "UNCONTAMINATED_SPECTRAL_REFERENCE",
+    "head_L4_role": "TOP4_TARGET_CONDITIONED"
+  },
+  "runtime": {
+    "device": "cuda",
+    "calibration_batch_size": 1
+  },
+  "environment_required": {
+    "USER": "djoko.bandjur.ftnkm",
+    "LOGNAME": "djoko.bandjur.ftnkm",
+    "USERNAME": "djoko.bandjur.ftnkm",
+    "HOME": "/home/djoko.bandjur.ftnkm",
+    "TORCHINDUCTOR_CACHE_DIR": "/tmp/torchinductor_uid1545",
+    "TRITON_CACHE_DIR": "/tmp/triton_uid1545",
+    "XDG_CACHE_HOME": "/tmp/xdg_cache_uid1545"
+  },
+  "prohibitions": {
+    "tail_blocks_beyond_4": true,
+    "c_sweep": true,
+    "c_relock": true,
+    "k_change": true,
+    "random_reroll": true,
+    "confirmatory_H1": true,
+    "geometry_support_cutoff": true,
+    "H2": true,
+    "H3": true
+  },
+  "implementation_version": "v1.1",
+  "authorization_amendments": [
+    "TSPG_PROTOCOL_AMENDMENT_A43_H1_0014_CLOSEOUT_AND_H1_0015_MATCHED_RANK_BOUNDARY_COMPLEMENT_FAIRNESS_AUTHORIZATION_v1_0_20260828.md",
+    "TSPG_PROTOCOL_AMENDMENT_A44_H1_0014_UNCONTAMINATED_L0_BASELINE_AND_H1_0015_CONTROL_HIERARCHY_CLARIFICATION_v1_0_20260828.md"
+  ],
+  "claim_restrictions": {
+    "H1_0014_L_ge_1_gap_supports_C1": false,
+    "spectral_gap_is_primary_H1_concentration_statistic": false,
+    "primary_H1_concentration_statistic": "C_k^cross",
+    "k_reselection_from_development_seed": false
+  }
+}
