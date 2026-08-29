@@ -1,8 +1,16 @@
 # Code
 
-This directory contains the exact final, non-superseded analysis code promoted for the reported TSPG M1--M5 results. The files are copied byte-for-byte from the SHA-locked execution starter packages used for the corresponding analyses; public SHA-256 values are recorded in `../manifests/CODE_SHA256.txt`.
+This directory contains the exact final, non-superseded **analysis** code promoted for the reported TSPG M1--M5 results. The listed analysis files are copied byte-for-byte from the SHA-locked execution starter packages used for the corresponding analyses; public SHA-256 values are recorded in `../manifests/CODE_SHA256.txt`.
 
 Development-only and superseded implementations are intentionally not promoted. The public repository is a reproducibility surface, not a dump of the internal project workspace.
+
+## Model-definition dependency
+
+The Learned seed-42 checkpoint was instantiated from `full_scale_experiment.py` with authoritative SHA-256:
+
+`83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf`
+
+An exact retained copy has been recovered and SHA-verified during release preparation. Its exact-byte public promotion is **still pending**. No reconstructed or approximate implementation is accepted as a substitute. This dependency therefore remains an explicit blocker for the first immutable release and is also recorded in the public checkpoint manifest and `../docs/REPRODUCTION.md`.
 
 ## Shared operators
 
@@ -48,4 +56,4 @@ Development-only and superseded implementations are intentionally not promoted. 
 - locked configuration: `../configs/TSPG_H1_0019_CONFIG_v1_0_20260829.json`
 - run card: `../run_cards/TSPG_RUN_CARD_H1_0019_LAST_ESTIMATOR_CONSENSUS_THIRDFOLD_v1_0_20260829.md`
 
-The manuscript-level M1--M5 mapping is maintained in `../docs/ARTIFACT_MAP.md`. Large raw arrays are not stored in Git; their identities are preserved through SHA-256 manifests and the versioned archival evidence release.
+The manuscript-level M1--M5 mapping is maintained in `../docs/ARTIFACT_MAP.md`. Portable path mapping and release-blocker status are documented in `../docs/REPRODUCTION.md`. Large raw arrays are not stored in Git; their identities and acquisition/reconstruction routes are preserved in `../manifests/` and `../docs/ARTIFACT_ACQUISITION.md`.
