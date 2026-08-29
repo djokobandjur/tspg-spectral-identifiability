@@ -11,6 +11,7 @@ Current public coverage includes:
 - H1-0017 ingest/interpretation and formal closeout for the B-normalized cross-fit audit (M3);
 - H1-0018 ingest/interpretation and formal closeout for the finite-sample support/orientation audit (M4);
 - H1-0019 ingest/interpretation and formal closeout for the final matched-sample consensus estimator (M5);
-- `TSPG_STANDALONE_LARGE_ARTIFACT_SOURCE_BYTE_VERIFICATION_v1_0_20260829.md`, which records the pre-release size/SHA-256 verification of all eight standalone Zenodo numerical assets (`8/8 PASS`) while keeping release staging and upload as separate pending gates.
+- `TSPG_STANDALONE_LARGE_ARTIFACT_SOURCE_BYTE_VERIFICATION_v1_0_20260829.md`, which records the pre-release size/SHA-256 verification of all eight standalone Zenodo numerical assets (`8/8 PASS`);
+- `TSPG_ZENODO_STANDALONE_STAGING_SHA_VERIFICATION_v1_0_20260829.md`, which records that all eight staged-copy SHA-256 entries match the locked standalone identities, while retaining the small staging JSON metadata manifest as the final capture needed to close the standalone staging gate fully.
 
 Machine-readable static-QA and gate outputs are promoted under `../results/`. Authoritative compact runtime evidence archives are identified by SHA-256 under `../manifests/`; large raw arrays remain outside Git and are referenced by exact hashes rather than duplicated here.
