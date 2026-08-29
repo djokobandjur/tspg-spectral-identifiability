@@ -12,6 +12,7 @@ Current public coverage includes:
 - H1-0018 ingest/interpretation and formal closeout for the finite-sample support/orientation audit (M4);
 - H1-0019 ingest/interpretation and formal closeout for the final matched-sample consensus estimator (M5);
 - `TSPG_STANDALONE_LARGE_ARTIFACT_SOURCE_BYTE_VERIFICATION_v1_0_20260829.md`, which records the pre-release size/SHA-256 verification of all eight standalone Zenodo numerical assets (`8/8 PASS`);
-- `TSPG_ZENODO_STANDALONE_STAGING_SHA_VERIFICATION_v1_0_20260829.md`, which records the completed standalone release-staging gate: all eight staged copies match their locked SHA-256 identities and the generated staging metadata reports `PASS_8_OF_8`. The public metadata copy is sanitized to omit host-local path/login details while remaining bound to the exact private JSON by size and SHA-256.
+- `TSPG_ZENODO_STANDALONE_STAGING_SHA_VERIFICATION_v1_0_20260829.md`, which records the completed standalone release-staging gate: all eight staged copies match their locked SHA-256 identities and the generated staging metadata reports `PASS_8_OF_8`;
+- `TSPG_CONVENIENCE_ASSETS_STAGING_VERIFICATION_v1_0_20260829.md`, which records the completed convenience-assets staging gate: the checkpoint plus five compact H1-0015--H1-0019 evidence ZIPs are `6/6` exact staged-copy SHA-256 matches.
 
 Machine-readable static-QA and gate outputs are promoted under `../results/`. Authoritative compact runtime evidence archives are identified by SHA-256 under `../manifests/`; large raw arrays remain outside Git and are referenced by exact hashes rather than duplicated here.
