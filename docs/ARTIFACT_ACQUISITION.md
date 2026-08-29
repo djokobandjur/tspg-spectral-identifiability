@@ -52,11 +52,11 @@ These binaries are not duplicated inside the compact evidence archives and there
 | `TSPG_H1_0016_LEARNED_SEED42_AG2_320_FP64_TASK_GRADIENTS_v1_2.npy` | raw AG2 task gradients | M2--M5 | 387,317,888 | `2850c66d13dc45f48baa114f540e29c3ca75903db412ac8f93c048fdb8b930eb` |
 | `TSPG_H1_0016_LEARNED_SEED42_AG1_AG2_TASK_CROSSFOLD_DERIVED_v1_2.npz` | cross-fold derived binary | M2--M3 | 390,626,716 | `afe9a94d1c5c7f7f3d8986348b15c7513013c77969781d54d03c0f8154b4baea` |
 | `TSPG_H1_0019_LEARNED_SEED42_AP640_FP64_TASK_GRADIENTS_v1_0.npy` | raw AP gradients | M5 | 774,635,648 | `0398ec1949f7d5ad326902f438c554848b86325d352d73a67078473f7fba3145` |
-| `TSPG_H1_0019_FIT_ARM_BASES_TOP32_v1_0.npz` | pre-AP fit-arm bases | M5 | pending transfer verification | `8bfc5c8e4bc7c677a882974a61b4e66d540f230dbb75b690ffbfe42ea47fa4e3` |
+| `TSPG_H1_0019_FIT_ARM_BASES_TOP32_v1_0.npz` | pre-AP fit-arm bases | M5 | 154,928,108 | `8bfc5c8e4bc7c677a882974a61b4e66d540f230dbb75b690ffbfe42ea47fa4e3` |
 
 The H1-0011 size (`79,126,618` bytes) was recovered from the SHA-locked `raw_output` record in `TSPG_H1_0011_RESULT_v1_0_20260828.json` inside the authoritative H1-0011 runtime-evidence archive (archive SHA-256 `4463233f624be483f96d97fd1fd28932386da2e94c13a64f242c57a52a9b73cb`). This closes the metadata gap but does **not** replace transfer-time verification of the NPZ bytes themselves.
 
-The exact size remains unknown only for the H1-0019 fit-arm bases. It is intentionally left blank in the machine-readable manifest until the actual object is materialized and independently rehashed. No size inferred from array shapes or a regenerated NPZ is accepted as archival verification. SHA-256 remains the locked identity.
+The H1-0019 fit-arm-bases object was directly materialized and independently verified on 2026-08-29: size `154,928,108` bytes and SHA-256 `8bfc5c8e4bc7c677a882974a61b4e66d540f230dbb75b690ffbfe42ea47fa4e3`, matching the locked registry identity. The NPZ opens without pickle and contains exactly four FP64 matrices — `U320_AG1`, `U320_AG2`, `U640`, and `CONS640` — each with shape `(151296, 32)`. This closes the final unknown-size metadata gap; remaining pre-release transfer work concerns independent rehashing of the other standalone assets, not identification of this object.
 
 ## Already contained — do not upload twice
 
