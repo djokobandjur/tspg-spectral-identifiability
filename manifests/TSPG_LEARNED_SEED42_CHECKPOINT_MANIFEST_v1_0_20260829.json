@@ -1,0 +1,24 @@
+{
+  "schema": "TSPG_PUBLIC_CHECKPOINT_MANIFEST_v1",
+  "status": "VERIFIED_SOURCE_ARTIFACT_PENDING_ARCHIVAL_UPLOAD",
+  "created_date": "2026-08-29",
+  "study_role": "single development checkpoint used by the reported TSPG M1-M5 analyses",
+  "architecture": "ViT-B/16",
+  "dataset": "ImageNet-100",
+  "positional_encoding": "Learned",
+  "seed": 42,
+  "checkpoint_filename": "best_model.pth",
+  "size_bytes": 343559209,
+  "sha256": "7fcca75916c2d6f0f64aa5c381812ad3a305ba1a04672e9288f4251ab683c536",
+  "strict_load_status": "PASS",
+  "model_source": {
+    "public_repo_path": "code/model/full_scale_experiment.py",
+    "sha256": "83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf"
+  },
+  "archival_location": {
+    "status": "PENDING_ZENODO_ARCHIVAL_UPLOAD",
+    "doi": null,
+    "url": null
+  },
+  "redistribution_note": "The checkpoint is not stored in ordinary Git history. Its archival location will be frozen before release."
+}
