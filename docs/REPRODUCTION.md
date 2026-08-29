@@ -47,21 +47,52 @@ sha256sum TSPG_LEARNED_SEED42_best_model.pth
 
 The value must match the SHA-256 above exactly.
 
-## 4. Locked configs versus portable runtime paths
+## 4. Portable runtime staging
 
 Files under `../configs/` are retained as exact historical analysis configurations. Several therefore contain execution-time absolute paths and cache/user fields. **Do not edit those committed files in place.** They are provenance artifacts.
 
-For portable reproduction, make a runtime copy of the selected config and change only host-local interface fields such as:
+The public helper `../tools/prepare_runtime_root.py` creates derived runtime copies and a flat staging root while preserving the locked configs unchanged. It changes only host-local routing/cache fields plus the filename/SHA of compatibility manifests whose bytes necessarily change when local paths are substituted.
 
-- `model_source.path` -> local reconstructed/promoted `full_scale_experiment.py`;
-- `val_dir` -> local ImageNet-100 validation directory;
-- checkpoint-manifest path/identity -> local verified release checkpoint;
-- host-specific cache directories -> writable local cache directories;
-- known absolute artifact paths -> local artifact staging root where required.
+The complete external-input contract is machine-readable in:
 
-Scientific parameters, split identities, ranks, gates, tolerances, dtype choices, and locked metric values must remain unchanged.
+- `../manifests/TSPG_PORTABLE_RUNTIME_DEPENDENCIES_v1_0_20260829.json`.
 
-The M1--M5 runners already expose portable `--config`, `--root`, and `--output-dir` interfaces. H1-0016 and H1-0019 additionally separate prespecified gate/fit-lock stages from their full stages. A release helper that generates the path-only runtime overlay and staging root will be finalized and clean-environment tested before tagging.
+Before downloading large artifacts, the helper can be run in plan mode:
+
+```bash
+python tools/prepare_runtime_root.py \
+  --repo-root . \
+  --output-root ./tspg_runtime \
+  --plan-only
+```
+
+Plan mode validates the public split binding and M1--M5 config/runner interfaces, emits derived runtime-config copies, and reports every still-missing SHA-locked external input. It deliberately does **not** claim to verify the checkpoint, model source, or ImageNet directory.
+
+Materialization mode is fail-closed:
+
+```bash
+python tools/prepare_runtime_root.py \
+  --repo-root . \
+  --output-root ./tspg_runtime \
+  --model-source /path/to/full_scale_experiment.py \
+  --checkpoint /path/to/TSPG_LEARNED_SEED42_best_model.pth \
+  --imagenet-val /path/to/imagenet100/val \
+  --artifact-dir /path/to/extracted_tspg_archival_assets
+```
+
+It verifies the exact model-source SHA, checkpoint size/SHA, the `100`-class / `5000`-image ImageFolder contract, and every staged external artifact SHA before declaring the runtime root complete. External artifacts are symlinked by default; use `--stage-mode copy` for a self-contained staging directory.
+
+The helper writes `TSPG_PORTABLE_RUNTIME_PREPARATION_REPORT_v1.json`, recording:
+
+- locked-config and runner SHA-256 identities;
+- every derived runtime-config SHA-256;
+- every host-local field changed, including old and new values;
+- public-split and compatibility checkpoint-manifest identities;
+- staged and missing external artifacts.
+
+Scientific parameters, split sample identities, ranks, gates, tolerances, dtype choices, metric definitions, and locked result values are not changed by the helper.
+
+The M1--M5 runners expose `--config`, `--root`, and `--output-dir` interfaces. H1-0016 and H1-0019 additionally separate the prespecified `gate`/`fit_gate` stages from their full stages. End-to-end execution of this portable path is still required before release tagging.
 
 ## 5. Exact model source
 
@@ -73,7 +104,7 @@ An exact retained copy has been recovered and SHA-verified during release prepar
 
 ## 6. Large/derived artifacts
 
-See `ARTIFACT_ACQUISITION.md` and `../manifests/LARGE_ARTIFACTS_SHA256.csv`.
+See `ARTIFACT_ACQUISITION.md`, `../manifests/LARGE_ARTIFACTS_SHA256.csv`, and `../manifests/TSPG_PORTABLE_RUNTIME_DEPENDENCIES_v1_0_20260829.json`.
 
 Large raw gradients and geometry arrays are never identified by filename alone: the SHA-256 value is the identity. Some late-stage artifacts can be regenerated from earlier locked inputs with the promoted M1--M5 code; earlier expensive dependencies will be supplied in the archival package when reconstruction would otherwise require re-running the pre-M1 development chain.
 
@@ -85,6 +116,7 @@ A reproduction is accepted only after verifying the relevant identities in:
 - `../manifests/RUN_RESULTS_SHA256.txt`;
 - `../manifests/EVIDENCE_ARCHIVES_SHA256.txt`;
 - `../manifests/LARGE_ARTIFACTS_SHA256.csv`;
+- `../manifests/TSPG_PORTABLE_RUNTIME_DEPENDENCIES_v1_0_20260829.json`;
 - `../manifests/TSPG_LEARNED_SEED42_CHECKPOINT_MANIFEST_v1_0_20260829.json`.
 
 The final tagged release will add a release-level SHA-256 manifest over the frozen public tree and archival assets.
