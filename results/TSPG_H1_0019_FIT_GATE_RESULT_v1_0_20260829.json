@@ -1,0 +1,51 @@
+{
+  "schema": "TSPG_H1_0019_FIT_GATE_RESULT_v1_0",
+  "run_id": "TSPG-RUN-H1-0019",
+  "technical_status": "PASS",
+  "AP_task_gradients_computed": 0,
+  "pooled_rank": 640,
+  "pooled_rank_tol": 4.1741641608070537e-11,
+  "arm_orthonormality": {
+    "U320_AG1": 2.1094237467877974e-15,
+    "U320_AG2": 2.4424906541753444e-15,
+    "U640": 1.7763568394002505e-15,
+    "CONS640": 2.886579864025407e-15
+  },
+  "fit_energy_top32": {
+    "U320_AG1": {
+      "AG1_fraction_top32": 0.8062423549698094,
+      "AG2_fraction_top32": 0.14226587608715968
+    },
+    "U320_AG2": {
+      "AG1_fraction_top32": 0.169529540945841,
+      "AG2_fraction_top32": 0.740665704552413
+    },
+    "U640": {
+      "AG1_fraction_top32": 0.6454409791526372,
+      "AG2_fraction_top32": 0.5489059445547614
+    },
+    "CONS640": {
+      "AG1_fraction_top32": 0.5755265045930407,
+      "AG2_fraction_top32": 0.4708650005152247
+    }
+  },
+  "consensus_fold_swap_relative_fro": 0.0,
+  "AP_class_gate": {
+    "AP_unique_classes": 99,
+    "AP_intersection_AG1": 97,
+    "AP_intersection_AG2": 97,
+    "pass": true
+  },
+  "fit_lock": {
+    "filename": "TSPG_H1_0019_FIT_LOCK_DUAL_COEFFICIENTS_v1_0_20260829.npz",
+    "sha256": "9d8d7fa7649f21a24d980172791c350dfae73c768ba7ab48a0d98b85180a8390",
+    "size_bytes": 667162
+  },
+  "consensus_definition": {
+    "name": "SYMMETRIC_CROSS_ENERGY_SANDWICH",
+    "trace_normalize_folds": true,
+    "uses_B_or_GA_in_fit": false,
+    "tunable_hyperparameters": 0,
+    "fit_max_k": 32
+  }
+}
