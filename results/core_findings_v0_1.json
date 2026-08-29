@@ -1,0 +1,74 @@
+{
+  "schema": "TSPG_PUBLIC_CORE_FINDINGS_v0_1",
+  "scope": {
+    "model": "ViT-B/16",
+    "dataset": "ImageNet-100",
+    "positional_parameterization": "Learned",
+    "development_seed": 42,
+    "parameter_dimension": 151296,
+    "claim_scope": "single exhaustively instrumented case; no prevalence or universality claim"
+  },
+  "M1_search_conditioned_boundary": {
+    "baseline": {"delta4": 0.0252, "lambda4_over_lambda5": 1.026, "delta8": 0.0692, "lambda8_over_lambda9": 1.074},
+    "head": {"delta4": 0.7682, "lambda4_over_lambda5": 4.314, "delta8": 0.0399, "lambda8_over_lambda9": 1.042},
+    "tail": {"delta4": 0.5965, "lambda4_over_lambda5": 2.479, "delta8": 0.3004, "lambda8_over_lambda9": 1.429},
+    "combined": {"delta4": 0.0654, "lambda4_over_lambda5": 1.070, "delta8": 0.7903, "lambda8_over_lambda9": 4.768},
+    "evidence_archive": "TSPG_H1_0015_RUNTIME_EVIDENCE_v1_1_20260828.zip"
+  },
+  "M2_crossfold_orientation": {
+    "raw_span_overlap": 0.20369,
+    "random_span_reference": 0.002115,
+    "phi_1_to_2": 0.40736,
+    "phi_2_to_1": 0.42768,
+    "eta_task_k32_1_to_2": 0.40589,
+    "eta_task_k32_2_to_1": 0.43723,
+    "evidence_archive": "TSPG_H1_0016_RUNTIME_EVIDENCE_v1_2_20260829.zip"
+  },
+  "M3_denominator_selective_normalization": {
+    "delta_selection_task_range": [-0.313, -0.261],
+    "delta_selection_B_range": [0.327, 0.381],
+    "bbar_response_reduction_range_fold": [74.54, 405.70],
+    "interpretation": "B-normalized selection improves the B-normalized score while worsening pure held-out task transfer; the gain is denominator-selective.",
+    "evidence_archive": "TSPG_H1_0017_RUNTIME_EVIDENCE_v1_1_20260829.zip"
+  },
+  "M4_finite_sample_decoupling": {
+    "train_n_range": [100, 320],
+    "eta32_1_to_2": {"n100": 0.52972, "n320": 0.40589, "delta": -0.12383},
+    "eta32_2_to_1": {"n100": 0.56355, "n320": 0.43723, "delta": -0.12632},
+    "T32_gain_1_to_2": 0.0306804,
+    "U32_gain_1_to_2": 0.1373521,
+    "U_over_T_absolute_gain_ratio_1_to_2": 4.47687,
+    "T32_gain_2_to_1": 0.0349382,
+    "U32_gain_2_to_1": 0.1483948,
+    "U_over_T_absolute_gain_ratio_2_to_1": 4.24735,
+    "evidence_archive": "TSPG_H1_0018_RUNTIME_EVIDENCE_v1_0_20260829.zip"
+  },
+  "M5_matched_sample_consensus": {
+    "primary_k": [4, 8, 16, 32],
+    "U320_mean": {"4": 0.0440208, "8": 0.0700046, "16": 0.1053740, "32": 0.1463512},
+    "U640": {"4": 0.0601324, "8": 0.0917751, "16": 0.1382067, "32": 0.1843309},
+    "CONS640": {"4": 0.0656361, "8": 0.0927186, "16": 0.1292236, "32": 0.1865780},
+    "delta_sample": {"4": 0.0161116, "8": 0.0217704, "16": 0.0328326, "32": 0.0379796},
+    "delta_cons": {"4": 0.0055037, "8": 0.0009436, "16": -0.0089830, "32": 0.0022471},
+    "delta_curve": -0.0000721439,
+    "delta_curve_ci95": [-0.00230568, 0.00216562],
+    "pointwise_ci95": {
+      "4": [0.00273695, 0.00821501],
+      "8": [-0.00322213, 0.00469513],
+      "16": [-0.01383427, -0.00429662],
+      "32": [-0.00110166, 0.00581529]
+    },
+    "fit_energy_top32": {
+      "U640_AG1": 0.6454,
+      "U640_AG2": 0.5489,
+      "CONS640_AG1": 0.5755,
+      "CONS640_AG2": 0.4709
+    },
+    "bbar_CONS640_over_U640_primary_k": {"4": 1.0320, "8": 0.9979, "16": 0.9578, "32": 1.0195},
+    "AP_gradients_before_arm_lock": 0,
+    "no_alternate_consensus_after_AP": true,
+    "scientific_status": "CONSENSUS_NOT_ESTABLISHED_STOP_ESTIMATOR_SEARCH",
+    "evidence_archive": "TSPG_H1_0019_RUNTIME_EVIDENCE_v1_0_20260829.zip"
+  },
+  "note": "This compact file is a public index of manuscript-level numerical findings. Authoritative run evidence remains the SHA-256-identified runtime archives listed in manifests/EVIDENCE_ARCHIVES_SHA256.txt."
+}
