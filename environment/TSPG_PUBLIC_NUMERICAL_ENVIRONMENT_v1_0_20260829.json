@@ -1,0 +1,75 @@
+{
+  "schema": "TSPG_PUBLIC_NUMERICAL_ENVIRONMENT_v1",
+  "created_date": "2026-08-29",
+  "status": "SANITIZED_FROM_SHA_LOCKED_RUNTIME_EVIDENCE",
+  "scope": "Reference execution environment for the numerical path underlying the reported TSPG analyses",
+  "reference_stack": {
+    "platform": "Linux-4.18.0-477.27.1.el8_8.x86_64-x86_64-with-glibc2.39",
+    "python": {
+      "version": "3.12.3",
+      "compiler": "GCC 13.3.0"
+    },
+    "pytorch": {
+      "version": "2.8.0a0+5228986c39.nv25.06",
+      "default_dtype": "torch.float32",
+      "float32_matmul_precision": "high"
+    },
+    "cuda": {
+      "available": true,
+      "torch_cuda_version": "12.9",
+      "cudnn_version": 91002,
+      "gpu_count": 1,
+      "reference_gpu": {
+        "name": "NVIDIA H200",
+        "total_memory_bytes": 150393585664,
+        "compute_capability": "9.0"
+      }
+    },
+    "backend_settings": {
+      "cudnn_benchmark": false,
+      "cudnn_deterministic": false,
+      "allow_tf32_matmul": true,
+      "allow_tf32_cudnn": true,
+      "scaled_dot_product_attention": {
+        "flash_sdp_enabled": true,
+        "mem_efficient_sdp_enabled": true,
+        "math_sdp_enabled": true
+      }
+    }
+  },
+  "runtime_isolation": {
+    "per_user_cache_roots_were_used": true,
+    "public_requirement": "Use writable, process-safe cache directories for TorchInductor/Triton/XDG caches when the selected scripts require them; host-specific UID and absolute paths are intentionally not part of the public contract."
+  },
+  "source_evidence": [
+    {
+      "archive": "TSPG_P0_0001_RUNTIME_EVIDENCE_v1_0_20260827.zip",
+      "archive_sha256": "0f918d82b907ae8e452a34df7c418874f701ccd96b4d6476b2c78a7514abc1b7",
+      "authoritative_environment_record": "TSPG_NUMERICAL_MODE_LOCK_P0_0001_v1_1_UID_FIX_20260827.json",
+      "record_sha256": "e86ffbbd80c5e94c89d3ea0a80b8056e1017630a7fccde04d22c6f4000e9ebfd"
+    },
+    {
+      "archive": "TSPG_P0_0003_RUNTIME_EVIDENCE_v1_0_20260827.zip",
+      "archive_sha256": "3d89178eef1dfab98d2483aaa2f91f3ac5811db97ad5d249c7679a0e235d0846",
+      "authoritative_environment_record": "TSPG_NUMERICAL_MODE_LOCK_P0_0003_v1_0_20260827.json",
+      "record_sha256": "6781f5aa9243d32a74d80ea5073d07020b68bd169a6c6c18368b294733a79571"
+    }
+  ],
+  "sanitization": {
+    "omitted_fields": [
+      "host/container identifier",
+      "user/login name",
+      "UID",
+      "HOME",
+      "working-directory absolute paths",
+      "host-specific cache absolute paths"
+    ],
+    "scientific_values_changed": false,
+    "numerical_backend_values_changed": false
+  },
+  "reproduction_status": {
+    "reference_environment_captured": true,
+    "clean_environment_reproduction_test_completed": false,
+    "note": "The captured stack is authoritative provenance. A separate clean-environment verification must be completed before the first immutable release is tagged."
+  }
+}
