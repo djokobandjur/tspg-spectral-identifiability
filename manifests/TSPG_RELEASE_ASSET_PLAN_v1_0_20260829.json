@@ -76,9 +76,9 @@
       },
       {
         "filename": "TSPG_H1_0011_LEARNED_SEED42_COMPLEMENT_KRYLOV_BASIS_v1_0.npz",
-        "size_bytes": null,
+        "size_bytes": 79126618,
         "sha256": "4f948e96ec8c8ae911259f923b876864b6ffd83b1cf54669d7fdd00b90b88237",
-        "reason": "upstream M1 complement basis; exact size to be filled after transfer/materialization verification"
+        "reason": "upstream M1 complement basis; exact size recovered from the SHA-locked H1-0011 runtime result; transfer-time byte rehash remains required"
       },
       {
         "filename": "TSPG_H1_0015_LEARNED_SEED42_TAIL_RANK5_8_COMPLEMENT_KRYLOV_L4_v1_0.npz",
@@ -108,7 +108,7 @@
         "filename": "TSPG_H1_0019_FIT_ARM_BASES_TOP32_v1_0.npz",
         "size_bytes": null,
         "sha256": "8bfc5c8e4bc7c677a882974a61b4e66d540f230dbb75b690ffbfe42ea47fa4e3",
-        "reason": "pre-AP fit-arm basis lock; exact size to be filled after transfer/materialization verification"
+        "reason": "pre-AP fit-arm basis lock; exact size remains pending transfer/materialization verification"
       }
     ],
     "already_contained_no_standalone_duplicate_needed": [
@@ -135,8 +135,7 @@
     ]
   },
   "pre_release_blockers": [
-    "Promote exact model source code/model/full_scale_experiment.py with SHA-256 83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf.",
-    "Transfer/materialize every standalone Zenodo numeric asset and independently rehash it; fill the two currently unknown exact sizes.",
+    "Transfer/materialize every standalone Zenodo numeric asset and independently rehash it; the exact size remains unknown only for the H1-0019 fit-arm bases.",
     "Run the portable runtime helper in materialization mode and complete the clean-environment M1-M5 reproduction audit.",
     "Freeze the Git tree and generate the final release-level SHA-256 manifest.",
     "Create the versioned GitHub Release and attach the checkpoint plus compact evidence ZIPs.",
