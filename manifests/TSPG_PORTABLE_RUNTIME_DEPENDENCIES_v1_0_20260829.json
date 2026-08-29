@@ -8,7 +8,7 @@
       "filename": "full_scale_experiment.py",
       "public_path": "code/model/full_scale_experiment.py",
       "sha256": "83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf",
-      "status": "PENDING_EXACT_BYTE_PROMOTION"
+      "status": "PUBLIC_GIT_EXACT_BYTE_VERIFIED"
     },
     "checkpoint": {
       "release_asset_filename": "TSPG_LEARNED_SEED42_best_model.pth",
