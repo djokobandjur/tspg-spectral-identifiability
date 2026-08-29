@@ -1,7 +1,51 @@
 # Code
 
-This directory will contain the public implementations used to reproduce the reported TSPG spectral-identifiability analyses.
+This directory contains the exact final, non-superseded analysis code promoted for the reported TSPG M1--M5 results. The files are copied byte-for-byte from the SHA-locked execution starter packages used for the corresponding analyses; public SHA-256 values are recorded in `../manifests/CODE_SHA256.txt`.
 
-Only code that maps to manuscript evidence will be promoted here. Development-only and superseded implementations remain outside the public release unless needed to explain a scientific result.
+Development-only and superseded implementations are intentionally not promoted. The public repository is a reproducibility surface, not a dump of the internal project workspace.
 
-Each promoted script/module should be accompanied by a clear mapping to the corresponding run/config/result artifact in `docs/` or `manifests/`.
+## Shared operators
+
+- `TSPG_cross_family_pe_operator_v1_0_20260828.py` — common positional-parameter forward/gradient operator used across the reported analyses.
+- `TSPG_h1_0003_matrixfree_geometry_operator_v1_1_20260828.py` — matrix-free attention-geometry operator used by M1 and M5 dependencies.
+- `TSPG_h1_0007_dual_blocksolve_ridge_fraction_alibi_control_v1_1_20260828.py` — shared block/matvec and generalized-spectral utilities used by the final analysis path.
+
+## M1 — unrestricted quotient pathology / search-conditioned boundary
+
+- `TSPG_h1_0015_matched_rank_boundary_complement_fairness_v1_1_20260828.py`
+- `TSPG_run_h1_0015_matched_rank_boundary_complement_fairness_v1_1_20260828.py`
+- locked configuration: `../configs/TSPG_H1_0015_CONFIG_v1_1_20260828.json`
+- run card: `../run_cards/TSPG_RUN_CARD_H1_0015_LEARNED_MATCHED_RANK_BOUNDARY_COMPLEMENT_FAIRNESS_v1_1_20260828.md`
+
+## M2 — task-support restriction and cross-fold orientation
+
+- `TSPG_h1_0016_task_side_crossfold_preflight_v1_2_20260829.py`
+- `TSPG_run_h1_0016_task_side_crossfold_preflight_v1_2_20260829.py`
+- locked configuration: `../configs/TSPG_H1_0016_CONFIG_v1_2_20260829.json`
+- run card: `../run_cards/TSPG_RUN_CARD_H1_0016_LEARNED_AG1_AG2_TASK_SIDE_CROSSFOLD_PREFLIGHT_v1_2_20260829.md`
+
+## M3 — denominator-selective B-normalized cross-fit selection
+
+- `TSPG_h1_0017_offline_b_normalized_crossfit_v1_1_20260829.py`
+- `TSPG_run_h1_0017_offline_b_normalized_crossfit_v1_1_20260829.py`
+- `TSPG_H1_0017_STATIC_QA_v1_1_20260829.py`
+- locked configuration: `../configs/TSPG_H1_0017_CONFIG_v1_1_20260829.json`
+- run card: `../run_cards/TSPG_RUN_CARD_H1_0017_LEARNED_AG1_TO_AG2_OFFLINE_B_NORMALIZED_CROSSFIT_v1_1_20260829.md`
+
+## M4 — finite-sample support/orientation stability
+
+- `TSPG_h1_0018_dual_finite_sample_stability_v1_0_20260829.py`
+- `TSPG_run_h1_0018_finite_sample_stability_v1_0_20260829.py`
+- `TSPG_H1_0018_STATIC_QA_v1_0_20260829.py`
+- locked configuration: `../configs/TSPG_H1_0018_CONFIG_v1_0_20260829.json`
+- run card: `../run_cards/TSPG_RUN_CARD_H1_0018_LEARNED_SEED42_FINITE_SAMPLE_STABILITY_v1_0_20260829.md`
+
+## M5 — matched-sample third-fold consensus test
+
+- `TSPG_h1_0019_consensus_thirdfold_v1_0_20260829.py`
+- `TSPG_run_h1_0019_last_estimator_v1_0_20260829.py`
+- `TSPG_H1_0019_STATIC_QA_v1_0_20260829.py`
+- locked configuration: `../configs/TSPG_H1_0019_CONFIG_v1_0_20260829.json`
+- run card: `../run_cards/TSPG_RUN_CARD_H1_0019_LAST_ESTIMATOR_CONSENSUS_THIRDFOLD_v1_0_20260829.md`
+
+The manuscript-level M1--M5 mapping is maintained in `../docs/ARTIFACT_MAP.md`. Large raw arrays are not stored in Git; their identities are preserved through SHA-256 manifests and the versioned archival evidence release.
