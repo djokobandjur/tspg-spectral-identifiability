@@ -1,0 +1,73 @@
+{
+  "schema": "TSPG_PORTABLE_RUNTIME_DEPENDENCIES_v1",
+  "created_date": "2026-08-29",
+  "scope": "Inputs required to execute the promoted M1-M5 runners without relying on the original host filesystem",
+  "identity_rule": "SHA-256 is authoritative; filenames alone are insufficient",
+  "shared": {
+    "model_source": {
+      "filename": "full_scale_experiment.py",
+      "public_path": "code/model/full_scale_experiment.py",
+      "sha256": "83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf",
+      "status": "PENDING_EXACT_BYTE_PROMOTION"
+    },
+    "checkpoint": {
+      "release_asset_filename": "TSPG_LEARNED_SEED42_best_model.pth",
+      "original_filename": "best_model.pth",
+      "sha256": "7fcca75916c2d6f0f64aa5c381812ad3a305ba1a04672e9288f4251ab683c536",
+      "size_bytes": 343559209,
+      "status": "PENDING_GITHUB_RELEASE_ASSET"
+    },
+    "split": {
+      "locked_source_filename": "TSPG_SPLIT_MANIFEST_IN100_PILOT_v1_0_20260819.json",
+      "locked_source_sha256": "9488e109f43f23a1bdd1ebda771a707e2b4b1e6f535ce6227bf0705d1834d1af",
+      "public_semantic_copy": "manifests/TSPG_USED_ANALYSIS_SPLIT_INDICES_PUBLIC_v1_0_20260829.json",
+      "portable_runtime_rule": "A path-overlay may use the public semantic copy and record its runtime SHA while preserving the locked source SHA in provenance."
+    },
+    "dataset": {
+      "name": "ImageNet-100 validation ImageFolder",
+      "expected_classes": 100,
+      "expected_images": 5000,
+      "redistributed": false
+    }
+  },
+  "run_dependencies": {
+    "M1_H1_0015": [
+      {"filename":"TSPG_H1_0010_LEARNED_SEED42_QR_TASK320_EXACT_GEOMETRY_v1_1.npz","sha256":"08f23a6c0d87a58ed49c9f4bda841105f7d45eb848d18f30aa498eb42fb31074","role":"task_span_geometry","availability":"ARCHIVAL_REQUIRED"},
+      {"filename":"TSPG_H1_0011_LEARNED_SEED42_COMPLEMENT_KRYLOV_BASIS_v1_0.npz","sha256":"4f948e96ec8c8ae911259f923b876864b6ffd83b1cf54669d7fdd00b90b88237","role":"head_complement_geometry","availability":"ARCHIVAL_REQUIRED"}
+    ],
+    "M2_H1_0016": [
+      {"filename":"TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_v1_0.npy","sha256":"d02d8a31465912e7239164e965428162fa5f64f09082d5d0a158f6585b439009","role":"AG1_task_gradients","availability":"ARCHIVAL_REQUIRED"},
+      {"filename":"TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_METADATA_v1_0.json","sha256":"720cca9169e7f78641ee875686337085d99ed2c432b61768fc4dce1e71437cc5","role":"AG1_gradient_metadata","availability":"ARCHIVAL_CONTROL"},
+      {"filename":"TSPG_H1_0010_LEARNED_SEED42_QR_TASK320_EXACT_GEOMETRY_v1_1.npz","sha256":"08f23a6c0d87a58ed49c9f4bda841105f7d45eb848d18f30aa498eb42fb31074","role":"AG1_task_basis_geometry","availability":"ARCHIVAL_REQUIRED"},
+      {"filename":"TSPG_H1_0010_RESULT_v1_1_20260828.json","sha256":"5ef3d77cc5b3ad9a0e71ed5405499c479be91459009c53c573816ee7712cc32f","role":"H1_0010_result_contract","availability":"ARCHIVAL_CONTROL"}
+    ],
+    "M3_H1_0017": [
+      {"filename":"TSPG_H1_0010_LEARNED_SEED42_QR_TASK320_EXACT_GEOMETRY_v1_1.npz","sha256":"08f23a6c0d87a58ed49c9f4bda841105f7d45eb848d18f30aa498eb42fb31074","role":"H1_0010_geometry","availability":"ARCHIVAL_REQUIRED"},
+      {"filename":"TSPG_H1_0016_LEARNED_SEED42_AG1_AG2_TASK_CROSSFOLD_DERIVED_v1_2.npz","sha256":"afe9a94d1c5c7f7f3d8986348b15c7513013c77969781d54d03c0f8154b4baea","role":"H1_0016_crossfold_derived","availability":"GENERATED_BY_M2_OR_ARCHIVAL"}
+    ],
+    "M4_H1_0018": [
+      {"filename":"TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_v1_0.npy","sha256":"d02d8a31465912e7239164e965428162fa5f64f09082d5d0a158f6585b439009","role":"AG1_task_gradients","availability":"ARCHIVAL_REQUIRED"},
+      {"filename":"TSPG_H1_0016_LEARNED_SEED42_AG2_320_FP64_TASK_GRADIENTS_v1_2.npy","sha256":"2850c66d13dc45f48baa114f540e29c3ca75903db412ac8f93c048fdb8b930eb","role":"AG2_task_gradients","availability":"GENERATED_BY_M2_OR_ARCHIVAL"},
+      {"filename":"TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_METADATA_v1_0.json","sha256":"720cca9169e7f78641ee875686337085d99ed2c432b61768fc4dce1e71437cc5","role":"AG1_gradient_metadata","availability":"ARCHIVAL_CONTROL"},
+      {"filename":"TSPG_H1_0016_RESULT_v1_2_20260829.json","sha256":"6ea3ed7d85fddaff6e60a0d6c40974f84c13106f67c3508360c0ed37862e4428","role":"H1_0016_result_contract","availability":"ARCHIVAL_CONTROL"},
+      {"filename":"TSPG_H1_0016_GATE_RESULT_v1_2_20260829.json","sha256":"97e6e20baa6aa3130385c6c91d5f5d4179925e2f54a48da7bc7eed3c4c656759","role":"H1_0016_gate_contract","availability":"PUBLIC_GIT_EXACT_OR_ARCHIVAL"}
+    ],
+    "M5_H1_0019": [
+      {"filename":"TSPG_H1_0018_DUAL_GRAMS_RESAMPLES_AND_CURVES_v1_0.npz","sha256":"228705665d79f4d917c7706059413dbb78a35795ed629a23bab69ac82c3b3855","role":"H1_0018_dual_fit_input","availability":"GENERATED_BY_M4_OR_ARCHIVAL"},
+      {"filename":"TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_v1_0.npy","sha256":"d02d8a31465912e7239164e965428162fa5f64f09082d5d0a158f6585b439009","role":"AG1_task_gradients","availability":"ARCHIVAL_REQUIRED"},
+      {"filename":"TSPG_H1_0016_LEARNED_SEED42_AG2_320_FP64_TASK_GRADIENTS_v1_2.npy","sha256":"2850c66d13dc45f48baa114f540e29c3ca75903db412ac8f93c048fdb8b930eb","role":"AG2_task_gradients","availability":"GENERATED_BY_M2_OR_ARCHIVAL"},
+      {"filename":"TSPG_H1_0018_RESULT_v1_0_20260829.json","sha256":"c6828d72e918a8f88be8fd9b254f4c2695163e7a84e9db18dac0225bc6f876b8","role":"H1_0018_forecast_contract","availability":"ARCHIVAL_CONTROL"}
+    ]
+  },
+  "generated_late_stage_outputs": [
+    {"filename":"TSPG_H1_0015_LEARNED_SEED42_TAIL_RANK5_8_COMPLEMENT_KRYLOV_L4_v1_0.npz","sha256":"7d78e8584d265ff3a041ce84055720106a1fa49a09e7acc31be38482208e2279","producer":"M1_H1_0015"},
+    {"filename":"TSPG_H1_0016_LEARNED_SEED42_AG2_320_FP64_TASK_GRADIENTS_v1_2.npy","sha256":"2850c66d13dc45f48baa114f540e29c3ca75903db412ac8f93c048fdb8b930eb","producer":"M2_H1_0016"},
+    {"filename":"TSPG_H1_0016_LEARNED_SEED42_AG1_AG2_TASK_CROSSFOLD_DERIVED_v1_2.npz","sha256":"afe9a94d1c5c7f7f3d8986348b15c7513013c77969781d54d03c0f8154b4baea","producer":"M2_H1_0016"},
+    {"filename":"TSPG_H1_0017_LEARNED_SEED42_AG1_TO_AG2_B_NORMALIZED_CROSSFIT_DERIVED_v1_1.npz","sha256":"6cdc0f467d7ed974be2fae4be2e973f97a403a2dc6a3e61bf32d6ba5adcc2415","producer":"M3_H1_0017"},
+    {"filename":"TSPG_H1_0018_DUAL_GRAMS_RESAMPLES_AND_CURVES_v1_0.npz","sha256":"228705665d79f4d917c7706059413dbb78a35795ed629a23bab69ac82c3b3855","producer":"M4_H1_0018"},
+    {"filename":"TSPG_H1_0019_FIT_LOCK_DUAL_COEFFICIENTS_v1_0_20260829.npz","sha256":"9d8d7fa7649f21a24d980172791c350dfae73c768ba7ab48a0d98b85180a8390","producer":"M5_H1_0019_fit_gate"},
+    {"filename":"TSPG_H1_0019_AP_PER_EXAMPLE_CAPTURE_v1_0.npz","sha256":"e285e695b3214b282b709ad9c9bdefc1f3f37d3a97d736c131847a5a44f51cd5","producer":"M5_H1_0019_full"},
+    {"filename":"TSPG_H1_0019_LEARNED_SEED42_AP640_FP64_TASK_GRADIENTS_v1_0.npy","sha256":"0398ec1949f7d5ad326902f438c554848b86325d352d73a67078473f7fba3145","producer":"M5_H1_0019_full"},
+    {"filename":"TSPG_H1_0019_FIT_ARM_BASES_TOP32_v1_0.npz","sha256":"8bfc5c8e4bc7c677a882974a61b4e66d540f230dbb75b690ffbfe42ea47fa4e3","producer":"M5_H1_0019_fit_gate"}
+  ]
+}
