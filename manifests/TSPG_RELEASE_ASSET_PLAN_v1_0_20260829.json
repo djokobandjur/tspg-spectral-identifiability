@@ -1,0 +1,145 @@
+{
+  "schema": "TSPG_RELEASE_ASSET_PLAN_v1",
+  "created_date": "2026-08-29",
+  "status": "PRE_RELEASE_LOCKED_PLAN_LOCATIONS_PENDING_UPLOAD",
+  "principles": {
+    "ordinary_git": "UTF-8 source/config/result/audit/provenance files only; no checkpoint or large NPY/NPZ/ZIP payloads",
+    "github_release": "Convenience distribution surface for the single study checkpoint and compact runtime-evidence archives",
+    "zenodo": "Persistent DOI-bearing archival surface for the complete immutable non-Git evidence set; checkpoint is duplicated here so the DOI record is self-contained",
+    "restricted_data": "ImageNet source images are never redistributed"
+  },
+  "github_release_assets": [
+    {
+      "filename": "TSPG_LEARNED_SEED42_best_model.pth",
+      "role": "single checkpoint used by M1-M5",
+      "size_bytes": 343559209,
+      "sha256": "7fcca75916c2d6f0f64aa5c381812ad3a305ba1a04672e9288f4251ab683c536",
+      "status": "PENDING_UPLOAD"
+    },
+    {
+      "filename": "TSPG_H1_0015_RUNTIME_EVIDENCE_v1_1_20260828.zip",
+      "role": "authoritative compact M1 runtime evidence",
+      "size_bytes": 24682,
+      "sha256": "8125067b17eee2abe61bf9a3519366d371b2c751e7a481a87b3de0c32ce11c71",
+      "status": "PENDING_UPLOAD"
+    },
+    {
+      "filename": "TSPG_H1_0016_RUNTIME_EVIDENCE_v1_2_20260829.zip",
+      "role": "authoritative compact M2 runtime evidence",
+      "size_bytes": 144501,
+      "sha256": "0d7c6acfe8e38826fbb36322f30f187f9442d4ea42253e9463328d004062e022",
+      "status": "PENDING_UPLOAD"
+    },
+    {
+      "filename": "TSPG_H1_0017_RUNTIME_EVIDENCE_v1_1_20260829.zip",
+      "role": "authoritative compact M3 runtime evidence; contains the H1-0017 derived NPZ",
+      "size_bytes": 2522591,
+      "sha256": "5fff014e258c2bac92cc61f13ea559ba6cae67b41487d35141f4e00306ee1ae4",
+      "status": "PENDING_UPLOAD"
+    },
+    {
+      "filename": "TSPG_H1_0018_RUNTIME_EVIDENCE_v1_0_20260829.zip",
+      "role": "authoritative compact M4 runtime evidence; contains the H1-0018 dual-Gram/resample NPZ",
+      "size_bytes": 2936547,
+      "sha256": "2ab57eeb8c27f229f37ceec1233033cf6c3061dce8943d526cf597f2ede7e567",
+      "status": "PENDING_UPLOAD"
+    },
+    {
+      "filename": "TSPG_H1_0019_RUNTIME_EVIDENCE_v1_0_20260829.zip",
+      "role": "authoritative compact M5 runtime evidence; contains fit-lock, AP-capture, and H1-0018 dual inputs",
+      "size_bytes": 4072637,
+      "sha256": "f9eaadb43d0054a7d90714f2305b3e34fe3d47eaa34513659e4aed5ab09e62da",
+      "status": "PENDING_UPLOAD"
+    }
+  ],
+  "zenodo_assets": {
+    "duplicate_from_github_release": [
+      "TSPG_LEARNED_SEED42_best_model.pth",
+      "TSPG_H1_0015_RUNTIME_EVIDENCE_v1_1_20260828.zip",
+      "TSPG_H1_0016_RUNTIME_EVIDENCE_v1_2_20260829.zip",
+      "TSPG_H1_0017_RUNTIME_EVIDENCE_v1_1_20260829.zip",
+      "TSPG_H1_0018_RUNTIME_EVIDENCE_v1_0_20260829.zip",
+      "TSPG_H1_0019_RUNTIME_EVIDENCE_v1_0_20260829.zip"
+    ],
+    "standalone_large_numeric_assets": [
+      {
+        "filename": "TSPG_H1_0007_LEARNED_SEED42_AG1_320_FP64_TASK_GRADIENTS_v1_0.npy",
+        "size_bytes": 387317888,
+        "sha256": "d02d8a31465912e7239164e965428162fa5f64f09082d5d0a158f6585b439009",
+        "reason": "upstream raw AG1 dependency not contained in compact evidence"
+      },
+      {
+        "filename": "TSPG_H1_0010_LEARNED_SEED42_QR_TASK320_EXACT_GEOMETRY_v1_1.npz",
+        "size_bytes": 776283320,
+        "sha256": "08f23a6c0d87a58ed49c9f4bda841105f7d45eb848d18f30aa498eb42fb31074",
+        "reason": "upstream exact task-span geometry required by M1-M3"
+      },
+      {
+        "filename": "TSPG_H1_0011_LEARNED_SEED42_COMPLEMENT_KRYLOV_BASIS_v1_0.npz",
+        "size_bytes": null,
+        "sha256": "4f948e96ec8c8ae911259f923b876864b6ffd83b1cf54669d7fdd00b90b88237",
+        "reason": "upstream M1 complement basis; exact size to be filled after transfer/materialization verification"
+      },
+      {
+        "filename": "TSPG_H1_0015_LEARNED_SEED42_TAIL_RANK5_8_COMPLEMENT_KRYLOV_L4_v1_0.npz",
+        "size_bytes": 232412532,
+        "sha256": "7d78e8584d265ff3a041ce84055720106a1fa49a09e7acc31be38482208e2279",
+        "reason": "M1 raw output excluded from compact evidence because of size; retained for byte-level audit"
+      },
+      {
+        "filename": "TSPG_H1_0016_LEARNED_SEED42_AG2_320_FP64_TASK_GRADIENTS_v1_2.npy",
+        "size_bytes": 387317888,
+        "sha256": "2850c66d13dc45f48baa114f540e29c3ca75903db412ac8f93c048fdb8b930eb",
+        "reason": "raw AG2 gradients; expensive M2 output and M4-M5 dependency"
+      },
+      {
+        "filename": "TSPG_H1_0016_LEARNED_SEED42_AG1_AG2_TASK_CROSSFOLD_DERIVED_v1_2.npz",
+        "size_bytes": 390626716,
+        "sha256": "afe9a94d1c5c7f7f3d8986348b15c7513013c77969781d54d03c0f8154b4baea",
+        "reason": "M2 derived cross-fold binary required directly by M3 and not contained in compact M2 evidence"
+      },
+      {
+        "filename": "TSPG_H1_0019_LEARNED_SEED42_AP640_FP64_TASK_GRADIENTS_v1_0.npy",
+        "size_bytes": 774635648,
+        "sha256": "0398ec1949f7d5ad326902f438c554848b86325d352d73a67078473f7fba3145",
+        "reason": "raw AP gradients generated only after the prespecified fit lock; expensive M5 evidence"
+      },
+      {
+        "filename": "TSPG_H1_0019_FIT_ARM_BASES_TOP32_v1_0.npz",
+        "size_bytes": null,
+        "sha256": "8bfc5c8e4bc7c677a882974a61b4e66d540f230dbb75b690ffbfe42ea47fa4e3",
+        "reason": "pre-AP fit-arm basis lock; exact size to be filled after transfer/materialization verification"
+      }
+    ],
+    "already_contained_no_standalone_duplicate_needed": [
+      {
+        "filename": "TSPG_H1_0017_LEARNED_SEED42_AG1_TO_AG2_B_NORMALIZED_CROSSFIT_DERIVED_v1_1.npz",
+        "sha256": "6cdc0f467d7ed974be2fae4be2e973f97a403a2dc6a3e61bf32d6ba5adcc2415",
+        "container": "TSPG_H1_0017_RUNTIME_EVIDENCE_v1_1_20260829.zip"
+      },
+      {
+        "filename": "TSPG_H1_0018_DUAL_GRAMS_RESAMPLES_AND_CURVES_v1_0.npz",
+        "sha256": "228705665d79f4d917c7706059413dbb78a35795ed629a23bab69ac82c3b3855",
+        "container": "TSPG_H1_0018_RUNTIME_EVIDENCE_v1_0_20260829.zip"
+      },
+      {
+        "filename": "TSPG_H1_0019_FIT_LOCK_DUAL_COEFFICIENTS_v1_0_20260829.npz",
+        "sha256": "9d8d7fa7649f21a24d980172791c350dfae73c768ba7ab48a0d98b85180a8390",
+        "container": "TSPG_H1_0019_RUNTIME_EVIDENCE_v1_0_20260829.zip"
+      },
+      {
+        "filename": "TSPG_H1_0019_AP_PER_EXAMPLE_CAPTURE_v1_0.npz",
+        "sha256": "e285e695b3214b282b709ad9c9bdefc1f3f37d3a97d736c131847a5a44f51cd5",
+        "container": "TSPG_H1_0019_RUNTIME_EVIDENCE_v1_0_20260829.zip"
+      }
+    ]
+  },
+  "pre_release_blockers": [
+    "Promote exact model source code/model/full_scale_experiment.py with SHA-256 83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf.",
+    "Transfer/materialize every standalone Zenodo numeric asset and independently rehash it; fill the two currently unknown exact sizes.",
+    "Run the portable runtime helper in materialization mode and complete the clean-environment M1-M5 reproduction audit.",
+    "Freeze the Git tree and generate the final release-level SHA-256 manifest.",
+    "Create the versioned GitHub Release and attach the checkpoint plus compact evidence ZIPs.",
+    "Create the matching Zenodo record containing the complete non-Git asset set and then update release URLs/DOI in the public manifests and CITATION.cff."
+  ]
+}
