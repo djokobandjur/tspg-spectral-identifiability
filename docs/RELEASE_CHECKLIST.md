@@ -12,7 +12,8 @@ The first GitHub/Zenodo release should not be tagged until all items below are c
 - [ ] Clean-environment reproduction instructions tested
 - [ ] Public release SHA-256 manifest generated
 - [ ] Code/data licensing selected and documented
-- [ ] `CITATION.cff` updated with release version and Zenodo DOI
+- [ ] Verify that no manuscript PDF/TEX/source, submission package, cover letter, reviewer/editor material, or internal manuscript-governance artifact is present in the GitHub/Zenodo release
+- [ ] `CITATION.cff` updated with release version and Zenodo DOI for the reproducibility package
 - [ ] GitHub release tagged
 - [ ] Zenodo archive minted from the same immutable GitHub release
-- [ ] Data Availability and Code Availability statements updated with the persistent DOI
+- [ ] Data Availability and Code Availability statements updated with the persistent reproducibility-package DOI
