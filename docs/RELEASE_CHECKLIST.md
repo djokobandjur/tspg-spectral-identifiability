@@ -28,8 +28,8 @@ The first GitHub/Zenodo release should not be tagged or published until all appl
 - [x] Verified Learned seed-42 checkpoint attached to the versioned GitHub Release
 - [x] Five compact H1-0015--H1-0019 evidence ZIPs attached to the versioned GitHub Release; public GitHub API verification is 6/6 exact size + SHA-256 PASS after correction of the initially mis-selected H1-0016 ZIP
 - [x] Zenodo record published, registering version DOI `10.5281/zenodo.22180107` (all-versions DOI `10.5281/zenodo.22180106`)
-- [ ] Published GitHub/Zenodo assets reverified against the locked identities — GitHub 6/6 PASS; independent post-publication Zenodo retrieval/checksum verification still pending
-- [ ] Data Availability and Code Availability statements updated with the persistent reproducibility-package DOI
+- [x] Published GitHub/Zenodo assets reverified against the locked identities — GitHub `6/6` exact size + SHA-256 PASS and Zenodo `14/14` independently downloaded exact SHA-256 PASS (`audits/TSPG_ZENODO_POSTPUBLICATION_REMOTE_SHA256_VERIFICATION_v1_0_20260831.md`)
+- [ ] Data Availability and Code Availability statements updated with the persistent reproducibility-package DOI — external manuscript/editorial action; not a public-release integrity blocker and intentionally outside the public repository content boundary
 
 ## Current verification notes
 
@@ -37,4 +37,8 @@ The final public content tree is bound by `manifests/TSPG_PUBLIC_RELEASE_TREE_SH
 
 Before Zenodo publication, an H1-0016 ZIP with the correct filename but wrong bytes (`169389` bytes; SHA-256 `4622a6dcc17f212b95959744b248c47b0e49ea4c28cddc49959397785f7931e4`) was detected on the GitHub release. It was replaced by the authoritative archive (`144501` bytes; SHA-256 `0d7c6acfe8e38826fbb36322f30f187f9442d4ea42253e9463328d004062e022`). The unpublished Zenodo draft was corrected before publication; the corrected entry displayed MD5 `324b13e35f384c851657b4e583668d92`. See `audits/TSPG_PUBLICATION_AND_GITHUB_RELEASE_VERIFICATION_v1_0_20260831.md`.
 
-The Zenodo record is now public as version `1.0.0`. For exact release pinning, use version DOI `10.5281/zenodo.22180107`; Zenodo's all-versions DOI is `10.5281/zenodo.22180106`. Independent post-publication retrieval and checksum verification of all 14 Zenodo files remains the final archive-integrity gate before the release verification checklist can be fully closed.
+The Zenodo record is public as version `1.0.0`. For exact release pinning, use version DOI `10.5281/zenodo.22180107`; Zenodo's all-versions DOI is `10.5281/zenodo.22180106`.
+
+Independent post-publication retrieval of the complete Zenodo payload is now complete: all 14 published objects were downloaded from their public Zenodo content endpoints, all 14 independently computed SHA-256 values match the locked release identities, all downloaded byte counts match, all downloaded MD5 values match Zenodo's exposed checksums, and the aggregate downloaded byte count is exactly `3,535,908,885`. The final Zenodo gate is `PASS_REMOTE_SHA256_14_OF_14`.
+
+Therefore the public `v1.0.0` GitHub/Zenodo release-integrity gate is fully closed. The remaining unchecked availability-statement item is a manuscript/editorial follow-up outside the public repository and does not affect the released binary or provenance boundary.
