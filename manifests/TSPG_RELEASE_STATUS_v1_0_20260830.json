@@ -13,7 +13,7 @@
     "transfer_to_usb_integrity": "PASS_14_OF_14_SHA256_BEFORE_UPLOAD",
     "zenodo_ui_completion": "14_OF_14_FILES_AT_100_PERCENT_WITH_SIZE_AND_MD5_DISPLAYED",
     "remote_sha256_post_publication_verification": "PENDING",
-    "note": "The Zenodo record remains a saved draft. File publication and DOI registration are intentionally deferred until the final Git tree is frozen and the coordinated release steps are complete."
+    "note": "The Zenodo record remains a saved draft. File publication and DOI registration are intentionally deferred until the coordinated GitHub release gate is complete."
   },
   "github_release": {
     "status": "PENDING",
@@ -22,15 +22,22 @@
     "asset_plan": "TSPG_RELEASE_ASSET_PLAN_v1_0_20260829.json"
   },
   "git_freeze": {
-    "status": "PENDING_FINAL_RELEASE_TREE_SHA256_MANIFEST",
+    "status": "PASS_FINAL_CONTENT_TREE_MANIFEST_VERIFIED_AND_PROMOTED",
+    "content_commit": "535eb0e7efc6e983b042d63fa420859a3391e618",
+    "tracked_file_count": 92,
+    "tracked_total_bytes": 489666,
+    "tree_manifest": "TSPG_PUBLIC_RELEASE_TREE_SHA256_v1_0_20260830.txt",
+    "tree_manifest_sha256": "d39ed8cf39c419a7e26ac676a091a8457705de6a833f72fa6a1908a3a34d53fe",
+    "freeze_report": "../audits/TSPG_PUBLIC_RELEASE_FINAL_FREEZE_REPORT_v1_0_20260830.json",
+    "verification_audit": "../audits/TSPG_PUBLIC_RELEASE_FINAL_FREEZE_VERIFICATION_v1_0_20260830.md",
     "pre_freeze_candidate_commit": "43f1a67578ec658220f73df4eb84569a25fb9430",
     "pre_freeze_candidate_manifest_sha256": "6af4f12371926a0f4d92182407f8b242c8ab3052e19078c681993c4e23f757f3",
-    "note": "The earlier candidate predates DOI/release-metadata updates and is not the final release manifest."
+    "note": "The final tree manifest binds the complete pre-envelope public content tree. It is carried by the successor release-manifest commit together with the freeze report and verification audit."
   },
   "citation_metadata": {
     "status": "UPDATED_WITH_VERSION_AND_RESERVED_DOI",
     "version": "1.0.0",
     "doi": "10.5281/zenodo.22180107"
   },
-  "publication_gate": "DO_NOT_PUBLISH_ZENODO_OR_TAG_GITHUB_UNTIL_FINAL_FROZEN_TREE_MANIFEST_PASSES"
+  "publication_gate": "FINAL_TREE_MANIFEST_PASS; NEXT_CREATE_GITHUB_V1_0_0_RELEASE_AND_ATTACH_6_ASSETS_THEN_PUBLISH_ZENODO"
 }

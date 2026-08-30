@@ -1,0 +1,34 @@
+{
+  "schema": "TSPG_PUBLIC_RELEASE_FINAL_FREEZE_REPORT_v1",
+  "date": "2026-08-30",
+  "status": "PASS_FINAL_CONTENT_FREEZE_CANDIDATE",
+  "release_version": "1.0.0",
+  "reserved_zenodo_doi": "10.5281/zenodo.22180107",
+  "repository": "djokobandjur/tspg-spectral-identifiability",
+  "content_commit": "535eb0e7efc6e983b042d63fa420859a3391e618",
+  "git_status_clean": true,
+  "tracked_file_count": 92,
+  "tracked_total_bytes": 489666,
+  "release_boundary": {
+    "forbidden_tracked_path_count": 0,
+    "manuscript_pdf_tex_absent": true,
+    "ordinary_git_binary_payload_absent": true,
+    "submission_review_material_path_absent": true
+  },
+  "release_metadata": {
+    "citation_version_doi_pass": true,
+    "zenodo_saved_draft_pass": true,
+    "zenodo_file_count": 14,
+    "non_git_asset_count": 14,
+    "non_git_total_bytes": 3535908885,
+    "non_git_sha_manifest_crosscheck_pass": true
+  },
+  "tree_manifest": {
+    "filename": "TSPG_PUBLIC_RELEASE_TREE_SHA256_v1_0_20260830.txt",
+    "sha256": "d39ed8cf39c419a7e26ac676a091a8457705de6a833f72fa6a1908a3a34d53fe",
+    "entry_count": 92,
+    "scope": "ALL_GIT_TRACKED_REGULAR_FILES_AT_CONTENT_COMMIT",
+    "content_commit": "535eb0e7efc6e983b042d63fa420859a3391e618",
+    "self_reference_policy": "The manifest is external to the hashed content tree. After independent verification it may be promoted in a successor release-manifest commit; it does not hash itself."
+  }
+}
