@@ -14,9 +14,11 @@ The study examines finite-sample spectral identifiability of task-sensitive para
 
 ## Repository status
 
-**Release preparation in progress.** The M1--M5 analysis code/config/result/audit layer is publicly promoted and SHA-bound. A sanitized reference environment and large-artifact acquisition policy are now published. The release is not yet immutable: the exact checkpoint model-definition source must still be promoted byte-for-byte, a portable runtime overlay must be clean-environment tested, and archival assets must be attached before tagging.
+**Release candidate `v1.0.0` is in final archival preparation.** The exact checkpoint model source, M1--M5 analysis code/config/result/audit layer, portable-runtime materialization, sequential clean-environment M1--M5 reproduction, and exact dependency capture have all passed their public verification gates. The complete 14-file non-Git payload has been SHA-verified before upload and is present in the saved Zenodo draft at 100% completion for all files.
 
-Track the remaining blockers in `docs/RELEASE_CHECKLIST.md`.
+Zenodo DOI `10.5281/zenodo.22180107` is reserved for this release but is not registered/public until the draft is published. Remaining gates are the final frozen-tree SHA-256 manifest, the versioned GitHub Release with its six convenience assets, Zenodo publication, and post-publication asset verification.
+
+Track the remaining blockers in `docs/RELEASE_CHECKLIST.md`; the current machine-readable release state is `manifests/TSPG_RELEASE_STATUS_v1_0_20260830.json`.
 
 ## Structure
 
@@ -51,7 +53,7 @@ All reported M1--M5 analyses use one instrumented checkpoint: ViT-B/16, Learned 
 - size: 343,559,209 bytes
 - SHA-256: `7fcca75916c2d6f0f64aa5c381812ad3a305ba1a04672e9288f4251ab683c536`
 
-Because the checkpoint exceeds ordinary GitHub Git-history file limits, it is not committed to the repository tree. The verified checkpoint will instead be attached directly to the first versioned **GitHub Release**, eliminating any dependency on a separate Google Drive/shared-folder download. The corresponding immutable release will also be archived through Zenodo for persistent DOI citation.
+Because the checkpoint exceeds ordinary GitHub Git-history file limits, it is not committed to the repository tree. The SHA-verified checkpoint is already present in the saved Zenodo draft and will also be attached directly to the versioned **GitHub Release**, eliminating any dependency on a separate Google Drive/shared-folder download.
 
 ## License
 
@@ -66,4 +68,7 @@ Corresponding author: Đoko Banđur (`djoko.bandjur@pr.ac.rs`)
 
 ## Citation
 
-A versioned citation record and Zenodo DOI will be added with the first archival release. The archival DOI will identify the reproducibility package, not a copy of the manuscript.
+Release version: `1.0.0`  
+Reserved Zenodo DOI: `10.5281/zenodo.22180107`
+
+The DOI identifies the reproducibility package, not a copy of the manuscript. It becomes the registered public archival DOI when the saved Zenodo record is published. See `CITATION.cff` for the versioned citation metadata.
