@@ -1,0 +1,36 @@
+{
+  "schema": "TSPG_RELEASE_STATUS_v1",
+  "date": "2026-08-30",
+  "release_version": "1.0.0",
+  "reserved_zenodo_doi": "10.5281/zenodo.22180107",
+  "zenodo_draft": {
+    "status": "UPLOAD_COMPLETE_AWAITING_PUBLICATION",
+    "expected_file_count": 14,
+    "observed_completed_file_count": 14,
+    "total_payload_bytes": 3535908885,
+    "ui_total_display": "3.54 GB",
+    "source_staging_integrity": "PASS_14_OF_14_SHA256_BEFORE_UPLOAD",
+    "transfer_to_usb_integrity": "PASS_14_OF_14_SHA256_BEFORE_UPLOAD",
+    "zenodo_ui_completion": "14_OF_14_FILES_AT_100_PERCENT_WITH_SIZE_AND_MD5_DISPLAYED",
+    "remote_sha256_post_publication_verification": "PENDING",
+    "note": "The Zenodo record remains a saved draft. File publication and DOI registration are intentionally deferred until the final Git tree is frozen and the coordinated release steps are complete."
+  },
+  "github_release": {
+    "status": "PENDING",
+    "planned_tag": "v1.0.0",
+    "planned_asset_count": 6,
+    "asset_plan": "TSPG_RELEASE_ASSET_PLAN_v1_0_20260829.json"
+  },
+  "git_freeze": {
+    "status": "PENDING_FINAL_RELEASE_TREE_SHA256_MANIFEST",
+    "pre_freeze_candidate_commit": "43f1a67578ec658220f73df4eb84569a25fb9430",
+    "pre_freeze_candidate_manifest_sha256": "6af4f12371926a0f4d92182407f8b242c8ab3052e19078c681993c4e23f757f3",
+    "note": "The earlier candidate predates DOI/release-metadata updates and is not the final release manifest."
+  },
+  "citation_metadata": {
+    "status": "UPDATED_WITH_VERSION_AND_RESERVED_DOI",
+    "version": "1.0.0",
+    "doi": "10.5281/zenodo.22180107"
+  },
+  "publication_gate": "DO_NOT_PUBLISH_ZENODO_OR_TAG_GITHUB_UNTIL_FINAL_FROZEN_TREE_MANIFEST_PASSES"
+}
