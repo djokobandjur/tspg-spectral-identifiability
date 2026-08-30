@@ -1,0 +1,102 @@
+{
+  "schema": "TSPG_CLEAN_EXECUTION_DIRECT_DEPENDENCY_LOCK_v1",
+  "date": "2026-08-30",
+  "status": "CAPTURED_FROM_SUCCESSFUL_M1_M5_CLEAN_EXECUTION",
+  "successful_clean_execution_commit": "53c7ff9dc8afcc7ff782a6d2f340d8e183acbcf4",
+  "scan_scope": {
+    "python_files_scanned": 18,
+    "roots": [
+      "code/**/*.py",
+      "tools/prepare_runtime_root.py"
+    ]
+  },
+  "external_import_modules": [
+    "matplotlib",
+    "numpy",
+    "scipy",
+    "sklearn",
+    "torch",
+    "torchvision",
+    "tqdm"
+  ],
+  "module_to_distribution_resolution": {
+    "matplotlib": [
+      {
+        "distribution": "matplotlib",
+        "version": "3.10.3"
+      }
+    ],
+    "numpy": [
+      {
+        "distribution": "numpy",
+        "version": "1.26.4"
+      }
+    ],
+    "scipy": [
+      {
+        "distribution": "scipy",
+        "version": "1.15.3"
+      }
+    ],
+    "sklearn": [
+      {
+        "distribution": "scikit-learn",
+        "version": "1.6.1"
+      }
+    ],
+    "torch": [
+      {
+        "distribution": "torch",
+        "version": "2.8.0a0+5228986c39.nv25.6"
+      }
+    ],
+    "torchvision": [
+      {
+        "distribution": "torchvision",
+        "version": "0.22.0a0+95f10a4e"
+      }
+    ],
+    "tqdm": [
+      {
+        "distribution": "tqdm",
+        "version": "4.67.1"
+      }
+    ]
+  },
+  "exact_direct_distribution_versions": {
+    "matplotlib": "3.10.3",
+    "numpy": "1.26.4",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.15.3",
+    "torch": "2.8.0a0+5228986c39.nv25.6",
+    "torchvision": "0.22.0a0+95f10a4e",
+    "tqdm": "4.67.1"
+  },
+  "pytorch_reference_identity": {
+    "version": "2.8.0a0+5228986c39.nv25.06",
+    "cuda": "12.9",
+    "cudnn": 91002,
+    "cuda_available": true
+  },
+  "python_reference_identity": {
+    "version": "3.12.3",
+    "implementation": "CPython"
+  },
+  "platform_reference": {
+    "system": "Linux",
+    "machine": "x86_64",
+    "libc": [
+      "glibc",
+      "2.39"
+    ]
+  },
+  "environment_notes": {
+    "passwd_resolution_status": "CURRENT_UID_NOT_PRESENT_IN_PASSWD",
+    "torchvision_import_policy": "DO_NOT_IMPORT_FOR_VERSION_CAPTURE; distribution version obtained via importlib.metadata because direct torchvision import in this container raises getpwuid()/passwd-resolution error"
+  },
+  "lock_policy": {
+    "torch": "Reference identity only; custom NVIDIA PyTorch build is not converted into a generic PyPI reinstall requirement.",
+    "torchvision": "Version captured through installed distribution metadata; no torchvision module import is required.",
+    "host_local_paths_usernames_hostnames": "OMITTED"
+  }
+}
