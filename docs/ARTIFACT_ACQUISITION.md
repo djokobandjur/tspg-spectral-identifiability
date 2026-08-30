@@ -4,8 +4,9 @@ This document defines how non-Git artifacts enter the public TSPG reproducibilit
 
 Machine-readable sources:
 
-- `../manifests/LARGE_ARTIFACTS_SHA256.csv` — binary identities and current public-location state;
-- `../manifests/TSPG_RELEASE_ASSET_PLAN_v1_0_20260829.json` — first-release distribution plan;
+- `../manifests/LARGE_ARTIFACTS_SHA256.csv` — binary identities and public-location state;
+- `../manifests/TSPG_RELEASE_ASSET_PLAN_v1_0_20260829.json` — locked first-release distribution plan;
+- `../manifests/TSPG_RELEASE_STATUS_v1_0_20260830.json` — current release/DOI/upload state;
 - `../manifests/TSPG_PORTABLE_RUNTIME_DEPENDENCIES_v1_0_20260829.json` — external inputs needed by the portable M1--M5 runtime path.
 
 ## Distribution boundary
@@ -13,9 +14,11 @@ Machine-readable sources:
 The first immutable release uses two coordinated surfaces:
 
 1. **GitHub Release** — convenient download surface for the single Learned seed-42 checkpoint plus the five compact H1-0015--H1-0019 runtime-evidence ZIPs.
-2. **Zenodo** — DOI-bearing self-contained archival record containing those same six convenience assets **plus** the standalone large numerical binaries that are not already contained in the compact evidence ZIPs.
+2. **Zenodo** — DOI-bearing self-contained archival record containing those same six convenience assets **plus** the eight standalone large numerical binaries that are not already contained in the compact evidence ZIPs.
 
 This deliberately removes mutable Google Drive/shared-folder links from the permanent checkpoint/evidence chain. Ordinary Git history remains limited to source/config/result/audit/provenance files.
+
+Release `1.0.0` has reserved Zenodo DOI `10.5281/zenodo.22180107`. The saved Zenodo draft contains all 14 planned non-Git files; publication remains intentionally pending until the final Git freeze and coordinated release gates close.
 
 ## Checkpoint
 
@@ -23,11 +26,11 @@ This deliberately removes mutable Google Drive/shared-folder links from the perm
 |---|---|---|---|
 | `TSPG_LEARNED_SEED42_best_model.pth` | M1--M5 | GitHub Release asset **and** duplicate Zenodo archival asset | size `343559209` bytes; SHA-256 `7fcca75916c2d6f0f64aa5c381812ad3a305ba1a04672e9288f4251ab683c536` |
 
-The checkpoint is intentionally excluded from ordinary Git history because of its size. A user may download it directly from the versioned GitHub Release; the Zenodo copy makes the DOI-bearing reproducibility record self-contained.
+The checkpoint is intentionally excluded from ordinary Git history because of its size. Its SHA-verified copy is already present in the saved Zenodo draft and will also be attached to the versioned GitHub Release.
 
 ## Compact runtime evidence
 
-The following authoritative archives will be attached to the versioned GitHub Release and duplicated in the Zenodo record:
+The following authoritative archives are already present in the saved Zenodo draft and will also be attached to the versioned GitHub Release:
 
 | Archive | Size (bytes) | SHA-256 |
 |---|---:|---|
@@ -41,7 +44,7 @@ The archives are the authoritative run-evidence layer. Their internal result/con
 
 ## Standalone Zenodo numerical assets
 
-These binaries are not duplicated inside the compact evidence archives and therefore require explicit archival upload:
+These binaries are not duplicated inside the compact evidence archives and therefore are explicit Zenodo archival files:
 
 | Artifact | Role | Supports | Verified size | SHA-256 |
 |---|---|---|---:|---|
@@ -54,15 +57,18 @@ These binaries are not duplicated inside the compact evidence archives and there
 | `TSPG_H1_0019_LEARNED_SEED42_AP640_FP64_TASK_GRADIENTS_v1_0.npy` | raw AP gradients | M5 | 774,635,648 | `0398ec1949f7d5ad326902f438c554848b86325d352d73a67078473f7fba3145` |
 | `TSPG_H1_0019_FIT_ARM_BASES_TOP32_v1_0.npz` | pre-AP fit-arm bases | M5 | 154,928,108 | `8bfc5c8e4bc7c677a882974a61b4e66d540f230dbb75b690ffbfe42ea47fa4e3` |
 
-## Source-byte verification completed
+## Integrity verification completed before upload
 
-On 2026-08-29, all eight standalone objects were checked against the locked identities above. Seven retained source objects were streamed through SHA-256 directly on the FMLE source host; each returned the exact expected byte count and SHA-256. The H1-0019 fit-arm-bases object was transferred separately and independently rehashed after transfer. The result is `8/8 PASS`, recorded in `../audits/TSPG_STANDALONE_LARGE_ARTIFACT_SOURCE_BYTE_VERIFICATION_v1_0_20260829.md`.
+All eight standalone source objects were checked against the locked identities above; the source-byte gate is `8/8 PASS` in `../audits/TSPG_STANDALONE_LARGE_ARTIFACT_SOURCE_BYTE_VERIFICATION_v1_0_20260829.md`.
 
-This closes the identity-discovery/source-byte-verification gate, including the earlier H1-0011 metadata gap. There are no unknown standalone asset sizes and no observed SHA mismatch. Host-local absolute paths are intentionally not part of the public archival contract.
+Release staging was then completed and independently rehashed:
 
-The H1-0019 fit-arm-bases NPZ additionally opens without pickle and contains exactly four FP64 matrices — `U320_AG1`, `U320_AG2`, `U640`, and `CONS640` — each with shape `(151296, 32)`.
+- standalone numerical payload: `8/8 PASS` in `../audits/TSPG_ZENODO_STANDALONE_STAGING_SHA_VERIFICATION_v1_0_20260829.md`;
+- convenience payload: `6/6 PASS` in `../audits/TSPG_CONVENIENCE_ASSETS_STAGING_VERIFICATION_v1_0_20260829.md`.
 
-The next integrity boundary is release staging: the exact verified objects still need to be copied to the release-upload workspace and every staged copy must be rehashed before GitHub Release/Zenodo upload. Source-host verification is not a substitute for staged-copy verification.
+The consolidated 14-file upload folder was again SHA-256 checked after FMLE-to-removable-storage transfer; all 14 copies matched the locked identities. The saved Zenodo draft subsequently showed all 14 files at 100% with concrete sizes and Zenodo MD5 values. See `../audits/TSPG_ZENODO_DRAFT_UPLOAD_AND_RESERVED_DOI_v1_0_20260830.md`.
+
+Zenodo's displayed MD5 values are an upload-completion signal, not a replacement for the authoritative SHA-256 identities. Post-publication retrieval/checksum verification remains pending.
 
 ## Already contained — do not upload twice
 
@@ -87,4 +93,4 @@ For every downloaded, staged, or regenerated binary, calculate SHA-256 and compa
 
 ## Release state
 
-All standalone numerical identities are now source-byte verified. URLs/DOI fields remain pending until the exact verified assets are staged and rehashed, the clean-environment reproduction gate is completed, the Git tree is frozen, the versioned GitHub Release is created, and the matching Zenodo deposit is minted. Only then should the manifests and `CITATION.cff` be updated with permanent release locations.
+Source-byte verification, release staging, clean-environment M1--M5 reproduction, dependency capture, DOI reservation, and Zenodo draft upload are complete. The current blocker is the final frozen Git tree and release-level SHA-256 manifest. After that gate passes, the coordinated `v1.0.0` GitHub Release can be tagged/asset-populated and the saved Zenodo draft can be published. Published assets must then be reverified before the availability statements are closed.
