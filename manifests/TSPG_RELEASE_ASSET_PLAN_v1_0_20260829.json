@@ -71,6 +71,19 @@
     "audit": "audits/TSPG_CONVENIENCE_ASSETS_STAGING_VERIFICATION_v1_0_20260829.md",
     "note": "The verified checkpoint plus five compact runtime-evidence ZIPs are staged and all six staged-copy SHA-256 values match their locked release identities. Upload remains pending."
   },
+  "clean_environment_verification": {
+    "execution_commit": "53c7ff9dc8afcc7ff782a6d2f340d8e183acbcf4",
+    "portable_materialization": "PASS",
+    "end_to_end_reproduction": "PASS_END_TO_END_M1_M5_EXACT_SCIENTIFIC_NUMERICAL_REPRODUCTION",
+    "dependency_lock": "PASS_EXACT_NON_PYTORCH_DEPENDENCY_LOCK_CAPTURED_AND_PROMOTED",
+    "dependency_checksum_manifest": "manifests/TSPG_CLEAN_EXECUTION_DEPENDENCY_CAPTURE_SHA256_v1_0_20260830.txt",
+    "audits": [
+      "audits/TSPG_CLEAN_ENVIRONMENT_PORTABLE_MATERIALIZATION_v1_0_20260829.md",
+      "audits/TSPG_CLEAN_ENVIRONMENT_M1_M5_END_TO_END_REPRODUCTION_v1_0_20260830.md",
+      "audits/TSPG_CLEAN_EXECUTION_DEPENDENCY_LOCK_VERIFICATION_v1_0_20260830.md"
+    ],
+    "note": "The clean-environment execution and dependency-capture gates are complete. The next release gate is the frozen-tree release-level SHA-256 manifest."
+  },
   "zenodo_assets": {
     "duplicate_from_github_release": [
       "TSPG_LEARNED_SEED42_best_model.pth",
@@ -174,8 +187,7 @@
     ]
   },
   "pre_release_blockers": [
-    "Run the portable runtime helper in materialization mode and complete the clean-environment M1-M5 reproduction audit.",
-    "Freeze the Git tree and generate the final release-level SHA-256 manifest.",
+    "Freeze the Git tree, repeat the manuscript-exclusion scan on the frozen tree, and generate the final release-level SHA-256 manifest.",
     "Create the versioned GitHub Release and attach the checkpoint plus compact evidence ZIPs.",
     "Create the matching Zenodo record containing the complete non-Git asset set and then update release URLs/DOI in the public manifests and CITATION.cff."
   ]
