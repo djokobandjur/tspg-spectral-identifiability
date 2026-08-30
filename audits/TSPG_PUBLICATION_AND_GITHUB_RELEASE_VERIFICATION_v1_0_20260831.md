@@ -5,11 +5,11 @@
 **GitHub release-manifest commit:** `2292cb17afb105572a9ac86de5ff33419033b073`  
 **Zenodo version DOI:** `10.5281/zenodo.22180107`  
 **Zenodo all-versions DOI:** `10.5281/zenodo.22180106`  
-**Status:** `PASS_GITHUB_RELEASE_6_OF_6_EXACT_AND_ZENODO_PUBLICATION_CONFIRMED_REMOTE_ZENODO_SHA_PENDING`
+**Status:** `PASS_GITHUB_RELEASE_6_OF_6_EXACT_AND_ZENODO_REMOTE_SHA256_14_OF_14`
 
 ## Scope
 
-This audit records publication of the coordinated `v1.0.0` GitHub/Zenodo reproducibility release after the final public-tree freeze. It distinguishes three separate gates: GitHub release/tag publication, byte-level verification of the six GitHub convenience assets, and publication of the Zenodo archival record. Independent post-publication byte retrieval of all 14 Zenodo files remains a separate pending gate.
+This audit records publication of the coordinated `v1.0.0` GitHub/Zenodo reproducibility release after the final public-tree freeze. It distinguishes the GitHub release/tag publication gate, byte-level verification of the six GitHub convenience assets, Zenodo archival publication, and independent post-publication retrieval of the complete 14-file Zenodo payload. All four gates are now closed.
 
 ## GitHub release
 
@@ -36,7 +36,7 @@ The first H1-0016 ZIP selected from the removable-storage release folder had the
 
 The authoritative H1-0016 archive was then independently identified and checked as `144501` bytes with SHA-256 `0d7c6acfe8e38826fbb36322f30f187f9442d4ea42253e9463328d004062e022`; its ZIP integrity check passed. The incorrect GitHub release asset was deleted and replaced. The public GitHub API subsequently reported the exact locked size and SHA-256 above.
 
-The still-unpublished Zenodo draft was corrected in the same way before publication. The corrected H1-0016 entry displayed `144.50 KB`, 100% completion, and MD5 `324b13e35f384c851657b4e583668d92`, matching the independently checked authoritative archive. Therefore the incorrect H1-0016 byte object was not intentionally carried into the published Zenodo version.
+The still-unpublished Zenodo draft was corrected in the same way before publication. The corrected H1-0016 entry displayed `144.50 KB`, 100% completion, and MD5 `324b13e35f384c851657b4e583668d92`, matching the independently checked authoritative archive. Therefore the incorrect H1-0016 byte object was not carried into the published Zenodo version.
 
 ## Zenodo publication
 
@@ -52,6 +52,21 @@ The saved Zenodo draft was published after the H1-0016 correction. The public re
 
 The version-specific DOI remains the release-pinning DOI used by `CITATION.cff`. The all-versions DOI is Zenodo's concept DOI for resolving to the latest version and does not replace the version DOI in the exact `v1.0.0` provenance boundary.
 
-## Remaining verification gate
+## Post-publication Zenodo byte verification
 
-The GitHub release asset gate is closed at `6/6 exact size + SHA-256 PASS`. Zenodo publication is confirmed. Independent post-publication retrieval and checksum verification of the complete 14-file Zenodo payload remains pending; the authoritative expected SHA-256 values remain those in the public release manifests and pre-upload staging audits.
+Independent public retrieval of all 14 Zenodo objects completed on 2026-08-31. The remote metadata gate passed for record ID, DOI, version, exact 14-file set, every per-file size, and aggregate size `3,535,908,885` bytes. Every published object was then downloaded and independently hashed.
+
+Result: `14/14` downloaded SHA-256 values match the locked release identities exactly, every downloaded byte count matches the expected size, every downloaded MD5 matches the checksum exposed by Zenodo, and the aggregate downloaded byte count is exactly `3,535,908,885` bytes. The final gate is `PASS_REMOTE_SHA256_14_OF_14`.
+
+The detailed per-file verification is recorded in `TSPG_ZENODO_POSTPUBLICATION_REMOTE_SHA256_VERIFICATION_v1_0_20260831.md`.
+
+## Closeout
+
+The public release-integrity boundary is closed:
+
+- GitHub release/tag: PASS;
+- GitHub planned convenience assets: `6/6` exact size + SHA-256 PASS;
+- Zenodo publication: PASS;
+- Zenodo public remote payload: `14/14` exact SHA-256 PASS.
+
+No further binary correction, replacement, or publication action is required for the `v1.0.0` release payload.
