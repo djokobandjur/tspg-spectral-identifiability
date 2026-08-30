@@ -21,30 +21,20 @@ The first GitHub/Zenodo release should not be tagged or published until all appl
 - [x] Code/repository licensing selected and documented: MIT
 - [x] Verify that no manuscript PDF/TEX/source, submission package, cover letter, reviewer/editor material, or internal manuscript-governance artifact is present in the GitHub working tree
 - [x] Zenodo DOI reserved for release `1.0.0`: `10.5281/zenodo.22180107`
-- [x] `CITATION.cff` updated with release version `1.0.0` and reserved Zenodo DOI
-- [x] Complete 14-file non-Git evidence set uploaded to the saved Zenodo draft; all 14 entries reached 100% with concrete size/checksum display (`audits/TSPG_ZENODO_DRAFT_UPLOAD_AND_RESERVED_DOI_v1_0_20260830.md`)
-- [x] Public release SHA-256 manifest generated and verified after the final metadata tree was frozen: content commit `535eb0e7efc6e983b042d63fa420859a3391e618`, 92 tracked files, manifest SHA-256 `d39ed8cf39c419a7e26ac676a091a8457705de6a833f72fa6a1908a3a34d53fe` (`manifests/TSPG_PUBLIC_RELEASE_TREE_SHA256_v1_0_20260830.txt`; `audits/TSPG_PUBLIC_RELEASE_FINAL_FREEZE_VERIFICATION_v1_0_20260830.md`)
-- [ ] GitHub release `v1.0.0` tagged
-- [ ] Verified Learned seed-42 checkpoint attached to the versioned GitHub Release
-- [ ] Five compact H1-0015--H1-0019 evidence ZIPs attached to the versioned GitHub Release
-- [ ] Saved Zenodo draft published, registering DOI `10.5281/zenodo.22180107`
-- [ ] Published GitHub/Zenodo assets reverified against the locked identities
+- [x] `CITATION.cff` updated with release version `1.0.0` and version DOI
+- [x] Complete 14-file non-Git evidence set uploaded to the saved Zenodo draft
+- [x] Public release SHA-256 manifest generated and verified after the final metadata tree was frozen: content commit `535eb0e7efc6e983b042d63fa420859a3391e618`, 92 tracked files, manifest SHA-256 `d39ed8cf39c419a7e26ac676a091a8457705de6a833f72fa6a1908a3a34d53fe`
+- [x] GitHub release `v1.0.0` tagged at release-manifest commit `2292cb17afb105572a9ac86de5ff33419033b073`
+- [x] Verified Learned seed-42 checkpoint attached to the versioned GitHub Release
+- [x] Five compact H1-0015--H1-0019 evidence ZIPs attached to the versioned GitHub Release; public GitHub API verification is 6/6 exact size + SHA-256 PASS after correction of the initially mis-selected H1-0016 ZIP
+- [x] Zenodo record published, registering version DOI `10.5281/zenodo.22180107` (all-versions DOI `10.5281/zenodo.22180106`)
+- [ ] Published GitHub/Zenodo assets reverified against the locked identities — GitHub 6/6 PASS; independent post-publication Zenodo retrieval/checksum verification still pending
 - [ ] Data Availability and Code Availability statements updated with the persistent reproducibility-package DOI
 
 ## Current verification notes
 
-The exact checkpoint model source and the exact non-superseded M1--M5 analysis code are SHA-bound by `manifests/CODE_SHA256.txt`; exact primary result identities are recorded in `manifests/RUN_RESULTS_SHA256.txt`; runtime evidence archives are recorded in `manifests/EVIDENCE_ARCHIVES_SHA256.txt`; and the M1--M5 public numerical mapping is complete in `docs/ARTIFACT_MAP.md`.
+The final public content tree is bound by `manifests/TSPG_PUBLIC_RELEASE_TREE_SHA256_v1_0_20260830.txt` and the associated freeze audits. GitHub release `v1.0.0` targets `2292cb17afb105572a9ac86de5ff33419033b073` and its six planned convenience assets have been independently checked against the locked public SHA-256 identities.
 
-The exact model-definition source is public at `code/model/full_scale_experiment.py`: 66,351 bytes, SHA-256 `83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf`. The sanitized reference numerical environment and the exact clean-execution dependency capture are public under `environment/` and `manifests/`.
+Before Zenodo publication, an H1-0016 ZIP with the correct filename but wrong bytes (`169389` bytes; SHA-256 `4622a6dcc17f212b95959744b248c47b0e49ea4c28cddc49959397785f7931e4`) was detected on the GitHub release. It was replaced by the authoritative archive (`144501` bytes; SHA-256 `0d7c6acfe8e38826fbb36322f30f187f9442d4ea42253e9463328d004062e022`). The unpublished Zenodo draft was corrected before publication; the corrected entry displayed MD5 `324b13e35f384c851657b4e583668d92`. See `audits/TSPG_PUBLICATION_AND_GITHUB_RELEASE_VERIFICATION_v1_0_20260831.md`.
 
-The fresh clean environment completed portable materialization followed by M1, M2 gate/full, M3, M4, and M5 fit gate/full. Every scientific/numerical field compared against authoritative evidence reproduced exactly; eleven checked generated numerical/runtime artifacts reproduced their authoritative SHA-256 identities. The end-to-end gate is closed by `audits/TSPG_CLEAN_ENVIRONMENT_M1_M5_END_TO_END_REPRODUCTION_v1_0_20260830.md`.
-
-The non-Git release payload is exactly 14 files totaling 3,535,908,885 bytes: the checkpoint, five compact evidence ZIPs, and eight standalone numerical objects. Source/staging copies were SHA-verified before upload; the consolidated payload was again SHA-verified 14/14 after FMLE-to-removable-storage transfer. The saved Zenodo draft contains all 14 files at 100% completion. This closes the draft-upload/file-presence gate but not post-publication remote SHA verification.
-
-`CITATION.cff` records release version `1.0.0`, date `2026-08-30`, and reserved DOI `10.5281/zenodo.22180107`. The DOI remains reserved until the Zenodo draft is published.
-
-The final fresh-clone content freeze passed at commit `535eb0e7efc6e983b042d63fa420859a3391e618`: 92 tracked regular files totaling 489,666 bytes, zero forbidden tracked paths, correct release/DOI metadata, and successful 14-file non-Git SHA-manifest cross-check. The promoted tree manifest has SHA-256 `d39ed8cf39c419a7e26ac676a091a8457705de6a833f72fa6a1908a3a34d53fe`. The manifest intentionally binds the pre-envelope content commit and does not hash itself; it is carried with the freeze report and verification audit in the successor release-manifest commit that is the intended `v1.0.0` tag target.
-
-A previous 90-file pre-freeze candidate at commit `43f1a67578ec658220f73df4eb84569a25fb9430` and manifest SHA-256 `6af4f12371926a0f4d92182407f8b242c8ab3052e19078c681993c4e23f757f3` is superseded and must not be used for release verification.
-
-The next coordinated release gate is to create/tag GitHub release `v1.0.0` at the release-manifest commit and attach the six SHA-locked convenience assets. Zenodo publication remains deferred until that GitHub release gate is complete.
+The Zenodo record is now public as version `1.0.0`. For exact release pinning, use version DOI `10.5281/zenodo.22180107`; Zenodo's all-versions DOI is `10.5281/zenodo.22180106`. Independent post-publication retrieval and checksum verification of all 14 Zenodo files remains the final archive-integrity gate before the release verification checklist can be fully closed.
