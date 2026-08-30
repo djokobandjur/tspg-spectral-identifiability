@@ -5,11 +5,13 @@
   "zenodo_version_doi": "10.5281/zenodo.22180107",
   "zenodo_all_versions_doi": "10.5281/zenodo.22180106",
   "zenodo_record": {
-    "status": "PUBLISHED",
+    "status": "PUBLISHED_AND_VERIFIED_14_OF_14_EXACT",
     "publication_date": "2026-08-30",
     "expected_file_count": 14,
     "published_file_count_prepublication_verified": 14,
+    "postpublication_verified_file_count": 14,
     "total_payload_bytes": 3535908885,
+    "postpublication_downloaded_total_bytes": 3535908885,
     "source_staging_integrity": "PASS_14_OF_14_SHA256_BEFORE_UPLOAD",
     "transfer_to_usb_integrity": "PASS_14_OF_14_SHA256_AT_INITIAL_TRANSFER_CHECK; H1-0016 WAS LATER OVERWRITTEN LOCALLY AND CORRECTED BEFORE ZENODO PUBLICATION",
     "h1_0016_prepublication_correction": {
@@ -20,8 +22,11 @@
       "authoritative_md5_displayed_by_zenodo_before_publish": "324b13e35f384c851657b4e583668d92",
       "status": "CORRECTED_BEFORE_PUBLICATION"
     },
-    "remote_sha256_post_publication_verification": "PENDING",
-    "audit": "../audits/TSPG_PUBLICATION_AND_GITHUB_RELEASE_VERIFICATION_v1_0_20260831.md"
+    "remote_sha256_post_publication_verification": "PASS_REMOTE_SHA256_14_OF_14",
+    "remote_md5_post_publication_verification": "PASS_14_OF_14_MATCH_ZENODO_CHECKSUMS",
+    "verification_transcript_sha256": "43832d6ca402d8aa19988f3b21c8fb1581679e2860c3ffaa5db592043ccaf8d6",
+    "audit": "../audits/TSPG_PUBLICATION_AND_GITHUB_RELEASE_VERIFICATION_v1_0_20260831.md",
+    "remote_verification_audit": "../audits/TSPG_ZENODO_POSTPUBLICATION_REMOTE_SHA256_VERIFICATION_v1_0_20260831.md"
   },
   "github_release": {
     "status": "PUBLISHED_AND_VERIFIED_6_OF_6_EXACT",
@@ -49,5 +54,5 @@
     "doi": "10.5281/zenodo.22180107",
     "doi_policy": "Use the version DOI for the exact v1.0.0 reproducibility boundary; the Zenodo all-versions DOI is 10.5281/zenodo.22180106."
   },
-  "publication_gate": "PUBLICATION_COMPLETE; NEXT_POSTPUBLICATION_ZENODO_REMOTE_CHECKSUM_VERIFICATION_AND_AVAILABILITY_STATEMENTS"
+  "publication_gate": "PASS_PUBLIC_RELEASE_V1_0_0_COMPLETE; GITHUB_6_OF_6_SHA256_PASS; ZENODO_14_OF_14_REMOTE_SHA256_PASS"
 }
