@@ -1,7 +1,9 @@
 {
   "schema": "TSPG_RELEASE_ASSET_PLAN_v1",
   "created_date": "2026-08-29",
-  "status": "PRE_RELEASE_LOCKED_PLAN_LOCATIONS_PENDING_UPLOAD",
+  "status": "PRE_RELEASE_LOCKED_PLAN_ZENODO_DRAFT_UPLOADED_GITHUB_PENDING",
+  "release_version": "1.0.0",
+  "reserved_zenodo_doi": "10.5281/zenodo.22180107",
   "principles": {
     "ordinary_git": "UTF-8 source/config/result/audit/provenance files only; no checkpoint or large NPY/NPZ/ZIP payloads",
     "github_release": "Convenience distribution surface for the single study checkpoint and compact runtime-evidence archives",
@@ -69,7 +71,7 @@
       "sha256": "a384f56c58ff2ccb320e84ffab40f5ebdc080e14e10b1fa9434bbb9b1887734e"
     },
     "audit": "audits/TSPG_CONVENIENCE_ASSETS_STAGING_VERIFICATION_v1_0_20260829.md",
-    "note": "The verified checkpoint plus five compact runtime-evidence ZIPs are staged and all six staged-copy SHA-256 values match their locked release identities. Upload remains pending."
+    "note": "The verified checkpoint plus five compact runtime-evidence ZIPs are staged and all six staged-copy SHA-256 values match their locked release identities. Their Zenodo draft copies are uploaded; GitHub Release attachment remains pending."
   },
   "clean_environment_verification": {
     "execution_commit": "53c7ff9dc8afcc7ff782a6d2f340d8e183acbcf4",
@@ -163,6 +165,15 @@
       "audit": "audits/TSPG_ZENODO_STANDALONE_STAGING_SHA_VERIFICATION_v1_0_20260829.md",
       "note": "All eight standalone payload files were staged and their staged-copy SHA-256 values match the locked identities. The host-local stage directory is preserved only in the private manifest and sanitized from the public semantic copy."
     },
+    "draft_upload_verification": {
+      "status": "PASS_14_OF_14_UI_COMPLETE_AWAITING_PUBLICATION",
+      "date": "2026-08-30",
+      "reserved_doi": "10.5281/zenodo.22180107",
+      "total_payload_bytes": 3535908885,
+      "completed_file_count": 14,
+      "audit": "audits/TSPG_ZENODO_DRAFT_UPLOAD_AND_RESERVED_DOI_v1_0_20260830.md",
+      "note": "All 14 planned files are present in the saved Zenodo draft at 100% with concrete size and Zenodo MD5 display. Locked SHA-256 identities were verified before upload; post-publication remote verification remains pending."
+    },
     "already_contained_no_standalone_duplicate_needed": [
       {
         "filename": "TSPG_H1_0017_LEARNED_SEED42_AG1_TO_AG2_B_NORMALIZED_CROSSFIT_DERIVED_v1_1.npz",
@@ -189,6 +200,6 @@
   "pre_release_blockers": [
     "Freeze the Git tree, repeat the manuscript-exclusion scan on the frozen tree, and generate the final release-level SHA-256 manifest.",
     "Create the versioned GitHub Release and attach the checkpoint plus compact evidence ZIPs.",
-    "Create the matching Zenodo record containing the complete non-Git asset set and then update release URLs/DOI in the public manifests and CITATION.cff."
+    "Publish the saved Zenodo draft for DOI 10.5281/zenodo.22180107 and verify the published archival assets against their locked identities."
   ]
 }
