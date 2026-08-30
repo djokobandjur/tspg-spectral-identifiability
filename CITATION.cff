@@ -1,8 +1,11 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite the associated manuscript and the archived release DOI once available."
+message: "If you use this reproducibility package, please cite this software release using the Zenodo DOI below and cite the associated manuscript where appropriate."
 title: "TSPG Spectral Identifiability: Reproducibility Package"
 type: software
 license: MIT
+version: "1.0.0"
+date-released: 2026-08-30
+doi: "10.5281/zenodo.22180107"
 authors:
   - family-names: "Banđur"
     given-names: "Đoko"
@@ -15,12 +18,14 @@ authors:
     email: "milos.bandjur@pr.ac.rs"
     affiliation: "Faculty of Technical Sciences, University of Pristina, Kosovska Mitrovica"
 repository-code: "https://github.com/djokobandjur/tspg-spectral-identifiability"
-url: "https://github.com/djokobandjur/tspg-spectral-identifiability"
+url: "https://doi.org/10.5281/zenodo.22180107"
 abstract: >-
   Reproducibility package for the manuscript "Diagnosing Spectral Identifiability
   Failures in Task-Sensitive Parameter Geometry: A Vision Transformer Case Study".
   The package contains the public code, configurations, manifests, compact results,
-  diagnostics, and provenance records needed to reproduce the reported analyses.
+  diagnostics, environment provenance, and SHA-verified non-Git numerical evidence
+  needed to reproduce the reported M1--M5 analyses. ImageNet source images are not
+  redistributed and must be obtained separately under the applicable ImageNet terms.
 keywords:
   - spectral identifiability
   - parameter-space geometry
