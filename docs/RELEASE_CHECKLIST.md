@@ -11,9 +11,10 @@ GitHub release `v1.0.0` and Zenodo version DOI `10.5281/zenodo.22180107` are pub
 - [x] Assemble and SHA-verify a local public-safe candidate set for H1-0012, H1-0007 ALiBi, and A52.
 - [x] Assemble and SHA-verify the eight supplemental evidence objects for the new release boundary.
 - [x] Exclude manuscript PDF/TEX, submission files, editor/reviewer material, and internal manuscript-governance artifacts from the public candidate.
-- [ ] Promote the candidate public-safe code/config/result/audit/manifest files into the release branch and verify the branch tree.
-- [ ] Obtain/stage the four exact A52 checkpoint binaries or formally lock an alternative archival acquisition route; verify exact SHA-256 for each.
-- [ ] Decide whether the eight supplemental evidence objects are GitHub Release convenience assets, Zenodo-only assets, or both.
+- [ ] Promote the remaining candidate public-safe code/config/result/audit/manifest files into the release branch and verify the branch tree.
+- [x] Obtain/stage the four exact A52 checkpoint binaries and verify source -> staged-copy SHA-256 identity (`4/4 PASS`; aggregate `858,245,348` bytes).
+- [x] Lock A52 checkpoint distribution policy: the four checkpoint binaries are Zenodo v1.1.0 archival payloads; GitHub Release duplication is not required because the public tree exposes their exact SHA identities and the DOI acquisition route.
+- [ ] Lock distribution of the eight small supplemental evidence objects (GitHub Release convenience assets, Zenodo, or both); preserve exact identities from `manifests/TSPG_RELEASE_ASSET_PLAN_v1_1_0_20260904.json`.
 - [ ] Reserve the Zenodo new-version DOI for `1.1.0`; update `CITATION.cff` only after the DOI exists.
 - [ ] Freeze the v1.1.0 Git content tree; generate and verify the full tracked-file SHA-256 manifest.
 - [ ] Create/tag GitHub release `v1.1.0` at the frozen release-manifest commit.
