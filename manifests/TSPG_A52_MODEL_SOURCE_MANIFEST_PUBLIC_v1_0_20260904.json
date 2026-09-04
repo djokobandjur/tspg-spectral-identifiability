@@ -1,0 +1,23 @@
+{
+  "schema": "TSPG_A52_MODEL_SOURCE_MANIFEST_PUBLIC_v1_0",
+  "date": "2026-09-04",
+  "purpose": "Exact model-source identities required by the four A52 checkpoint/runtime records.",
+  "sources": [
+    {
+      "role": "A52 ViT-B model source for PV-A and PV-C",
+      "public_release_path": "code/model_sources/full_scale_experiment_vitb_a52_exact.py",
+      "size_bytes": 66352,
+      "sha256": "ccd6df277ae7d60391ad26c554cec33b9a0263f08256211d144b88f5b0a4d35a",
+      "used_by_arms": ["PV-A", "PV-C"]
+    },
+    {
+      "role": "A52 ViT-S BF16/AMP model source for PV-B1 and PV-B2",
+      "public_release_path": "code/model_sources/full_scale_experiment_vits_bf16_a52_exact.py",
+      "size_bytes": 65955,
+      "sha256": "0fb623bf4c9330b41f8d93de62dd25a3ffff04bf00ab9c8aa278cfc087f1e308",
+      "used_by_arms": ["PV-B1", "PV-B2"]
+    }
+  ],
+  "status": "EXACT_SOURCE_BYTES_RECOVERED_AND_SHA_VERIFIED",
+  "note": "The exact source bytes are included in the v1.1.0 public-tree candidate. Their Git promotion is part of the final tree-promotion gate."
+}
