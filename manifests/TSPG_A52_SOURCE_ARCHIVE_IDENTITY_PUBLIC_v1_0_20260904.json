@@ -1,0 +1,20 @@
+{
+  "schema": "TSPG_A52_SOURCE_ARCHIVE_IDENTITY_PUBLIC_v1_0",
+  "date": "2026-09-04",
+  "exact_source_archives_not_distributed": [
+    {
+      "filename": "TSPG_A52_RUNTIME_EVIDENCE_v1_0_20260903.zip",
+      "sha256": "d9fbab1fe06bbb8d3b34e5e3370cbcddf2481836006e3b3e5488c000a7a68d57",
+      "public_derivative": "TSPG_A52_RUNTIME_EVIDENCE_PUBLIC_v1_1_0_20260904.zip",
+      "public_derivative_sha256": "730e0e9dc9303241ea83b6cf4aa6d3a221d40df8f9015fddf5af2d2780e03e21"
+    },
+    {
+      "filename": "TSPG_A52_ZERO_COMPUTE_FINAL_CLOSEOUT_PATCH_v1_0_20260904.zip",
+      "sha256": "1b894a28b1599e703ae2b7def2338aa655b1c1b8fd0349bd72076a84d13493b0",
+      "public_derivative": "TSPG_A52_ZERO_COMPUTE_FINAL_CLOSEOUT_PATCH_PUBLIC_v1_1_0_20260904.zip",
+      "public_derivative_sha256": "b7196ef6d132f346a7333b14f02279689782868031d893377a791e8c1d13c6df"
+    }
+  ],
+  "exact_locked_protocol_sha256": "2fc2c8dbeca0ce0affe17055e7ba6e7a7ffd8c7b9ba7488c15bfcf7e32a89aeb",
+  "reason": "Public release excludes non-scientific publication-process governance text; source archive identities remain preserved by SHA-256."
+}
