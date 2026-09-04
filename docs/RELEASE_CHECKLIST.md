@@ -16,8 +16,8 @@ GitHub release `v1.0.0` and Zenodo version DOI `10.5281/zenodo.22180107` are pub
 - [x] Lock distribution of the eight small supplemental evidence objects to both GitHub Release and Zenodo.
 - [x] Lock the exact 12-object new Zenodo v1.1.0 payload identity set: eight supplemental evidence objects + four A52 checkpoints, aggregate `871,089,498` bytes.
 - [x] Build the local Zenodo v1.1.0 upload staging directory and verify source -> copy identity for all 12 objects (`12/12 PASS`).
-- [ ] Promote the exact remaining public-safe candidate tree into the release branch and verify the branch tree.
-- [ ] Reserve the Zenodo new-version DOI for `1.1.0`; update `CITATION.cff` only after the DOI exists.
+- [x] Promote the exact remaining public-safe candidate tree into the release branch and verify the branch tree (`a84740dabd4eb50f13e413624f8f586082ecee6a`; Git tree `1b98538c4f7c3cb93fe20dc58d4cd7c30d8f87a2`).
+- [x] Reserve the Zenodo new-version DOI for `1.1.0`: `10.5281/zenodo.22308245`; advance `CITATION.cff` only after reservation.
 - [ ] Freeze the v1.1.0 Git content tree; generate and verify the full tracked-file SHA-256 manifest.
 - [ ] Create/tag GitHub release `v1.1.0` at the frozen release-manifest commit.
 - [ ] Upload/publish the exact v1.1.0 Zenodo payload under the all-versions DOI lineage.

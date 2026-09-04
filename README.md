@@ -21,9 +21,9 @@ The manuscript itself is intentionally **not** published in this repository. No 
 
 The original public package remains frozen as GitHub release `v1.0.0` and Zenodo version DOI `10.5281/zenodo.22180107` (all-versions DOI `10.5281/zenodo.22180106`).
 
-Branch `release/v1.1.0-alibi-a52` prepares the next archival version. It extends, rather than rewrites, the v1.0.0 provenance boundary. The new v1.1.0 version DOI will be recorded only after the new Zenodo version is reserved/published and independently verified.
+Branch `release/v1.1.0-alibi-a52` prepares the next archival version. It extends, rather than rewrites, the v1.0.0 provenance boundary. The v1.1.0 version DOI is reserved as `10.5281/zenodo.22308245`; it will become registered/public when the Zenodo draft is published. The stable all-versions DOI remains `10.5281/zenodo.22180106`.
 
-Current pre-publication blockers are limited to exact Git-tree promotion/freeze/tagging, Zenodo v1.1.0 DOI reservation/publication, post-publication remote byte verification, and persistent-link insertion. The public A52 compatibility overlay and the local 12-object Zenodo byte-staging gate are closed. No new scientific experiment is part of this release update.
+Current pre-publication blockers are limited to final Git-tree freeze/manifest/tagging, Zenodo v1.1.0 publication, post-publication remote byte verification, and persistent-link insertion. The public A52 compatibility overlay and the local 12-object Zenodo byte-staging gate are closed. No new scientific experiment is part of this release update.
 
 ## Structure
 
@@ -67,4 +67,4 @@ Corresponding author: Đoko Banđur (`djoko.bandjur@pr.ac.rs`).
 
 ## Citation
 
-Until v1.1.0 is published, use the existing version DOI `10.5281/zenodo.22180107` for the released v1.0.0 package or the all-versions DOI `10.5281/zenodo.22180106` when referring to the evolving reproducibility record. `CITATION.cff` will be advanced to v1.1.0 only after the new version DOI is assigned.
+Until v1.1.0 is published, the released v1.0.0 package remains identified by version DOI `10.5281/zenodo.22180107`, while the stable all-versions DOI `10.5281/zenodo.22180106` identifies the evolving reproducibility record. The reserved v1.1.0 version DOI is `10.5281/zenodo.22308245`; `CITATION.cff` records that exact release DOI and it becomes citable when v1.1.0 is published.
