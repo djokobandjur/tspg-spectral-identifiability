@@ -1,0 +1,62 @@
+{
+  "schema": "TSPG_A52_CHECKPOINT_RELEASE_STAGING_MANIFEST_PUBLIC_v1_0",
+  "date": "2026-09-04",
+  "release_target": "v1.1.0",
+  "scientific_compute": "NONE",
+  "mode": "VERIFY_COPY_REVERIFY",
+  "all_pass": true,
+  "aggregate_size_bytes": 858245348,
+  "privacy_note": "Host-local source and staging paths are intentionally omitted from this public semantic copy. The private staging manifest is retained outside the public Git tree.",
+  "private_staging_manifest_sha256": "c98c3a689a776b8e863d4c0827f2887d1f63402f7e3090055a8a3c4996325415",
+  "private_staging_sha256_list_sha256": "2a6831a613333716c5290d464fc04f0772a07a08e5821f81278be37154bef9f9",
+  "records": [
+    {
+      "arm": "PV-A",
+      "architecture": "ViT-B/16",
+      "dataset": "ImageNet-100",
+      "seed": 123,
+      "release_filename": "TSPG_A52_PV-A_VITB_IN100_LEARNED_SEED123_best_model.pth",
+      "size_bytes": 343559209,
+      "sha256": "fbb8d70f72fb6ee1bb93b1d00cca663ffb222f489d16d8149f2e01efd65c351e",
+      "source_identity_match": true,
+      "staged_identity_match": true,
+      "status": "PASS_STAGED_EXACT"
+    },
+    {
+      "arm": "PV-B1",
+      "architecture": "ViT-S/16",
+      "dataset": "ImageNet-100",
+      "seed": 42,
+      "release_filename": "TSPG_A52_PV-B1_VITS_IN100_LEARNED_SEED42_best_model.pth",
+      "size_bytes": 86873641,
+      "sha256": "a518ec4ba5478539e85b8a3841e847cd014e7f1eddc7e48752bfe105b68ace26",
+      "source_identity_match": true,
+      "staged_identity_match": true,
+      "status": "PASS_STAGED_EXACT"
+    },
+    {
+      "arm": "PV-B2",
+      "architecture": "ViT-S/16",
+      "dataset": "ImageNet-100",
+      "seed": 123,
+      "release_filename": "TSPG_A52_PV-B2_VITS_IN100_LEARNED_SEED123_best_model.pth",
+      "size_bytes": 86873641,
+      "sha256": "c04bd01615a897d713e5e0deb94afea0cdc0e0367d09a14846ab46b93bf82524",
+      "source_identity_match": true,
+      "staged_identity_match": true,
+      "status": "PASS_STAGED_EXACT"
+    },
+    {
+      "arm": "PV-C",
+      "architecture": "ViT-B/CIFAR config",
+      "dataset": "CIFAR-100",
+      "seed": 42,
+      "release_filename": "TSPG_A52_PV-C_VITB_CIFAR100_LEARNED_SEED42_best_model.pth",
+      "size_bytes": 340938857,
+      "sha256": "a65418972b2f3c9c68b5031d79159fa5141cfccab3d12454947321500d545cdd",
+      "source_identity_match": true,
+      "staged_identity_match": true,
+      "status": "PASS_STAGED_EXACT"
+    }
+  ]
+}
