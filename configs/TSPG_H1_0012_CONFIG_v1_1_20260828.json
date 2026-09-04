@@ -1,0 +1,123 @@
+{
+  "schema": "TSPG_H1_0012_CONFIG_v1_1",
+  "run_id": "TSPG-RUN-H1-0012",
+  "status": "AUTHORIZED_DEVELOPMENT_ONLY",
+  "scientific_H1_status": "NOT_EVALUATED_DEVELOPMENT_ONLY",
+  "family": "learned",
+  "seed": 42,
+  "native_d": 151296,
+  "dtype": "float64",
+  "sdpa_backend": "math",
+  "active_protocol_lock": "TSPG_PROTOCOL_LOCK_v0_37_20260828.md",
+  "authorization_amendment": "TSPG_PROTOCOL_AMENDMENT_A36_H1_0011_CLOSEOUT_AND_H1_0012_COMPLEMENT_DEPTH_FULLSPACE_RESIDUAL_AUTHORIZATION_v1_0_20260828.md",
+  "model_source": {
+    "path": "/home/djoko.bandjur.ftnkm/Notebooks/cross_family_final_n6_FMLE/code/full_scale_experiment.py",
+    "sha256": "83fc337128dec7f896c9816842806789a634154dea8372bb0a43bae19188d3bf"
+  },
+  "val_dir": "/home/djoko.bandjur.ftnkm/datasets/imagenet100/imagenet100_resized/val",
+  "split_manifest": "TSPG_SPLIT_MANIFEST_IN100_PILOT_v1_0_20260819.json",
+  "checkpoint_manifest": "TSPG_H1_CONFIRMATORY_20CHECKPOINT_MANIFEST_v1_0_20260828.json",
+  "locked_metric": {
+    "trace_hat": 2.4953308524383493,
+    "tau": 0.00024953308524383496,
+    "alpha_tau_over_d": 1.6493039157931138e-09,
+    "source": "H1-0004 Learned 32-probe trace, carried through H1-0005"
+  },
+  "source_raw_artifacts": {
+    "task_span": {
+      "filename": "TSPG_H1_0010_LEARNED_SEED42_QR_TASK320_EXACT_GEOMETRY_v1_1.npz",
+      "sha256": "08f23a6c0d87a58ed49c9f4bda841105f7d45eb848d18f30aa498eb42fb31074",
+      "required_arrays": [
+        "Q320",
+        "C320",
+        "GA_Q320",
+        "A320"
+      ],
+      "regenerate_if_missing": false
+    },
+    "complement_L4": {
+      "filename": "TSPG_H1_0011_LEARNED_SEED42_COMPLEMENT_KRYLOV_BASIS_v1_0.npz",
+      "sha256": "4f948e96ec8c8ae911259f923b876864b6ffd83b1cf54669d7fdd00b90b88237",
+      "required_arrays": [
+        "Z_complement",
+        "GA_Z_complement"
+      ],
+      "expected_existing_complement_dimension": 32,
+      "regenerate_if_missing": false
+    }
+  },
+  "depth_extension": {
+    "existing_blocks": 4,
+    "max_blocks": 16,
+    "block_size": 8,
+    "ga_direction_chunk_size": 4,
+    "reported_depths": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      12,
+      16
+    ],
+    "calibration_images": 256,
+    "qr_relative_diagonal_rank_tolerance": 1e-12,
+    "Q_orthogonality_gate": 1e-10,
+    "Z_orthogonality_gate": 1e-10,
+    "block_quadratic_consistency_gate": 1e-08,
+    "augmented_symmetry_gate": 1e-08
+  },
+  "generalized_validation": {
+    "top_k_report": 4,
+    "projected_B_orthonormality_gate": 1e-10,
+    "projected_generalized_residual_gate": 1e-10,
+    "fraction_identity_gate": 1e-10,
+    "full_space_generalized_residual_validity_gate": 1e-06,
+    "min_B_eigenvalue_gate": 0.0,
+    "full_space_gate_role": "CERTIFICATION_ONLY_NOT_DIAGNOSTIC_PASS_FAIL"
+  },
+  "prohibitions": {
+    "unrestricted_inverse_solver": true,
+    "nystrom_rank128": true,
+    "nystrom_rank256": true,
+    "c_change": true,
+    "c_sweep": true,
+    "geometry_support_cutoff_selection": true,
+    "confirmatory_execution": true,
+    "H2": true,
+    "H3": true
+  },
+  "runtime": {
+    "device": "cuda",
+    "calibration_batch_size": 1
+  },
+  "environment_required": {
+    "USER": "djoko.bandjur.ftnkm",
+    "LOGNAME": "djoko.bandjur.ftnkm",
+    "USERNAME": "djoko.bandjur.ftnkm",
+    "HOME": "/home/djoko.bandjur.ftnkm",
+    "TORCHINDUCTOR_CACHE_DIR": "/tmp/torchinductor_uid1545",
+    "TRITON_CACHE_DIR": "/tmp/triton_uid1545",
+    "XDG_CACHE_HOME": "/tmp/xdg_cache_uid1545"
+  },
+  "implementation_version": "v1.1",
+  "authorization_amendments": [
+    "TSPG_PROTOCOL_AMENDMENT_A36_H1_0011_CLOSEOUT_AND_H1_0012_COMPLEMENT_DEPTH_FULLSPACE_RESIDUAL_AUTHORIZATION_v1_0_20260828.md",
+    "TSPG_PROTOCOL_AMENDMENT_A37_H1_0012_RESIDUAL_PATH_AND_GEOMETRY_LOCATION_CLARIFICATION_v1_0_20260828.md"
+  ],
+  "diagnostic_reporting": {
+    "primary_path_variables": [
+      "lambda1",
+      "ga_leakage_norm_top1",
+      "lambda_times_ga_leakage_norm_top1",
+      "full_space_generalized_residual_top1",
+      "lambda1_relative_increment_vs_previous_report",
+      "geometry_location_over_mean_GA_top1"
+    ],
+    "report_closed_form_leakage_residual_for_top4": true,
+    "report_exact_vs_closed_form_residual_difference": true,
+    "report_geometry_location_over_mean_GA_for_top4": true,
+    "assume_monotonic_residual_decrease": false,
+    "residual_above_1e6_is_technical_failure": false
+  }
+}

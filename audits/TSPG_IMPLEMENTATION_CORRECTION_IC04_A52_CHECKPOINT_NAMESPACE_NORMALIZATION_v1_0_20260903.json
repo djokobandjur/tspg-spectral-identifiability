@@ -1,0 +1,41 @@
+{
+  "schema": "TSPG_IMPLEMENTATION_CORRECTION_IC04_A52_CHECKPOINT_NAMESPACE_NORMALIZATION_v1_0",
+  "date": "2026-09-03",
+  "classification": "IMPLEMENTATION_ONLY_PRE_SCIENTIFIC_EXECUTION",
+  "reason": "locked checkpoints may carry known torch.compile _orig_mod. state-dict prefix",
+  "normalization_prefixes": [
+    "module.",
+    "model.",
+    "net.",
+    "_orig_mod."
+  ],
+  "scientific_estimand_changed": false,
+  "checkpoint_bytes_changed": false,
+  "checkpoint_manifest_changed": false,
+  "dataset_or_split_changed": false,
+  "scientific_outcomes_observed_before_fix": false,
+  "new_task_gradients_before_fix": 0,
+  "new_scientific_G_A_actions_before_fix": 0,
+  "pre_ic04_core_sha256": "48b7ae458bdaa71f2e46912fdd9e798eac4bf25b1a6407e3847dfe81e66eece0",
+  "post_ic04_core_sha256": "b3694a90d6a4df32aa50907f2aaf83727ad3cfb8ca6f29d365fdf2bd158bd8d4",
+  "checkpoint_host_preflight_status_after_fix": "PASS",
+  "checkpoint_host_preflight_arms": {
+    "PV-A": {
+      "sha256": "fbb8d70f72fb6ee1bb93b1d00cca663ffb222f489d16d8149f2e01efd65c351e",
+      "wrapper": "raw_state_dict+strip__orig_mod"
+    },
+    "PV-B1": {
+      "sha256": "a518ec4ba5478539e85b8a3841e847cd014e7f1eddc7e48752bfe105b68ace26",
+      "wrapper": "raw_state_dict+strip__orig_mod"
+    },
+    "PV-B2": {
+      "sha256": "c04bd01615a897d713e5e0deb94afea0cdc0e0367d09a14846ab46b93bf82524",
+      "wrapper": "raw_state_dict+strip__orig_mod"
+    },
+    "PV-C": {
+      "sha256": "a65418972b2f3c9c68b5031d79159fa5141cfccab3d12454947321500d545cdd",
+      "wrapper": "raw_state_dict"
+    }
+  },
+  "source_status": "FROZEN_FOR_TSPG_RUN_PV_0001"
+}

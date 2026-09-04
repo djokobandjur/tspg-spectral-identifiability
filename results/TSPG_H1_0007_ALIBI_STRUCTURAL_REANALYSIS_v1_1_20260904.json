@@ -1,0 +1,325 @@
+{
+  "schema": "TSPG_H1_0007_ALIBI_STRUCTURAL_REANALYSIS_v1_1",
+  "date": "2026-09-04",
+  "status": "PASS_REPORTING_ONLY_DETERMINISTIC_ZERO_COMPUTE",
+  "evidential_role": "postrun_archived_matrix_structural_readout_not_A52_arm_not_heldout_PE_family_test",
+  "source_npz": "TSPG_H1_0007_ALIBI_SEED42_DENSE_GA_GT_AND_TOP4_v1_1.npz",
+  "source_npz_sha256": "dd8e670f222824fd78eb833bc4cd23f31ac5119ba3ed5eb6921b318c6149329d",
+  "GT_reconstruction_max_abs_error": 0.0,
+  "locked_regularization": {
+    "c": 0.0001,
+    "trace_GA": 20.81006282089981,
+    "tau": 0.002081006282089981,
+    "alpha": 0.00017341719017416508,
+    "B_definition": "GA + alpha I"
+  },
+  "B_spectrum_ascending": [
+    1.4721413890422883,
+    1.4834486731284267,
+    1.492216192758501,
+    1.4929277986099052,
+    1.5478248895223587,
+    1.5867676309061514,
+    1.6327294548445441,
+    1.7265410111874295,
+    1.7610157095634322,
+    1.8773836270000877,
+    2.0683872994370196,
+    2.6707601511817547
+  ],
+  "B_lambda_min": 1.4721413890422883,
+  "B_lambda_max": 2.6707601511817547,
+  "B_condition": 1.8142008444713562,
+  "crude_equal_dimensional_ratio_bound": [
+    0.5512068870695472,
+    1.8142008444713562
+  ],
+  "generalized_eigenvalues_top4": [
+    1347.5037811275756,
+    539.6398745512179,
+    360.72587331014364,
+    248.68247940772667
+  ],
+  "rows": [
+    {
+      "k": 1,
+      "k_over_dp": 0.08333333333333333,
+      "bbar_SE": 2.4049278867195376,
+      "bbar_SB": 2.1919630777256014,
+      "R_B_SB_over_SE": 0.9114464886161586,
+      "selector_principal_cosines": [
+        0.9699353169350241
+      ],
+      "selector_max_principal_angle_deg": 14.085104385242177,
+      "selector_overlap_mean_cos2": 0.9407745190378457,
+      "sharp_bbar_lower": 1.4721413890422883,
+      "sharp_bbar_upper": 2.6707601511817547,
+      "sharp_equal_dimensional_ratio_lower": 0.5512068870695472,
+      "sharp_equal_dimensional_ratio_upper": 1.8142008444713562
+    },
+    {
+      "k": 2,
+      "k_over_dp": 0.16666666666666666,
+      "bbar_SE": 2.029388770675485,
+      "bbar_SB": 1.9171148460847305,
+      "R_B_SB_over_SE": 0.9446759900256154,
+      "selector_principal_cosines": [
+        0.9962731449993765,
+        0.9698042467603174
+      ],
+      "selector_max_principal_angle_deg": 14.115929653722773,
+      "selector_overlap_mean_cos2": 0.9665402282406477,
+      "sharp_bbar_lower": 1.4777950310853574,
+      "sharp_bbar_upper": 2.369573725309387,
+      "sharp_equal_dimensional_ratio_lower": 0.6236543793936636,
+      "sharp_equal_dimensional_ratio_upper": 1.6034522213605418
+    },
+    {
+      "k": 3,
+      "k_over_dp": 0.25,
+      "bbar_SE": 2.0285939676672067,
+      "bbar_SB": 1.9456004029786858,
+      "R_B_SB_over_SE": 0.9590881339433539,
+      "selector_principal_cosines": [
+        0.999174846466409,
+        0.9872062736800423,
+        0.9629185857360651
+      ],
+      "selector_max_principal_angle_deg": 15.651898176583135,
+      "selector_overlap_mean_cos2": 0.9667129344534501,
+      "sharp_bbar_lower": 1.4826020849764052,
+      "sharp_bbar_upper": 2.2055103592062872,
+      "sharp_equal_dimensional_ratio_lower": 0.6722263075245586,
+      "sharp_equal_dimensional_ratio_upper": 1.4875942652147198
+    },
+    {
+      "k": 4,
+      "k_over_dp": 0.3333333333333333,
+      "bbar_SE": 1.9753419316235716,
+      "bbar_SB": 1.926396437869796,
+      "R_B_SB_over_SE": 0.9752217613719432,
+      "selector_principal_cosines": [
+        0.9999222119563681,
+        0.9991676699187393,
+        0.9838119591049649,
+        0.9765367386371061
+      ],
+      "selector_max_principal_angle_deg": 12.43611300411497,
+      "selector_overlap_mean_cos2": 0.9799226088401258,
+      "sharp_bbar_lower": 1.4851835133847802,
+      "sharp_bbar_upper": 2.0943866967955733,
+      "sharp_equal_dimensional_ratio_lower": 0.7091257386504228,
+      "sharp_equal_dimensional_ratio_upper": 1.4101871438246711
+    },
+    {
+      "k": 5,
+      "k_over_dp": 0.4166666666666667,
+      "bbar_SE": 1.920451731494912,
+      "bbar_SB": 1.877026529931841,
+      "R_B_SB_over_SE": 0.9773880275922018,
+      "selector_principal_cosines": [
+        0.9999331577868211,
+        0.9996668499814146,
+        0.9994752790641779,
+        0.9863699476324302,
+        0.9665216124474894
+      ],
+      "selector_max_principal_angle_deg": 14.867536922789409,
+      "selector_overlap_mean_cos2": 0.9810481330748404,
+      "sharp_bbar_lower": 1.4977117886122957,
+      "sharp_bbar_upper": 2.0208175596739446,
+      "sharp_equal_dimensional_ratio_lower": 0.7411415154438528,
+      "sharp_equal_dimensional_ratio_upper": 1.3492699830762047
+    },
+    {
+      "k": 6,
+      "k_over_dp": 0.5,
+      "bbar_SE": 1.878410185434989,
+      "bbar_SB": 1.8556552916125144,
+      "R_B_SB_over_SE": 0.987886088992216,
+      "selector_principal_cosines": [
+        0.9999992895546865,
+        0.9999328105576925,
+        0.9998720507573945,
+        0.9994752280443105,
+        0.9962662435296078,
+        0.9860985280338739
+      ],
+      "selector_max_principal_angle_deg": 9.564723560476375,
+      "selector_overlap_mean_cos2": 0.9939159648478126,
+      "sharp_bbar_lower": 1.512554428994605,
+      "sharp_bbar_upper": 1.9561362088690446,
+      "sharp_equal_dimensional_ratio_lower": 0.7732357399943535,
+      "sharp_equal_dimensional_ratio_upper": 1.2932666563075608
+    },
+    {
+      "k": 7,
+      "k_over_dp": 0.5833333333333334,
+      "bbar_SE": 1.870853047263712,
+      "bbar_SB": 1.853136691440929,
+      "R_B_SB_over_SE": 0.9905303327545183,
+      "selector_principal_cosines": [
+        0.9999999999999998,
+        0.9999999999999998,
+        0.9999807342002693,
+        0.9999132356878287,
+        0.9997564563697143,
+        0.9989818777015245,
+        0.9848100215552539
+      ],
+      "selector_max_principal_angle_deg": 9.999251459132532,
+      "selector_overlap_mean_cos2": 0.9953023557514378,
+      "sharp_bbar_lower": 1.5297222898303104,
+      "sharp_bbar_upper": 1.9033692691600599,
+      "sharp_equal_dimensional_ratio_lower": 0.8036918083191306,
+      "sharp_equal_dimensional_ratio_upper": 1.244258047237579
+    },
+    {
+      "k": 8,
+      "k_over_dp": 0.6666666666666666,
+      "bbar_SE": 1.8464027732350154,
+      "bbar_SB": 1.8336757990407662,
+      "R_B_SB_over_SE": 0.9931071517121095,
+      "selector_principal_cosines": [
+        1.0,
+        1.0,
+        0.9999999999999999,
+        0.9999999999999997,
+        0.9999665978438176,
+        0.9997757753331306,
+        0.9996252380619056,
+        0.9783198566357277
+      ],
+      "selector_max_principal_angle_deg": 11.95243727081128,
+      "selector_overlap_mean_cos2": 0.9944806445255466,
+      "sharp_bbar_lower": 1.5543246299999505,
+      "sharp_bbar_upper": 1.858926221705347,
+      "sharp_equal_dimensional_ratio_lower": 0.8361411076196664,
+      "sharp_equal_dimensional_ratio_upper": 1.195970382136585
+    },
+    {
+      "k": 9,
+      "k_over_dp": 0.75,
+      "bbar_SE": 1.814244563289669,
+      "bbar_SB": 1.8133173077377147,
+      "R_B_SB_over_SE": 0.9994889026701709,
+      "selector_principal_cosines": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9999999999999998,
+        0.9999999999999997,
+        0.9999263647966097,
+        0.9997568413536775,
+        0.9990664830320745
+      ],
+      "selector_max_principal_angle_deg": 2.475896747158494,
+      "selector_overlap_mean_cos2": 0.9997222571518802,
+      "sharp_bbar_lower": 1.577290305507004,
+      "sharp_bbar_upper": 1.818259730250298,
+      "sharp_equal_dimensional_ratio_lower": 0.8674724954117954,
+      "sharp_equal_dimensional_ratio_upper": 1.152774301535973
+    },
+    {
+      "k": 10,
+      "k_over_dp": 0.8333333333333334,
+      "bbar_SE": 1.7825865047666032,
+      "bbar_SB": 1.782276444481802,
+      "R_B_SB_over_SE": 0.9998260615773922,
+      "selector_principal_cosines": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9999999999999998,
+        0.9999999999999997,
+        0.9999999999999994,
+        0.9998446897715014,
+        0.9997013589304764
+      ],
+      "selector_max_principal_angle_deg": 1.400306823726781,
+      "selector_overlap_mean_cos2": 0.9999092210711709,
+      "sharp_bbar_lower": 1.6072996376563125,
+      "sharp_bbar_upper": 1.7856553765011185,
+      "sharp_equal_dimensional_ratio_lower": 0.9001174912069074,
+      "sharp_equal_dimensional_ratio_upper": 1.1109660791716944
+    },
+    {
+      "k": 11,
+      "k_over_dp": 0.9166666666666666,
+      "bbar_SE": 1.756278306923597,
+      "bbar_SB": 1.7561592389372338,
+      "R_B_SB_over_SE": 0.9999322043745038,
+      "selector_principal_cosines": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999999,
+        0.9999999999999998,
+        0.9999999999999996,
+        0.9999999999999996,
+        0.9998081879381491
+      ],
+      "selector_max_principal_angle_deg": 1.1222316924580162,
+      "selector_overlap_mean_cos2": 0.9999651284243783,
+      "sharp_bbar_lower": 1.649216697818195,
+      "sharp_bbar_upper": 1.758182039830874,
+      "sharp_equal_dimensional_ratio_lower": 0.9380238567201148,
+      "sharp_equal_dimensional_ratio_upper": 1.0660709669971404
+    },
+    {
+      "k": 12,
+      "k_over_dp": 1.0,
+      "bbar_SE": 1.7343453189318243,
+      "bbar_SB": 1.734345318931825,
+      "R_B_SB_over_SE": 1.0000000000000004,
+      "selector_principal_cosines": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9999999999999998,
+        0.9999999999999997,
+        0.9999999999999997,
+        0.9999999999999994,
+        0.9999999999999994,
+        0.9999999999999994
+      ],
+      "selector_max_principal_angle_deg": 1.9090959104164224e-06,
+      "selector_overlap_mean_cos2": 0.9999999999999994,
+      "sharp_bbar_lower": 1.734345318931825,
+      "sharp_bbar_upper": 1.734345318931825,
+      "sharp_equal_dimensional_ratio_lower": 1.0,
+      "sharp_equal_dimensional_ratio_upper": 1.0
+    }
+  ],
+  "compute_boundary": {
+    "model_loads": 0,
+    "gpu_actions": 0,
+    "new_task_gradients": 0,
+    "new_GA_actions": 0,
+    "dataset_access": 0,
+    "operation": "12x12 FP64 algebra over archived matrices only"
+  },
+  "claim_boundary": {
+    "allowed": [
+      "The ALiBi B geometry is well conditioned in this archived control.",
+      "The normalized and Euclidean selectors remain closely aligned while R_B is mildly below one.",
+      "The complete B spectrum gives deterministic fixed-rank bounds on attainable mean-denominator ratios."
+    ],
+    "not_allowed": [
+      "PE-family portability",
+      "causal effect of d_p=12",
+      "population inference",
+      "a p-value or null-hypothesis test for selector preference",
+      "claim that G_A captures every downstream task pathway"
+    ]
+  }
+}

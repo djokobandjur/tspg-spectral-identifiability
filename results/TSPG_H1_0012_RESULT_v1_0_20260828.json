@@ -1,0 +1,1271 @@
+{
+  "schema": "TSPG_H1_0012_RESULT_v1",
+  "run_id": "TSPG-RUN-H1-0012",
+  "technical_status": "PASS",
+  "scientific_H1_status": "NOT_EVALUATED_DEVELOPMENT_ONLY",
+  "source_raw_artifacts": {
+    "task_span": {
+      "path": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_H1_0010_LEARNED_FULL_TASK_SPAN_GEOMETRY_DIAGNOSTIC_STARTER_v1_1_20260828/TSPG_H1_0010_RUNTIME_v1_1_20260828/TSPG_H1_0010_LEARNED_SEED42_QR_TASK320_EXACT_GEOMETRY_v1_1.npz",
+      "sha256": "08f23a6c0d87a58ed49c9f4bda841105f7d45eb848d18f30aa498eb42fb31074",
+      "checked_candidates": [
+        {
+          "path": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_H1_0010_LEARNED_FULL_TASK_SPAN_GEOMETRY_DIAGNOSTIC_STARTER_v1_1_20260828/TSPG_H1_0010_RUNTIME_v1_1_20260828/TSPG_H1_0010_LEARNED_SEED42_QR_TASK320_EXACT_GEOMETRY_v1_1.npz",
+          "sha256": "08f23a6c0d87a58ed49c9f4bda841105f7d45eb848d18f30aa498eb42fb31074"
+        }
+      ]
+    },
+    "complement_L4": {
+      "path": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_H1_0011_LEARNED_TASK_COMPLEMENT_SCHUR_DIAGNOSTIC_STARTER_v1_0_20260828/TSPG_H1_0011_RUNTIME_v1_0_20260828/TSPG_H1_0011_LEARNED_SEED42_COMPLEMENT_KRYLOV_BASIS_v1_0.npz",
+      "sha256": "4f948e96ec8c8ae911259f923b876864b6ffd83b1cf54669d7fdd00b90b88237",
+      "checked_candidates": [
+        {
+          "path": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_H1_0011_LEARNED_TASK_COMPLEMENT_SCHUR_DIAGNOSTIC_STARTER_v1_0_20260828/TSPG_H1_0011_RUNTIME_v1_0_20260828/TSPG_H1_0011_LEARNED_SEED42_COMPLEMENT_KRYLOV_BASIS_v1_0.npz",
+          "sha256": "4f948e96ec8c8ae911259f923b876864b6ffd83b1cf54669d7fdd00b90b88237"
+        }
+      ]
+    }
+  },
+  "extension_blocks": [
+    {
+      "L": 5,
+      "rank": 8,
+      "Q_orthogonality_max_abs": 9.942133921692076e-17,
+      "previous_Z_orthogonality_max_abs": 2.3001349089279977e-16,
+      "qr": {
+        "retained_rank": 8,
+        "diag_abs": [
+          0.0010311378144286724,
+          0.0011101855970091132,
+          0.0011390650580476102,
+          0.0011735132907247886,
+          0.0009079978217348596,
+          0.0011275322897143537,
+          0.0010359848817495679,
+          0.0008530314391497413
+        ],
+        "relative_tolerance": 1e-12
+      },
+      "ga_records": [
+        {
+          "start_col_1based": 1,
+          "stop_col_1based": 4,
+          "elapsed_sec": 21.942597150802612,
+          "peak_cuda_memory_bytes": 1386789376,
+          "quadratic_consistency_relative_max": 7.432654014694681e-16
+        },
+        {
+          "start_col_1based": 5,
+          "stop_col_1based": 8,
+          "elapsed_sec": 21.497960805892944,
+          "peak_cuda_memory_bytes": 1391469056,
+          "quadratic_consistency_relative_max": 7.669894586820851e-16
+        }
+      ]
+    },
+    {
+      "L": 6,
+      "rank": 8,
+      "Q_orthogonality_max_abs": 9.947554932554503e-17,
+      "previous_Z_orthogonality_max_abs": 1.3335686721571705e-16,
+      "qr": {
+        "retained_rank": 8,
+        "diag_abs": [
+          0.0009361253933863739,
+          0.0009831735289938773,
+          0.0008594430798266897,
+          0.0009765942684989344,
+          0.0007913037018232276,
+          0.001215416382255576,
+          0.001058266972678519,
+          0.000712488788284995
+        ],
+        "relative_tolerance": 1e-12
+      },
+      "ga_records": [
+        {
+          "start_col_1based": 1,
+          "stop_col_1based": 4,
+          "elapsed_sec": 21.63484787940979,
+          "peak_cuda_memory_bytes": 1385100288,
+          "quadratic_consistency_relative_max": 4.140062730393746e-16
+        },
+        {
+          "start_col_1based": 5,
+          "stop_col_1based": 8,
+          "elapsed_sec": 21.441229343414307,
+          "peak_cuda_memory_bytes": 1389116416,
+          "quadratic_consistency_relative_max": 5.236255490050262e-16
+        }
+      ]
+    },
+    {
+      "L": 7,
+      "rank": 8,
+      "Q_orthogonality_max_abs": 1.2152551100846898e-16,
+      "previous_Z_orthogonality_max_abs": 1.7433970933566911e-16,
+      "qr": {
+        "retained_rank": 8,
+        "diag_abs": [
+          0.0008361084936156396,
+          0.0008882259834676626,
+          0.0007767992956090671,
+          0.0010453404595273117,
+          0.0006170247525524128,
+          0.0007056502826280208,
+          0.0006140367253093768,
+          0.0007739083386558062
+        ],
+        "relative_tolerance": 1e-12
+      },
+      "ga_records": [
+        {
+          "start_col_1based": 1,
+          "stop_col_1based": 4,
+          "elapsed_sec": 21.49780559539795,
+          "peak_cuda_memory_bytes": 1385100288,
+          "quadratic_consistency_relative_max": 6.428678725029707e-16
+        },
+        {
+          "start_col_1based": 5,
+          "stop_col_1based": 8,
+          "elapsed_sec": 21.63738203048706,
+          "peak_cuda_memory_bytes": 1389116416,
+          "quadratic_consistency_relative_max": 1.014198481595104e-15
+        }
+      ]
+    },
+    {
+      "L": 8,
+      "rank": 8,
+      "Q_orthogonality_max_abs": 1.2311115668572903e-16,
+      "previous_Z_orthogonality_max_abs": 1.20346441145891e-16,
+      "qr": {
+        "retained_rank": 8,
+        "diag_abs": [
+          0.0006515305713286751,
+          0.0007074575801765959,
+          0.0008158560601617462,
+          0.0006569536147206534,
+          0.0006050473957029516,
+          0.00068845452242814,
+          0.0005656220389400238,
+          0.0006589084171225834
+        ],
+        "relative_tolerance": 1e-12
+      },
+      "ga_records": [
+        {
+          "start_col_1based": 1,
+          "stop_col_1based": 4,
+          "elapsed_sec": 21.7356698513031,
+          "peak_cuda_memory_bytes": 1385100288,
+          "quadratic_consistency_relative_max": 1.9046280151870787e-16
+        },
+        {
+          "start_col_1based": 5,
+          "stop_col_1based": 8,
+          "elapsed_sec": 21.263848543167114,
+          "peak_cuda_memory_bytes": 1389116416,
+          "quadratic_consistency_relative_max": 4.124855596748871e-16
+        }
+      ]
+    },
+    {
+      "L": 9,
+      "rank": 8,
+      "Q_orthogonality_max_abs": 7.857755245088693e-17,
+      "previous_Z_orthogonality_max_abs": 1.4243706041028315e-16,
+      "qr": {
+        "retained_rank": 8,
+        "diag_abs": [
+          0.000586212621208273,
+          0.00044005963586227675,
+          0.0005695106007840451,
+          0.0005600007565513857,
+          0.00048663898542279015,
+          0.0006403007692837309,
+          0.00046247650478731586,
+          0.0005309146868000314
+        ],
+        "relative_tolerance": 1e-12
+      },
+      "ga_records": [
+        {
+          "start_col_1based": 1,
+          "stop_col_1based": 4,
+          "elapsed_sec": 21.182512283325195,
+          "peak_cuda_memory_bytes": 1385100288,
+          "quadratic_consistency_relative_max": 1.1277350340710344e-15
+        },
+        {
+          "start_col_1based": 5,
+          "stop_col_1based": 8,
+          "elapsed_sec": 21.533228158950806,
+          "peak_cuda_memory_bytes": 1389116416,
+          "quadratic_consistency_relative_max": 7.610203163839046e-16
+        }
+      ]
+    },
+    {
+      "L": 10,
+      "rank": 8,
+      "Q_orthogonality_max_abs": 9.404098593596144e-17,
+      "previous_Z_orthogonality_max_abs": 1.2565903179106996e-16,
+      "qr": {
+        "retained_rank": 8,
+        "diag_abs": [
+          0.0005702206453619496,
+          0.00040658593885238917,
+          0.0005014981346508531,
+          0.000538948789661982,
+          0.000463850229070337,
+          0.000627063901196281,
+          0.0003786097555024289,
+          0.0004669182177329729
+        ],
+        "relative_tolerance": 1e-12
+      },
+      "ga_records": [
+        {
+          "start_col_1based": 1,
+          "stop_col_1based": 4,
+          "elapsed_sec": 21.226744174957275,
+          "peak_cuda_memory_bytes": 1385100288,
+          "quadratic_consistency_relative_max": 9.540550524850354e-16
+        },
+        {
+          "start_col_1based": 5,
+          "stop_col_1based": 8,
+          "elapsed_sec": 21.89514470100403,
+          "peak_cuda_memory_bytes": 1389116416,
+          "quadratic_consistency_relative_max": 7.440208062723439e-16
+        }
+      ]
+    },
+    {
+      "L": 11,
+      "rank": 8,
+      "Q_orthogonality_max_abs": 9.508453052697874e-17,
+      "previous_Z_orthogonality_max_abs": 1.3725999503666486e-16,
+      "qr": {
+        "retained_rank": 8,
+        "diag_abs": [
+          0.00041666738575438787,
+          0.0003793349867536421,
+          0.0003779014224865242,
+          0.0004946406605435683,
+          0.00039384980745671823,
+          0.00041499797789027837,
+          0.00036714011488724724,
+          0.0004180808734186093
+        ],
+        "relative_tolerance": 1e-12
+      },
+      "ga_records": [
+        {
+          "start_col_1based": 1,
+          "stop_col_1based": 4,
+          "elapsed_sec": 21.40268087387085,
+          "peak_cuda_memory_bytes": 1385100288,
+          "quadratic_consistency_relative_max": 1.0489502742893893e-15
+        },
+        {
+          "start_col_1based": 5,
+          "stop_col_1based": 8,
+          "elapsed_sec": 21.294563055038452,
+          "peak_cuda_memory_bytes": 1389116416,
+          "quadratic_consistency_relative_max": 1.5602931285844096e-15
+        }
+      ]
+    },
+    {
+      "L": 12,
+      "rank": 8,
+      "Q_orthogonality_max_abs": 7.106945240642482e-17,
+      "previous_Z_orthogonality_max_abs": 2.42861286636753e-16,
+      "qr": {
+        "retained_rank": 8,
+        "diag_abs": [
+          0.0003713777932297339,
+          0.00036578481979276944,
+          0.0003685596378452901,
+          0.0004389064102550711,
+          0.0003791211556220209,
+          0.00038954605307539987,
+          0.00036698331284517634,
+          0.00037315599607451276
+        ],
+        "relative_tolerance": 1e-12
+      },
+      "ga_records": [
+        {
+          "start_col_1based": 1,
+          "stop_col_1based": 4,
+          "elapsed_sec": 21.70799231529236,
+          "peak_cuda_memory_bytes": 1385100288,
+          "quadratic_consistency_relative_max": 3.8966141428261354e-16
+        },
+        {
+          "start_col_1based": 5,
+          "stop_col_1based": 8,
+          "elapsed_sec": 21.63250422477722,
+          "peak_cuda_memory_bytes": 1389116416,
+          "quadratic_consistency_relative_max": 5.745380056951637e-16
+        }
+      ]
+    },
+    {
+      "L": 13,
+      "rank": 8,
+      "Q_orthogonality_max_abs": 4.5644911461639737e-17,
+      "previous_Z_orthogonality_max_abs": 1.0007186052041206e-16,
+      "qr": {
+        "retained_rank": 8,
+        "diag_abs": [
+          0.0003668128684432602,
+          0.0003635390352961369,
+          0.00035627896750631255,
+          0.0003982655931198013,
+          0.0003570970434018318,
+          0.0003753230543105681,
+          0.00036656342594500516,
+          0.00034988896495311293
+        ],
+        "relative_tolerance": 1e-12
+      },
+      "ga_records": [
+        {
+          "start_col_1based": 1,
+          "stop_col_1based": 4,
+          "elapsed_sec": 21.724652767181396,
+          "peak_cuda_memory_bytes": 1385100288,
+          "quadratic_consistency_relative_max": 8.503846409114654e-16
+        },
+        {
+          "start_col_1based": 5,
+          "stop_col_1based": 8,
+          "elapsed_sec": 21.693978548049927,
+          "peak_cuda_memory_bytes": 1389116416,
+          "quadratic_consistency_relative_max": 9.305090922707986e-16
+        }
+      ]
+    },
+    {
+      "L": 14,
+      "rank": 8,
+      "Q_orthogonality_max_abs": 4.846383711010205e-17,
+      "previous_Z_orthogonality_max_abs": 2.3375398838787476e-16,
+      "qr": {
+        "retained_rank": 8,
+        "diag_abs": [
+          0.000372150767864206,
+          0.0003679925425874005,
+          0.0003351782989124126,
+          0.00037047483605644026,
+          0.00035583723375384263,
+          0.0003715628495901332,
+          0.0003655183433273468,
+          0.00035280005711516493
+        ],
+        "relative_tolerance": 1e-12
+      },
+      "ga_records": [
+        {
+          "start_col_1based": 1,
+          "stop_col_1based": 4,
+          "elapsed_sec": 21.478630304336548,
+          "peak_cuda_memory_bytes": 1385100288,
+          "quadratic_consistency_relative_max": 4.4208754327385214e-16
+        },
+        {
+          "start_col_1based": 5,
+          "stop_col_1based": 8,
+          "elapsed_sec": 22.012176036834717,
+          "peak_cuda_memory_bytes": 1389116416,
+          "quadratic_consistency_relative_max": 9.044940549250338e-16
+        }
+      ]
+    },
+    {
+      "L": 15,
+      "rank": 8,
+      "Q_orthogonality_max_abs": 5.017145553176672e-17,
+      "previous_Z_orthogonality_max_abs": 2.1196152472091612e-16,
+      "qr": {
+        "retained_rank": 8,
+        "diag_abs": [
+          0.00035710841378639867,
+          0.00036538001721883937,
+          0.0003339263913454942,
+          0.00035159577493005145,
+          0.0003515056584217865,
+          0.0003480972250152283,
+          0.00034621457716197437,
+          0.00033770305970911506
+        ],
+        "relative_tolerance": 1e-12
+      },
+      "ga_records": [
+        {
+          "start_col_1based": 1,
+          "stop_col_1based": 4,
+          "elapsed_sec": 21.721574306488037,
+          "peak_cuda_memory_bytes": 1385100288,
+          "quadratic_consistency_relative_max": 9.00318812167879e-16
+        },
+        {
+          "start_col_1based": 5,
+          "stop_col_1based": 8,
+          "elapsed_sec": 21.720086097717285,
+          "peak_cuda_memory_bytes": 1389116416,
+          "quadratic_consistency_relative_max": 6.405360300421946e-16
+        }
+      ]
+    },
+    {
+      "L": 16,
+      "rank": 8,
+      "Q_orthogonality_max_abs": 4.617346002072642e-17,
+      "previous_Z_orthogonality_max_abs": 1.2836953722228372e-16,
+      "qr": {
+        "retained_rank": 8,
+        "diag_abs": [
+          0.0003479206168806317,
+          0.00035218076018793144,
+          0.0003467984743079663,
+          0.0003363811791705122,
+          0.0003514550957516101,
+          0.0003345164091231137,
+          0.00035618375475329295,
+          0.00033128402758585894
+        ],
+        "relative_tolerance": 1e-12
+      },
+      "ga_records": [
+        {
+          "start_col_1based": 1,
+          "stop_col_1based": 4,
+          "elapsed_sec": 21.95313835144043,
+          "peak_cuda_memory_bytes": 1385100288,
+          "quadratic_consistency_relative_max": 4.726758215945244e-16
+        },
+        {
+          "start_col_1based": 5,
+          "stop_col_1based": 8,
+          "elapsed_sec": 22.181580543518066,
+          "peak_cuda_memory_bytes": 1389116416,
+          "quadratic_consistency_relative_max": 3.196247813041345e-16
+        }
+      ]
+    }
+  ],
+  "report_depths": [
+    {
+      "dimension": 320,
+      "complement_dimension": 0,
+      "B_eigenvalue_min": 3.3326992148544574e-05,
+      "B_eigenvalue_max": 0.04774425888304751,
+      "B_condition_number": 1432.6002979879645,
+      "top_ritz_values": [
+        2483.120106284828,
+        2072.90571911575,
+        1963.3075342213156,
+        1776.1001093413317
+      ],
+      "projected_B_orthonormality_max_abs": 1.0644263248593688e-14,
+      "projected_generalized_residual_max": 3.0989841859294376e-14,
+      "full_space_generalized_residuals": [
+        0.6005046694538756,
+        0.5897334483821686,
+        0.6281547189621166,
+        0.5846775900700455
+      ],
+      "full_space_generalized_residual_max": 0.6281547189621166,
+      "closed_form_leakage_normalized_residuals": [
+        0.6005046694538756,
+        0.5897334483821686,
+        0.6281547189621166,
+        0.5846775900700455
+      ],
+      "exact_vs_closed_form_normalized_residual_abs_max": 0.0,
+      "fraction_identity_error_max": 0.0,
+      "top_directions": [
+        {
+          "rank_index": 1,
+          "generalized_ritz_value": 2483.120106284828,
+          "projected_generalized_residual": 3.0989841859294376e-14,
+          "full_space_generalized_residual": 0.6005046694538756,
+          "ga_leakage_norm": 0.020958584124556347,
+          "lambda_times_ga_leakage_norm": 52.04268163894787,
+          "closed_form_leakage_normalized_residual": 0.6005046694538756,
+          "exact_minus_closed_form_normalized_residual_abs": 0.0,
+          "euclidean_norm_squared": 14829.489927890903,
+          "attention_energy": 0.9999755416641789,
+          "ridge_energy": 2.445833580728501e-05,
+          "attention_fraction": 0.9999755416641927,
+          "ridge_fraction": 2.4458335807285345e-05,
+          "complement_euclidean_fraction": 0.0,
+          "geometry_location_over_mean_GA": 4.088485617105365
+        },
+        {
+          "rank_index": 2,
+          "generalized_ritz_value": 2072.90571911575,
+          "projected_generalized_residual": 2.686333307712589e-14,
+          "full_space_generalized_residual": 0.5897334483821686,
+          "ga_leakage_norm": 0.021667948026754386,
+          "lambda_times_ga_leakage_norm": 44.91561338616199,
+          "closed_form_leakage_normalized_residual": 0.5897334483821686,
+          "exact_minus_closed_form_normalized_residual_abs": 0.0,
+          "euclidean_norm_squared": 14737.504980024298,
+          "attention_energy": 0.9999756933753249,
+          "ridge_energy": 2.430662467257459e-05,
+          "attention_fraction": 0.9999756933753274,
+          "ridge_fraction": 2.430662467257465e-05,
+          "complement_euclidean_fraction": 0.0,
+          "geometry_location_over_mean_GA": 4.114004749098741
+        },
+        {
+          "rank_index": 3,
+          "generalized_ritz_value": 1963.3075342213156,
+          "projected_generalized_residual": 2.2519965926362158e-14,
+          "full_space_generalized_residual": 0.6281547189621166,
+          "ga_leakage_norm": 0.02243617535362928,
+          "lambda_times_ga_leakage_norm": 44.04911211089096,
+          "closed_form_leakage_normalized_residual": 0.6281547189621166,
+          "exact_minus_closed_form_normalized_residual_abs": 0.0,
+          "euclidean_norm_squared": 14778.279667641438,
+          "attention_energy": 0.9999756261254691,
+          "ridge_energy": 2.437387452452678e-05,
+          "attention_fraction": 0.9999756261254755,
+          "ridge_fraction": 2.4373874524526938e-05,
+          "complement_euclidean_fraction": 0.0,
+          "geometry_location_over_mean_GA": 4.102653540450536
+        },
+        {
+          "rank_index": 4,
+          "generalized_ritz_value": 1776.1001093413317,
+          "projected_generalized_residual": 2.8023786261313753e-14,
+          "full_space_generalized_residual": 0.5846775900700455,
+          "ga_leakage_norm": 0.021841131330087245,
+          "lambda_times_ga_leakage_norm": 38.79203574350635,
+          "closed_form_leakage_normalized_residual": 0.5846775900700455,
+          "exact_minus_closed_form_normalized_residual_abs": 0.0,
+          "euclidean_norm_squared": 13614.18528358727,
+          "attention_energy": 0.9999775460708863,
+          "ridge_energy": 2.245392909855347e-05,
+          "attention_fraction": 0.9999775460709015,
+          "ridge_fraction": 2.2453929098553813e-05,
+          "complement_euclidean_fraction": 0.0,
+          "geometry_location_over_mean_GA": 4.453463541644955
+        }
+      ],
+      "L": 0,
+      "lambda1_gain_vs_L0": 1.0,
+      "lambda1_relative_increment_vs_previous_report": null,
+      "full_space_valid_top4": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "diagnostic_top1_path": {
+        "lambda1": 2483.120106284828,
+        "ga_leakage_norm": 0.020958584124556347,
+        "lambda_times_ga_leakage_norm": 52.04268163894787,
+        "full_space_generalized_residual": 0.6005046694538756,
+        "geometry_location_over_mean_GA": 4.088485617105365
+      }
+    },
+    {
+      "dimension": 328,
+      "complement_dimension": 8,
+      "B_eigenvalue_min": 1.8966550178453886e-05,
+      "B_eigenvalue_max": 0.053043811523238255,
+      "B_condition_number": 2796.7031971632005,
+      "top_ritz_values": [
+        6481.866711046214,
+        6195.148179142817,
+        5868.227445349137,
+        5003.508463930616
+      ],
+      "projected_B_orthonormality_max_abs": 2.6645352591003757e-14,
+      "projected_generalized_residual_max": 9.686769797905522e-14,
+      "full_space_generalized_residuals": [
+        0.6373016212698378,
+        0.6566170109911603,
+        0.6413987105147015,
+        0.610024461635582
+      ],
+      "full_space_generalized_residual_max": 0.6566170109911603,
+      "closed_form_leakage_normalized_residuals": [
+        0.6373016212698378,
+        0.6566170109911603,
+        0.6413987105147017,
+        0.6100244616355819
+      ],
+      "exact_vs_closed_form_normalized_residual_abs_max": 1.1102230246251565e-16,
+      "fraction_identity_error_max": 0.0,
+      "top_directions": [
+        {
+          "rank_index": 1,
+          "generalized_ritz_value": 6481.866711046214,
+          "projected_generalized_residual": 7.713119194827589e-14,
+          "full_space_generalized_residual": 0.6373016212698378,
+          "ga_leakage_norm": 0.014708729460496828,
+          "lambda_times_ga_leakage_norm": 95.34002385177912,
+          "closed_form_leakage_normalized_residual": 0.6373016212698378,
+          "exact_minus_closed_form_normalized_residual_abs": 0.0,
+          "euclidean_norm_squared": 41312.70050495576,
+          "attention_energy": 0.9999318628012626,
+          "ridge_energy": 6.81371987148117e-05,
+          "attention_fraction": 0.9999318628012852,
+          "ridge_fraction": 6.813719871481324e-05,
+          "complement_euclidean_fraction": 0.059588239836395857,
+          "geometry_location_over_mean_GA": 1.46752710951103
+        },
+        {
+          "rank_index": 2,
+          "generalized_ritz_value": 6195.148179142817,
+          "projected_generalized_residual": 6.499345295097896e-14,
+          "full_space_generalized_residual": 0.6566170109911603,
+          "ga_leakage_norm": 0.014749991098824982,
+          "lambda_times_ga_leakage_norm": 91.37838049825834,
+          "closed_form_leakage_normalized_residual": 0.6566170109911603,
+          "exact_minus_closed_form_normalized_residual_abs": 0.0,
+          "euclidean_norm_squared": 45563.57929803313,
+          "attention_energy": 0.9999248518102434,
+          "ridge_energy": 7.51481897537961e-05,
+          "attention_fraction": 0.9999248518102462,
+          "ridge_fraction": 7.51481897537963e-05,
+          "complement_euclidean_fraction": 0.05805540145218778,
+          "geometry_location_over_mean_GA": 1.330604043938041
+        },
+        {
+          "rank_index": 3,
+          "generalized_ritz_value": 5868.227445349137,
+          "projected_generalized_residual": 9.686769797905522e-14,
+          "full_space_generalized_residual": 0.6413987105147015,
+          "ga_leakage_norm": 0.014687371313691827,
+          "lambda_times_ga_leakage_norm": 86.18883544303999,
+          "closed_form_leakage_normalized_residual": 0.6413987105147017,
+          "exact_minus_closed_form_normalized_residual_abs": 1.1102230246251565e-16,
+          "euclidean_norm_squared": 45646.34931401538,
+          "attention_energy": 0.999924715297325,
+          "ridge_energy": 7.528470266526588e-05,
+          "attention_fraction": 0.9999247152973347,
+          "ridge_fraction": 7.528470266526661e-05,
+          "complement_euclidean_fraction": 0.05786380326197324,
+          "geometry_location_over_mean_GA": 1.3281910931404404
+        },
+        {
+          "rank_index": 4,
+          "generalized_ritz_value": 5003.508463930616,
+          "projected_generalized_residual": 6.088125499670747e-14,
+          "full_space_generalized_residual": 0.610024461635582,
+          "ga_leakage_norm": 0.014672391055674232,
+          "lambda_times_ga_leakage_norm": 73.41343283316588,
+          "closed_form_leakage_normalized_residual": 0.6100244616355819,
+          "exact_minus_closed_form_normalized_residual_abs": 1.1102230246251565e-16,
+          "euclidean_norm_squared": 39758.20646831048,
+          "attention_energy": 0.999934426634333,
+          "ridge_energy": 6.557336561309559e-05,
+          "attention_fraction": 0.9999344266343869,
+          "ridge_fraction": 6.557336561309913e-05,
+          "complement_euclidean_fraction": 0.060540654835808796,
+          "geometry_location_over_mean_GA": 1.524909416018502
+        }
+      ],
+      "L": 1,
+      "lambda1_gain_vs_L0": 2.6103718038609873,
+      "lambda1_relative_increment_vs_previous_report": 1.6103718038609873,
+      "full_space_valid_top4": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "diagnostic_top1_path": {
+        "lambda1": 6481.866711046214,
+        "ga_leakage_norm": 0.014708729460496828,
+        "lambda_times_ga_leakage_norm": 95.34002385177912,
+        "full_space_generalized_residual": 0.6373016212698378,
+        "geometry_location_over_mean_GA": 1.46752710951103
+      }
+    },
+    {
+      "dimension": 336,
+      "complement_dimension": 16,
+      "B_eigenvalue_min": 1.6237376108385942e-05,
+      "B_eigenvalue_max": 0.05306020792486858,
+      "B_condition_number": 3267.7821570854144,
+      "top_ritz_values": [
+        7050.795302414281,
+        7005.409566021246,
+        6341.8223748251885,
+        5492.215345990288
+      ],
+      "projected_B_orthonormality_max_abs": 2.886579864025407e-14,
+      "projected_generalized_residual_max": 1.5662616527148812e-13,
+      "full_space_generalized_residuals": [
+        0.6391886877676989,
+        0.6453760997617218,
+        0.6344316356289276,
+        0.6024566590556429
+      ],
+      "full_space_generalized_residual_max": 0.6453760997617218,
+      "closed_form_leakage_normalized_residuals": [
+        0.639188687767699,
+        0.6453760997617217,
+        0.6344316356289279,
+        0.6024566590556429
+      ],
+      "exact_vs_closed_form_normalized_residual_abs_max": 3.3306690738754696e-16,
+      "fraction_identity_error_max": 0.0,
+      "top_directions": [
+        {
+          "rank_index": 1,
+          "generalized_ritz_value": 7050.795302414281,
+          "projected_generalized_residual": 9.805205959346348e-14,
+          "full_space_generalized_residual": 0.6391886877676989,
+          "ga_leakage_norm": 0.013793112501794913,
+          "lambda_times_ga_leakage_norm": 97.25241283332726,
+          "closed_form_leakage_normalized_residual": 0.639188687767699,
+          "exact_minus_closed_form_normalized_residual_abs": 1.1102230246251565e-16,
+          "euclidean_norm_squared": 50605.911068412795,
+          "attention_energy": 0.9999165354726796,
+          "ridge_energy": 8.346452728741131e-05,
+          "attention_fraction": 0.9999165354727126,
+          "ridge_fraction": 8.346452728741408e-05,
+          "complement_euclidean_fraction": 0.06854715974496992,
+          "geometry_location_over_mean_GA": 1.1980137765945198
+        },
+        {
+          "rank_index": 2,
+          "generalized_ritz_value": 7005.409566021246,
+          "projected_generalized_residual": 1.5662616527148812e-13,
+          "full_space_generalized_residual": 0.6453760997617218,
+          "ga_leakage_norm": 0.013090758218499176,
+          "lambda_times_ga_leakage_norm": 91.70612285034538,
+          "closed_form_leakage_normalized_residual": 0.6453760997617217,
+          "exact_minus_closed_form_normalized_residual_abs": 1.1102230246251565e-16,
+          "euclidean_norm_squared": 51819.520086817625,
+          "attention_energy": 0.9999145338625846,
+          "ridge_energy": 8.546613739370822e-05,
+          "attention_fraction": 0.9999145338626063,
+          "ridge_fraction": 8.546613739371008e-05,
+          "complement_euclidean_fraction": 0.07150805130899583,
+          "geometry_location_over_mean_GA": 1.1699540477141015
+        },
+        {
+          "rank_index": 3,
+          "generalized_ritz_value": 6341.8223748251885,
+          "projected_generalized_residual": 9.895961237814378e-14,
+          "full_space_generalized_residual": 0.6344316356289276,
+          "ga_leakage_norm": 0.013940965190591922,
+          "lambda_times_ga_leakage_norm": 88.41112497235495,
+          "closed_form_leakage_normalized_residual": 0.6344316356289279,
+          "exact_minus_closed_form_normalized_residual_abs": 3.3306690738754696e-16,
+          "euclidean_norm_squared": 50699.575581898236,
+          "attention_energy": 0.9999163809914839,
+          "ridge_energy": 8.36190085362737e-05,
+          "attention_fraction": 0.9999163809914637,
+          "ridge_fraction": 8.3619008536272e-05,
+          "complement_euclidean_fraction": 0.06567167450545171,
+          "geometry_location_over_mean_GA": 1.1958003311624092
+        },
+        {
+          "rank_index": 4,
+          "generalized_ritz_value": 5492.215345990288,
+          "projected_generalized_residual": 7.51335512824535e-14,
+          "full_space_generalized_residual": 0.6024566590556429,
+          "ga_leakage_norm": 0.013822173853455782,
+          "lambda_times_ga_leakage_norm": 75.91435535289557,
+          "closed_form_leakage_normalized_residual": 0.6024566590556429,
+          "exact_minus_closed_form_normalized_residual_abs": 0.0,
+          "euclidean_norm_squared": 45521.02359282215,
+          "attention_energy": 0.9999249219974526,
+          "ridge_energy": 7.50780024625523e-05,
+          "attention_fraction": 0.9999249219975375,
+          "ridge_fraction": 7.507800246255867e-05,
+          "complement_euclidean_fraction": 0.07187513418923032,
+          "geometry_location_over_mean_GA": 1.3318480636138386
+        }
+      ],
+      "L": 2,
+      "lambda1_gain_vs_L0": 2.8394902383370715,
+      "lambda1_relative_increment_vs_previous_report": 0.08777233731118139,
+      "full_space_valid_top4": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "diagnostic_top1_path": {
+        "lambda1": 7050.795302414281,
+        "ga_leakage_norm": 0.013793112501794913,
+        "lambda_times_ga_leakage_norm": 97.25241283332726,
+        "full_space_generalized_residual": 0.6391886877676989,
+        "geometry_location_over_mean_GA": 1.1980137765945198
+      }
+    },
+    {
+      "dimension": 352,
+      "complement_dimension": 32,
+      "B_eigenvalue_min": 1.0730868087489249e-05,
+      "B_eigenvalue_max": 0.05306609431567799,
+      "B_condition_number": 4945.1818700060185,
+      "top_ritz_values": [
+        11421.533003447637,
+        10514.445695187538,
+        9403.98757204763,
+        8138.724413562942
+      ],
+      "projected_B_orthonormality_max_abs": 4.4353409833775004e-14,
+      "projected_generalized_residual_max": 2.0980484749558586e-13,
+      "full_space_generalized_residuals": [
+        0.6503898496568111,
+        0.6527913766164837,
+        0.6339339094417501,
+        0.6081348592595653
+      ],
+      "full_space_generalized_residual_max": 0.6527913766164837,
+      "closed_form_leakage_normalized_residuals": [
+        0.6503898496568109,
+        0.6527913766164837,
+        0.6339339094417501,
+        0.6081348592595652
+      ],
+      "exact_vs_closed_form_normalized_residual_abs_max": 2.220446049250313e-16,
+      "fraction_identity_error_max": 0.0,
+      "top_directions": [
+        {
+          "rank_index": 1,
+          "generalized_ritz_value": 11421.533003447637,
+          "projected_generalized_residual": 1.8406586922045032e-13,
+          "full_space_generalized_residual": 0.6503898496568111,
+          "ga_leakage_norm": 0.011442306928916894,
+          "lambda_times_ga_leakage_norm": 130.6886862242019,
+          "closed_form_leakage_normalized_residual": 0.6503898496568109,
+          "exact_minus_closed_form_normalized_residual_abs": 2.220446049250313e-16,
+          "euclidean_norm_squared": 85684.45666945032,
+          "attention_energy": 0.9998586802899783,
+          "ridge_energy": 0.0001413197099075298,
+          "attention_fraction": 0.9998586802900925,
+          "ridge_fraction": 0.00014131970990754596,
+          "complement_euclidean_fraction": 0.11759827894386553,
+          "geometry_location_over_mean_GA": 0.7075153783886334
+        },
+        {
+          "rank_index": 2,
+          "generalized_ritz_value": 10514.445695187538,
+          "projected_generalized_residual": 2.0980484749558586e-13,
+          "full_space_generalized_residual": 0.6527913766164837,
+          "ga_leakage_norm": 0.011327904103841858,
+          "lambda_times_ga_leakage_norm": 119.10663254013727,
+          "closed_form_leakage_normalized_residual": 0.6527913766164837,
+          "exact_minus_closed_form_normalized_residual_abs": 0.0,
+          "euclidean_norm_squared": 73367.17991749168,
+          "attention_energy": 0.999878995222861,
+          "ridge_energy": 0.00012100477712861693,
+          "attention_fraction": 0.9998789952228714,
+          "ridge_fraction": 0.0001210047771286182,
+          "complement_euclidean_fraction": 0.11618675527864174,
+          "geometry_location_over_mean_GA": 0.826313653848626
+        },
+        {
+          "rank_index": 3,
+          "generalized_ritz_value": 9403.98757204763,
+          "projected_generalized_residual": 1.3652311502411176e-13,
+          "full_space_generalized_residual": 0.6339339094417501,
+          "ga_leakage_norm": 0.011343743789915707,
+          "lambda_times_ga_leakage_norm": 106.6764256208598,
+          "closed_form_leakage_normalized_residual": 0.6339339094417501,
+          "exact_minus_closed_form_normalized_residual_abs": 0.0,
+          "euclidean_norm_squared": 75441.33922493855,
+          "attention_energy": 0.999875574303849,
+          "ridge_energy": 0.00012442569619636778,
+          "attention_fraction": 0.9998755743038037,
+          "ridge_fraction": 0.00012442569619636215,
+          "complement_euclidean_fraction": 0.10108995451585552,
+          "geometry_location_over_mean_GA": 0.8035925093204641
+        },
+        {
+          "rank_index": 4,
+          "generalized_ritz_value": 8138.724413562942,
+          "projected_generalized_residual": 1.8176534327037735e-13,
+          "full_space_generalized_residual": 0.6081348592595653,
+          "ga_leakage_norm": 0.011551068858332507,
+          "lambda_times_ga_leakage_norm": 94.01096612005739,
+          "closed_form_leakage_normalized_residual": 0.6081348592595652,
+          "exact_minus_closed_form_normalized_residual_abs": 1.1102230246251565e-16,
+          "euclidean_norm_squared": 67583.61109465662,
+          "attention_energy": 0.9998885340854343,
+          "ridge_energy": 0.0001114659144218561,
+          "attention_fraction": 0.9998885340855781,
+          "ridge_fraction": 0.00011146591442187213,
+          "complement_euclidean_fraction": 0.11592867997709509,
+          "geometry_location_over_mean_GA": 0.8970352410165826
+        }
+      ],
+      "L": 4,
+      "lambda1_gain_vs_L0": 4.599669977517198,
+      "lambda1_relative_increment_vs_previous_report": 0.6198928650696698,
+      "full_space_valid_top4": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "diagnostic_top1_path": {
+        "lambda1": 11421.533003447637,
+        "ga_leakage_norm": 0.011442306928916894,
+        "lambda_times_ga_leakage_norm": 130.6886862242019,
+        "full_space_generalized_residual": 0.6503898496568111,
+        "geometry_location_over_mean_GA": 0.7075153783886334
+      }
+    },
+    {
+      "dimension": 384,
+      "complement_dimension": 64,
+      "B_eigenvalue_min": 5.6748235921643755e-06,
+      "B_eigenvalue_max": 0.05306808739004419,
+      "B_condition_number": 9351.495518436732,
+      "top_ritz_values": [
+        19303.956236415106,
+        16203.293215981166,
+        15264.989455788718,
+        13855.246237451109
+      ],
+      "projected_B_orthonormality_max_abs": 5.1889048613418254e-14,
+      "projected_generalized_residual_max": 3.294405006910154e-13,
+      "full_space_generalized_residuals": [
+        0.6569953042765929,
+        0.6597377756839531,
+        0.6437069704406645,
+        0.6177848593054263
+      ],
+      "full_space_generalized_residual_max": 0.6597377756839531,
+      "closed_form_leakage_normalized_residuals": [
+        0.6569953042765929,
+        0.6597377756839532,
+        0.6437069704406644,
+        0.6177848593054264
+      ],
+      "exact_vs_closed_form_normalized_residual_abs_max": 1.1102230246251565e-16,
+      "fraction_identity_error_max": 0.0,
+      "top_directions": [
+        {
+          "rank_index": 1,
+          "generalized_ritz_value": 19303.956236415106,
+          "projected_generalized_residual": 2.3685527716064787e-13,
+          "full_space_generalized_residual": 0.6569953042765929,
+          "ga_leakage_norm": 0.008723609211279796,
+          "lambda_times_ga_leakage_norm": 168.40017043813288,
+          "closed_form_leakage_normalized_residual": 0.6569953042765929,
+          "exact_minus_closed_form_normalized_residual_abs": 0.0,
+          "euclidean_norm_squared": 166013.9589932301,
+          "attention_energy": 0.9997261925272437,
+          "ridge_energy": 0.00027380747264385183,
+          "attention_fraction": 0.9997261925273562,
+          "ridge_fraction": 0.0002738074726438826,
+          "complement_euclidean_fraction": 0.19344092322468354,
+          "geometry_location_over_mean_GA": 0.3651201272463489
+        },
+        {
+          "rank_index": 2,
+          "generalized_ritz_value": 16203.293215981166,
+          "projected_generalized_residual": 3.294405006910154e-13,
+          "full_space_generalized_residual": 0.6597377756839531,
+          "ga_leakage_norm": 0.009352009817520492,
+          "lambda_times_ga_leakage_norm": 151.53335723201906,
+          "closed_form_leakage_normalized_residual": 0.6597377756839532,
+          "exact_minus_closed_form_normalized_residual_abs": 1.1102230246251565e-16,
+          "euclidean_norm_squared": 128000.92779371617,
+          "attention_energy": 0.9997888875685794,
+          "ridge_energy": 0.00021111243143532768,
+          "attention_fraction": 0.9997888875685648,
+          "ridge_fraction": 0.0002111124314353246,
+          "complement_euclidean_fraction": 0.20484550692754092,
+          "geometry_location_over_mean_GA": 0.47358124804453094
+        },
+        {
+          "rank_index": 3,
+          "generalized_ritz_value": 15264.989455788718,
+          "projected_generalized_residual": 2.958386401338482e-13,
+          "full_space_generalized_residual": 0.6437069704406645,
+          "ga_leakage_norm": 0.009381119105910697,
+          "lambda_times_ga_leakage_norm": 143.2026842352249,
+          "closed_form_leakage_normalized_residual": 0.6437069704406644,
+          "exact_minus_closed_form_normalized_residual_abs": 1.1102230246251565e-16,
+          "euclidean_norm_squared": 134463.56471122953,
+          "attention_energy": 0.9997782287162532,
+          "ridge_energy": 0.00022177128380973163,
+          "attention_fraction": 0.9997782287161904,
+          "ridge_fraction": 0.0002217712838097177,
+          "complement_euclidean_fraction": 0.18626793581013756,
+          "geometry_location_over_mean_GA": 0.450815007038518
+        },
+        {
+          "rank_index": 4,
+          "generalized_ritz_value": 13855.246237451109,
+          "projected_generalized_residual": 1.869711289598005e-13,
+          "full_space_generalized_residual": 0.6177848593054263,
+          "ga_leakage_norm": 0.009316972627814495,
+          "lambda_times_ga_leakage_norm": 129.08894994596176,
+          "closed_form_leakage_normalized_residual": 0.6177848593054264,
+          "exact_minus_closed_form_normalized_residual_abs": 1.1102230246251565e-16,
+          "euclidean_norm_squared": 128400.05638263463,
+          "attention_energy": 0.9997882292839887,
+          "ridge_energy": 0.0002117707157799359,
+          "attention_fraction": 0.9997882292842201,
+          "ridge_fraction": 0.0002117707157799849,
+          "complement_euclidean_fraction": 0.2179646364115845,
+          "geometry_location_over_mean_GA": 0.4721088209018149
+        }
+      ],
+      "L": 8,
+      "lambda1_gain_vs_L0": 7.774072702949968,
+      "lambda1_relative_increment_vs_previous_report": 0.6901370622129381,
+      "full_space_valid_top4": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "dimension": 416,
+      "complement_dimension": 96,
+      "B_eigenvalue_min": 3.360208468800058e-06,
+      "B_eigenvalue_max": 0.05306829755832955,
+      "B_condition_number": 15793.156302972006,
+      "top_ritz_values": [
+        29098.221728435426,
+        23464.736644225315,
+        22511.71813553299,
+        20114.273394726995
+      ],
+      "projected_B_orthonormality_max_abs": 1.0835776720341528e-13,
+      "projected_generalized_residual_max": 4.647125296455124e-13,
+      "full_space_generalized_residuals": [
+        0.6560206552086179,
+        0.6412537377311096,
+        0.6549733639739557,
+        0.6168265289814587
+      ],
+      "full_space_generalized_residual_max": 0.6560206552086179,
+      "closed_form_leakage_normalized_residuals": [
+        0.6560206552086179,
+        0.6412537377311097,
+        0.6549733639739556,
+        0.6168265289814588
+      ],
+      "exact_vs_closed_form_normalized_residual_abs_max": 1.1102230246251565e-16,
+      "fraction_identity_error_max": 1.1102230246251565e-16,
+      "top_directions": [
+        {
+          "rank_index": 1,
+          "generalized_ritz_value": 29098.221728435426,
+          "projected_generalized_residual": 4.583499219691297e-13,
+          "full_space_generalized_residual": 0.6560206552086179,
+          "ga_leakage_norm": 0.00709324416718553,
+          "lambda_times_ga_leakage_norm": 206.40079155069583,
+          "closed_form_leakage_normalized_residual": 0.6560206552086179,
+          "exact_minus_closed_form_normalized_residual_abs": 0.0,
+          "euclidean_norm_squared": 281178.0973383797,
+          "attention_energy": 0.9995362518628863,
+          "ridge_energy": 0.000463748136975447,
+          "attention_fraction": 0.9995362518630244,
+          "ridge_fraction": 0.00046374813697551106,
+          "complement_euclidean_fraction": 0.2838321615534096,
+          "geometry_location_over_mean_GA": 0.21553428944897446
+        },
+        {
+          "rank_index": 2,
+          "generalized_ritz_value": 23464.736644225315,
+          "projected_generalized_residual": 3.4601286650918054e-13,
+          "full_space_generalized_residual": 0.6412537377311096,
+          "ga_leakage_norm": 0.007493348110389741,
+          "lambda_times_ga_leakage_norm": 175.82943999379867,
+          "closed_form_leakage_normalized_residual": 0.6412537377311097,
+          "exact_minus_closed_form_normalized_residual_abs": 1.1102230246251565e-16,
+          "euclidean_norm_squared": 240598.46194508395,
+          "attention_energy": 0.9996031800146858,
+          "ridge_energy": 0.00039681998541982747,
+          "attention_fraction": 0.9996031800145802,
+          "ridge_fraction": 0.0003968199854197855,
+          "complement_euclidean_fraction": 0.30315935589122156,
+          "geometry_location_over_mean_GA": 0.2519034365058822
+        },
+        {
+          "rank_index": 3,
+          "generalized_ritz_value": 22511.71813553299,
+          "projected_generalized_residual": 4.647125296455124e-13,
+          "full_space_generalized_residual": 0.6549733639739557,
+          "ga_leakage_norm": 0.007630145620837495,
+          "lambda_times_ga_leakage_norm": 171.76768754936504,
+          "closed_form_leakage_normalized_residual": 0.6549733639739556,
+          "exact_minus_closed_form_normalized_residual_abs": 1.1102230246251565e-16,
+          "euclidean_norm_squared": 211397.46232261747,
+          "attention_energy": 0.9996513413377497,
+          "ridge_energy": 0.00034865866239742023,
+          "attention_fraction": 0.9996513413376025,
+          "ridge_fraction": 0.0003486586623973689,
+          "complement_euclidean_fraction": 0.3079100921447851,
+          "geometry_location_over_mean_GA": 0.2867134676832702
+        },
+        {
+          "rank_index": 4,
+          "generalized_ritz_value": 20114.273394726995,
+          "projected_generalized_residual": 2.4292413125177907e-13,
+          "full_space_generalized_residual": 0.6168265289814587,
+          "ga_leakage_norm": 0.00784052932013386,
+          "lambda_times_ga_leakage_norm": 157.70655030454543,
+          "closed_form_leakage_normalized_residual": 0.6168265289814588,
+          "exact_minus_closed_form_normalized_residual_abs": 1.1102230246251565e-16,
+          "euclidean_norm_squared": 210545.48548902856,
+          "attention_energy": 0.9996527465059251,
+          "ridge_energy": 0.000347253493669617,
+          "attention_fraction": 0.9996527465063303,
+          "ridge_fraction": 0.0003472534936697578,
+          "complement_euclidean_fraction": 0.3355158462532865,
+          "geometry_location_over_mean_GA": 0.287874064546349
+        }
+      ],
+      "L": 12,
+      "lambda1_gain_vs_L0": 11.71841090359956,
+      "lambda1_relative_increment_vs_previous_report": 0.507370891856062,
+      "full_space_valid_top4": [
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    {
+      "dimension": 448,
+      "complement_dimension": 128,
+      "B_eigenvalue_min": 2.328906864513515e-06,
+      "B_eigenvalue_max": 0.05306832300840565,
+      "B_condition_number": 22786.7948766131,
+      "top_ritz_values": [
+        37385.55806016779,
+        30438.185570568112,
+        28296.204557623736,
+        25643.582470235902
+      ],
+      "projected_B_orthonormality_max_abs": 1.5373813333496855e-13,
+      "projected_generalized_residual_max": 5.208747945043448e-13,
+      "full_space_generalized_residuals": [
+        0.6398002628860521,
+        0.6218913817996116,
+        0.6455629827055478,
+        0.6141549511892511
+      ],
+      "full_space_generalized_residual_max": 0.6455629827055478,
+      "closed_form_leakage_normalized_residuals": [
+        0.6398002628860522,
+        0.6218913817996117,
+        0.6455629827055479,
+        0.6141549511892511
+      ],
+      "exact_vs_closed_form_normalized_residual_abs_max": 1.1102230246251565e-16,
+      "fraction_identity_error_max": 1.1102230246251565e-16,
+      "top_directions": [
+        {
+          "rank_index": 1,
+          "generalized_ritz_value": 37385.55806016779,
+          "projected_generalized_residual": 3.460637191175797e-13,
+          "full_space_generalized_residual": 0.6398002628860521,
+          "ga_leakage_norm": 0.005887297465278079,
+          "lambda_times_ga_leakage_norm": 220.09990120563225,
+          "closed_form_leakage_normalized_residual": 0.6398002628860522,
+          "exact_minus_closed_form_normalized_residual_abs": 1.1102230246251565e-16,
+          "euclidean_norm_squared": 401519.3640035847,
+          "attention_energy": 0.9993377725403401,
+          "ridge_energy": 0.000662227459317873,
+          "attention_fraction": 0.9993377725406819,
+          "ridge_fraction": 0.0006622274593180994,
+          "complement_euclidean_fraction": 0.35177524044146585,
+          "geometry_location_over_mean_GA": 0.15090551720245904
+        },
+        {
+          "rank_index": 2,
+          "generalized_ritz_value": 30438.185570568112,
+          "projected_generalized_residual": 5.208747945043448e-13,
+          "full_space_generalized_residual": 0.6218913817996116,
+          "ga_leakage_norm": 0.006145640478943102,
+          "lambda_times_ga_leakage_norm": 187.06214534806523,
+          "closed_form_leakage_normalized_residual": 0.6218913817996117,
+          "exact_minus_closed_form_normalized_residual_abs": 1.1102230246251565e-16,
+          "euclidean_norm_squared": 354775.084041215,
+          "attention_energy": 0.9994148680646315,
+          "ridge_energy": 0.000585131935335007,
+          "attention_fraction": 0.999414868064665,
+          "ridge_fraction": 0.0005851319353350265,
+          "complement_euclidean_fraction": 0.38474739885087694,
+          "geometry_location_over_mean_GA": 0.17080162741287302
+        },
+        {
+          "rank_index": 3,
+          "generalized_ritz_value": 28296.204557623736,
+          "projected_generalized_residual": 5.005446273159044e-13,
+          "full_space_generalized_residual": 0.6455629827055478,
+          "ga_leakage_norm": 0.006474238454308429,
+          "lambda_times_ga_leakage_norm": 183.19637565794503,
+          "closed_form_leakage_normalized_residual": 0.6455629827055479,
+          "exact_minus_closed_form_normalized_residual_abs": 1.1102230246251565e-16,
+          "euclidean_norm_squared": 310479.9884642789,
+          "attention_energy": 0.9994879241394533,
+          "ridge_energy": 0.0005120758607495361,
+          "attention_fraction": 0.9994879241392505,
+          "ridge_fraction": 0.0005120758607494321,
+          "complement_euclidean_fraction": 0.3930636686584915,
+          "geometry_location_over_mean_GA": 0.19518356570772194
+        },
+        {
+          "rank_index": 4,
+          "generalized_ritz_value": 25643.582470235902,
+          "projected_generalized_residual": 4.090331558362383e-13,
+          "full_space_generalized_residual": 0.6141549511892511,
+          "ga_leakage_norm": 0.00692382682964522,
+          "lambda_times_ga_leakage_norm": 177.55172431563918,
+          "closed_form_leakage_normalized_residual": 0.6141549511892511,
+          "exact_minus_closed_form_normalized_residual_abs": 0.0,
+          "euclidean_norm_squared": 306549.4400690792,
+          "attention_energy": 0.9994944068075172,
+          "ridge_energy": 0.0005055931918901188,
+          "attention_fraction": 0.9994944068081095,
+          "ridge_fraction": 0.0005055931918904185,
+          "complement_euclidean_fraction": 0.43076568630191986,
+          "geometry_location_over_mean_GA": 0.19768747341533402
+        }
+      ],
+      "L": 16,
+      "lambda1_gain_vs_L0": 15.05587988496576,
+      "lambda1_relative_increment_vs_previous_report": 0.2848055942756733,
+      "full_space_valid_top4": [
+        false,
+        false,
+        false,
+        false
+      ]
+    }
+  ],
+  "full_space_validity_gate": 1e-06,
+  "any_top1_full_space_validated": false,
+  "any_top4_all_full_space_validated": false,
+  "full_space_gate_role": "CERTIFICATION_ONLY_NOT_DIAGNOSTIC_PASS_FAIL",
+  "diagnostic_primary_outcome": "RESIDUAL_LEAKAGE_LAMBDA_TRAJECTORY",
+  "raw_output": {
+    "filename": "TSPG_H1_0012_LEARNED_SEED42_COMPLEMENT_KRYLOV_L16_v1_0.npz",
+    "sha256": "7807d98e9dc4a226779d7b3c4ebfb13036d3aef1fdc36cb71345733e7c1ef891",
+    "size_bytes": 309854748,
+    "included_in_compact_evidence_zip": false
+  },
+  "unrestricted_inverse_solver_executed": false,
+  "c_changed": false,
+  "c_sweep_performed": false,
+  "geometry_support_cutoff_selected": false,
+  "confirmatory_model_execution_performed": false
+}

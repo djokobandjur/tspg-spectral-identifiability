@@ -1,0 +1,194 @@
+{
+  "schema": "TSPG_A52_RUN_CONFIG_v1_0",
+  "status": "LOCKED",
+  "run_id": "TSPG-RUN-PV-0001",
+  "protocol_lock": "TSPG_PROTOCOL_LOCK_v0_52_20260903.md",
+  "protocol_amendment": "TSPG_PROTOCOL_AMENDMENT_A52_DIAGNOSTIC_PORTABILITY_PANEL_PUBLIC_SCIENTIFIC_v1_0_20260904.md",
+  "family": "learned",
+  "precision": {
+    "derivatives": "FP64",
+    "sdpa": "MATH",
+    "per_example_gradient": "ordinary scalar reverse-mode"
+  },
+  "rank_ladder": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "primary_ranks": [
+    4,
+    8,
+    16,
+    32
+  ],
+  "rank_gate": {
+    "tol_rank_formula": "m*eps64*lambda1",
+    "min_r_num": 64,
+    "lambda64_over_lambda1_strict_gt": 1e-08
+  },
+  "labels": {
+    "eps_label": 1e-10,
+    "eps_R": 1e-10
+  },
+  "numerical_gates": {
+    "symmetry_inf": 1e-10,
+    "B_invsqrt_reconstruction_relative_fro": 1e-10,
+    "B_orthonormality_inf": 1e-10,
+    "qr_orthonormality_inf": 1e-10,
+    "qr_span_equivalence_relative_fro": 1e-10,
+    "self_scaled_generalized_residual_top32": 1e-10,
+    "normwise_generalized_backward_error_all": 1e-10,
+    "symmetric_backward_error_all": 1e-10,
+    "efficiency_upper": 1.0000000001,
+    "principal_cosine_upper": 1.0000000001
+  },
+  "trace": {
+    "c": 0.0001,
+    "probe_counts": [
+      16,
+      32,
+      64
+    ],
+    "rse_gate": 0.02,
+    "seed_base_learned": 2026083200,
+    "rng": "numpy.Generator(PCG64)",
+    "distribution": "Rademacher_unscaled_pm1",
+    "max_actions_per_arm": 64,
+    "failure_status": "TRACE_ESTIMATION_GATE_FAIL"
+  },
+  "ga_certification": {
+    "indices": "first 8 C",
+    "seeds": [
+      2026090301,
+      2026090302,
+      2026090303,
+      2026090304
+    ],
+    "rng": "numpy.Generator(PCG64)",
+    "directions": "Rademacher then Euclidean unit normalization",
+    "serial_actions": 4,
+    "candidate_block_actions": 4,
+    "relative_l2_gate": 1e-08,
+    "quadratic_relative_gate": 1e-08,
+    "candidate_preference": [
+      "vmap",
+      "shared_vjp_loop"
+    ]
+  },
+  "compute_ceiling": {
+    "task_gradients_per_arm": 640,
+    "task_gradients_total": 2560,
+    "support_ga_actions_per_arm_max": 320,
+    "trace_jvp_actions_per_arm_max": 64,
+    "cert_actions_per_arm": 8,
+    "geometry_direction_actions_per_arm_max": 392,
+    "geometry_direction_actions_total_max": 1568,
+    "unique_C_arm_image_memberships_total": 1024
+  },
+  "paths": {
+    "checkpoint_manifest": "manifests/TSPG_A52_CHECKPOINT_MANIFEST_v1_0_20260903.json",
+    "imagenet_split": "manifests/TSPG_SPLIT_MANIFEST_IN100_PILOT_v1_0_20260819.json",
+    "cifar_split": "manifests/TSPG_A52_CIFAR_SPLIT_MANIFEST_v1_1_RECONSTRUCTED_20260903.json",
+    "h1_0017_target": "provenance/TSPG_H1_0017_RESULT_v1_1_20260829.json"
+  },
+  "arms": {
+    "PV-A": {
+      "role": "ViT-B seed portability",
+      "arch": "ViT-B/16",
+      "dataset": "ImageNet-100",
+      "seed": 123,
+      "checkpoint": "/home/djoko.bandjur.ftnkm/Notebooks/ImageNet100_checkpoints/learned_seed123/best_model.pth",
+      "sha256": "fbb8d70f72fb6ee1bb93b1d00cca663ffb222f489d16d8149f2e01efd65c351e",
+      "img_size": 224,
+      "patch_size": 16,
+      "embed_dim": 768,
+      "depth": 12,
+      "num_heads": 12,
+      "num_classes": 100,
+      "seq_len": 197,
+      "d_p": 151296,
+      "model_source": "model_sources/full_scale_experiment.py",
+      "dataset_root": "/home/djoko.bandjur.ftnkm/datasets/imagenet100/imagenet100_resized/val",
+      "split": "ImageNet"
+    },
+    "PV-B1": {
+      "role": "backbone portability seed42",
+      "arch": "ViT-S/16",
+      "dataset": "ImageNet-100",
+      "seed": 42,
+      "checkpoint": "/home/djoko.bandjur.ftnkm/ImageNet100_ViTS_AMP_FP16/learned_seed42/best_model.pth",
+      "sha256": "a518ec4ba5478539e85b8a3841e847cd014e7f1eddc7e48752bfe105b68ace26",
+      "img_size": 224,
+      "patch_size": 16,
+      "embed_dim": 384,
+      "depth": 12,
+      "num_heads": 6,
+      "num_classes": 100,
+      "seq_len": 197,
+      "d_p": 75648,
+      "model_source": "model_sources/full_scale_experiment_vits_bf16.py",
+      "dataset_root": "/home/djoko.bandjur.ftnkm/datasets/imagenet100/imagenet100_resized/val",
+      "split": "ImageNet"
+    },
+    "PV-B2": {
+      "role": "backbone portability seed123",
+      "arch": "ViT-S/16",
+      "dataset": "ImageNet-100",
+      "seed": 123,
+      "checkpoint": "/home/djoko.bandjur.ftnkm/ImageNet100_ViTS_AMP_FP16/learned_seed123/best_model.pth",
+      "sha256": "c04bd01615a897d713e5e0deb94afea0cdc0e0367d09a14846ab46b93bf82524",
+      "img_size": 224,
+      "patch_size": 16,
+      "embed_dim": 384,
+      "depth": 12,
+      "num_heads": 6,
+      "num_classes": 100,
+      "seq_len": 197,
+      "d_p": 75648,
+      "model_source": "model_sources/full_scale_experiment_vits_bf16.py",
+      "dataset_root": "/home/djoko.bandjur.ftnkm/datasets/imagenet100/imagenet100_resized/val",
+      "split": "ImageNet"
+    },
+    "PV-C": {
+      "role": "dataset/input-tokenization stress case",
+      "arch": "ViT-B/4-CIFAR",
+      "dataset": "CIFAR-100",
+      "seed": 42,
+      "checkpoint": "/home/djoko.bandjur.ftnkm/Notebooks/CIFAR100_checkpoints/learned_seed42/best_model.pth",
+      "sha256": "a65418972b2f3c9c68b5031d79159fa5141cfccab3d12454947321500d545cdd",
+      "img_size": 32,
+      "patch_size": 4,
+      "embed_dim": 768,
+      "depth": 12,
+      "num_heads": 12,
+      "num_classes": 100,
+      "seq_len": 65,
+      "d_p": 49920,
+      "model_source": "model_sources/full_scale_experiment.py",
+      "dataset_root": "/home/djoko.bandjur.ftnkm/datasets/cifar100/cifar-100-python",
+      "split": "CIFAR"
+    }
+  },
+  "cross_cell": {
+    "prospective_primary": [
+      "PV-A__vs__PV-B2",
+      "PV-B1__vs__PV-B2"
+    ],
+    "retrospective_context": [
+      "R0__vs__PV-A",
+      "R0__vs__PV-B1"
+    ],
+    "PV-C": "SINGLETON_STRESS_CASE"
+  },
+  "prohibitions": [
+    "no extra arms/checkpoints/seeds",
+    "no rank substitution",
+    "no post-outcome tau/probe change",
+    "no dense d_p x d_p G_A or G_T",
+    "no bootstrap/p-values/population inference",
+    "no R0-containing contrast called prospective"
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "TSPG_A52_EXPECTED_INVARIANTS_FINAL_v1_0",
+  "status": "LOCKED",
+  "date": "2026-09-03",
+  "prelock_evidence_sha256": "de475c3bab394b11101ed8da191cdaeb192066df43d80e41a16e5702595497b3",
+  "splits": {
+    "ImageNet": {
+      "C_hash": "44007d048ec59a2329da221ab9cad1f20259a48719225f0467065fa33dcbb968",
+      "AG1_hash": "bca79e4000650685a2c9d4de5c5842cea7bce5880f4c659f08c3756d0fb11246",
+      "AG2_hash": "9c16aba3c4596716f43a67e5405ab75aa1216baf68bd3dc6e26319180c61aea1"
+    },
+    "CIFAR": {
+      "C_hash": "a08224dd0de89527c0888d61028d897236a746136b79da960facb78d7a9535e4",
+      "AG1_hash": "063bd654c5f8e83a304aa89774b00f5959977ddf8aa5ed78785310f39d4d9338",
+      "AG2_hash": "2ae9ef0121f70ed8440cf410d0cd6804f7f143b1db731a04ea11a8a2bbbfc9a8"
+    }
+  },
+  "R0": {
+    "status": "R0_REPRO_PASS",
+    "min_train_generalized_gap": 0.009935160010726812,
+    "eps_gap_repro": 1e-08,
+    "rho_ridge": 4.948853195157456e-05
+  },
+  "P1b": {
+    "dimension": 64,
+    "h_j": "2.64-0.01*j for j=0..31",
+    "l_j": "0.5*h_j",
+    "B": "32 ones + 32 0.1",
+    "targets": {
+      "eta_task_SE": 1,
+      "eta_task_SB": 0.5,
+      "eta_B_SE": 0.2,
+      "eta_B_SB": 1,
+      "Delta_sel_task": -0.5,
+      "Delta_sel_B": 0.8,
+      "R_B": 0.1,
+      "tau_task": 0.5,
+      "R_norm": 5,
+      "F_SE": 1,
+      "F_SB": 1,
+      "label": "DENOMINATOR_SELECTIVE_REVERSAL"
+    }
+  },
+  "trace": {
+    "c": 0.0001,
+    "probe_counts": [
+      16,
+      32,
+      64
+    ],
+    "rse_gate": 0.02,
+    "seed_base_learned": 2026083200,
+    "rng": "numpy.Generator(PCG64)",
+    "distribution": "Rademacher_unscaled_pm1",
+    "max_actions_per_arm": 64,
+    "failure_status": "TRACE_ESTIMATION_GATE_FAIL"
+  },
+  "checkpoint_hashes": {
+    "PV-A": "fbb8d70f72fb6ee1bb93b1d00cca663ffb222f489d16d8149f2e01efd65c351e",
+    "PV-B1": "a518ec4ba5478539e85b8a3841e847cd014e7f1eddc7e48752bfe105b68ace26",
+    "PV-B2": "c04bd01615a897d713e5e0deb94afea0cdc0e0367d09a14846ab46b93bf82524",
+    "PV-C": "a65418972b2f3c9c68b5031d79159fa5141cfccab3d12454947321500d545cdd"
+  },
+  "ga_certification": {
+    "indices": "first 8 C",
+    "seeds": [
+      2026090301,
+      2026090302,
+      2026090303,
+      2026090304
+    ],
+    "rng": "numpy.Generator(PCG64)",
+    "directions": "Rademacher then Euclidean unit normalization",
+    "serial_actions": 4,
+    "candidate_block_actions": 4,
+    "relative_l2_gate": 1e-08,
+    "quadratic_relative_gate": 1e-08,
+    "candidate_preference": [
+      "vmap",
+      "shared_vjp_loop"
+    ]
+  }
+}

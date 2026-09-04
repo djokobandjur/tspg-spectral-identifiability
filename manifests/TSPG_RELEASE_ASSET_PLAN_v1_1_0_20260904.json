@@ -1,0 +1,134 @@
+{
+  "schema": "TSPG_RELEASE_ASSET_PLAN_v1_1_0",
+  "date": "2026-09-04",
+  "status": "PREPUBLIC_LOCAL_ZENODO_STAGING_VERIFIED",
+  "base_release": {
+    "github_tag": "v1.0.0",
+    "version_doi": "10.5281/zenodo.22180107",
+    "concept_doi": "10.5281/zenodo.22180106"
+  },
+  "new_release_version": "1.1.0",
+  "purpose": "Extend the public reproducibility boundary with H1-0012 motivating decomposition, pre-existing H1-0007 ALiBi structural control, and A52 diagnostic portability evidence.",
+  "release_assets": [
+    {
+      "filename": "TSPG_A52_RUNTIME_BYTE_PROVENANCE_ADDENDUM_v1_0_20260904.zip",
+      "size_bytes": 12456954,
+      "sha256": "9f3621629781553f6027dc0cb802261edcd1a3ff9a92e8bfed671dfcff3d4d73",
+      "role": "public compact evidence / convenience asset"
+    },
+    {
+      "filename": "TSPG_A52_RUNTIME_EVIDENCE_PUBLIC_v1_1_0_20260904.zip",
+      "size_bytes": 167939,
+      "sha256": "730e0e9dc9303241ea83b6cf4aa6d3a221d40df8f9015fddf5af2d2780e03e21",
+      "role": "public compact evidence / convenience asset"
+    },
+    {
+      "filename": "TSPG_A52_ZERO_COMPUTE_FINAL_CLOSEOUT_PATCH_PUBLIC_v1_1_0_20260904.zip",
+      "size_bytes": 95420,
+      "sha256": "f4ac1f76a7d4f7dba8fe878053889ccae171a3f0ec728049f92224af07a8d5fb",
+      "role": "public compact evidence / convenience asset"
+    },
+    {
+      "filename": "TSPG_H1_0007_ALIBI_SEED42_DENSE_GA_GT_AND_TOP4_v1_1.npz",
+      "size_bytes": 33778,
+      "sha256": "dd8e670f222824fd78eb833bc4cd23f31ac5119ba3ed5eb6921b318c6149329d",
+      "role": "public compact evidence / convenience asset"
+    },
+    {
+      "filename": "TSPG_H1_0007_CLOSEOUT_EVIDENCE_v1_0_20260828.zip",
+      "size_bytes": 6659,
+      "sha256": "089793f27121d02cbbba57a965557b67d4f1e3b939a4c80a0f16588736fa520a",
+      "role": "public compact evidence / convenience asset"
+    },
+    {
+      "filename": "TSPG_H1_0007_RUNTIME_EVIDENCE_v1_2_20260828.zip",
+      "size_bytes": 43475,
+      "sha256": "0fd3fc803b4cedb24f5cfeae2a5c624b56bf078ea0d7032b08594cb8c7f60f6c",
+      "role": "public compact evidence / convenience asset"
+    },
+    {
+      "filename": "TSPG_H1_0012_CLOSEOUT_EVIDENCE_v1_0_20260828.zip",
+      "size_bytes": 8973,
+      "sha256": "229cb41b8159e7837ea0be46a229b5d7cee84a3ff6fff3809d6a6d581a792201",
+      "role": "public compact evidence / convenience asset"
+    },
+    {
+      "filename": "TSPG_H1_0012_POSTRUN_UPGRADE_EVIDENCE_v1_1_20260828.zip",
+      "size_bytes": 30952,
+      "sha256": "ba01958be17df19947b90434714b2603de997a27ec40e7d8dc1505eab7c893c4",
+      "role": "public compact evidence / convenience asset"
+    }
+  ],
+  "checkpoint_binary_policy": {
+    "status": "PASS_STAGED_EXACT_4_OF_4",
+    "required_for_full_model_reexecution": [
+      "PV-A",
+      "PV-B1",
+      "PV-B2",
+      "PV-C"
+    ],
+    "aggregate_size_bytes": 858245348,
+    "identities_file": "manifests/TSPG_A52_CHECKPOINT_MANIFEST_PUBLIC_v1_0_20260904.json",
+    "staging_public_manifest": "manifests/TSPG_A52_CHECKPOINT_RELEASE_STAGING_MANIFEST_PUBLIC_v1_0_20260904.json",
+    "staging_sha256_list": "manifests/TSPG_A52_CHECKPOINT_RELEASE_STAGING_SHA256_v1_0_20260904.txt",
+    "distribution_target": "Zenodo v1.1.0 archival payload; GitHub Release duplication not required",
+    "records": [
+      {
+        "arm": "PV-A",
+        "release_filename": "TSPG_A52_PV-A_VITB_IN100_LEARNED_SEED123_best_model.pth",
+        "size_bytes": 343559209,
+        "sha256": "fbb8d70f72fb6ee1bb93b1d00cca663ffb222f489d16d8149f2e01efd65c351e"
+      },
+      {
+        "arm": "PV-B1",
+        "release_filename": "TSPG_A52_PV-B1_VITS_IN100_LEARNED_SEED42_best_model.pth",
+        "size_bytes": 86873641,
+        "sha256": "a518ec4ba5478539e85b8a3841e847cd014e7f1eddc7e48752bfe105b68ace26"
+      },
+      {
+        "arm": "PV-B2",
+        "release_filename": "TSPG_A52_PV-B2_VITS_IN100_LEARNED_SEED123_best_model.pth",
+        "size_bytes": 86873641,
+        "sha256": "c04bd01615a897d713e5e0deb94afea0cdc0e0367d09a14846ab46b93bf82524"
+      },
+      {
+        "arm": "PV-C",
+        "release_filename": "TSPG_A52_PV-C_VITB_CIFAR100_LEARNED_SEED42_best_model.pth",
+        "size_bytes": 340938857,
+        "sha256": "a65418972b2f3c9c68b5031d79159fa5141cfccab3d12454947321500d545cdd"
+      }
+    ],
+    "note": "Reporting-level and reduced-matrix reproduction is covered by the evidence archives; exact model re-execution additionally requires these four SHA-locked checkpoints."
+  },
+  "manuscript_files_in_public_release": false,
+  "internal_publication_correspondence_in_public_release": false,
+  "repo_candidate_files_count": 55,
+  "small_evidence_distribution_policy": {
+    "status": "LOCKED",
+    "asset_count": 8,
+    "aggregate_size_bytes": 12844150,
+    "github_release": "attach all eight as convenience assets",
+    "zenodo_v1_1_0": "include all eight in DOI-bearing archival payload",
+    "rationale": "Small aggregate size; dual distribution improves convenience while Zenodo remains the archival authority."
+  },
+  "recursive_clean_a52_closeout": {
+    "status": "PASS",
+    "filename": "TSPG_A52_ZERO_COMPUTE_FINAL_CLOSEOUT_PATCH_PUBLIC_v1_1_0_20260904.zip",
+    "size_bytes": 95420,
+    "sha256": "f4ac1f76a7d4f7dba8fe878053889ccae171a3f0ec728049f92224af07a8d5fb",
+    "nested_archives_omitted": 5,
+    "scientific_content_removed": false
+  },
+  "a52_model_source_policy": {
+    "status": "EXACT_SOURCES_RECOVERED_AND_HASH_VERIFIED",
+    "manifest": "manifests/TSPG_A52_MODEL_SOURCE_MANIFEST_PUBLIC_v1_0_20260904.json",
+    "sources_count": 2
+  },
+  "local_zenodo_staging": {
+    "status": "PASS_12_OF_12_SOURCE_TO_COPY_VERIFIED",
+    "object_count": 12,
+    "total_payload_bytes": 871089498,
+    "manifest_sha256": "ca942f8bf369c377ac5067b8e72f886a3cc1aa08f443880b6c0813c116b9c52b",
+    "sha_list_sha256": "472095d86616fc59b0aa4748cae8839dbeca1b281f38f11154f20f738573cfa5"
+  }
+}

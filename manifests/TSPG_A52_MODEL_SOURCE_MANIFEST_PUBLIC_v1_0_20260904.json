@@ -1,0 +1,27 @@
+{
+  "schema": "TSPG_A52_MODEL_SOURCE_MANIFEST_PUBLIC_v1_0",
+  "date": "2026-09-04",
+  "purpose": "Exact model-construction source identities for A52 checkpoint re-execution.",
+  "sources": [
+    {
+      "architecture": "ViT-B/16 and ViT-B CIFAR configuration",
+      "repo_path": "code/model_sources/full_scale_experiment_vitb_historical_sha_ccd6df277ae7.py",
+      "size_bytes": 66352,
+      "sha256": "ccd6df277ae7d60391ad26c554cec33b9a0263f08256211d144b88f5b0a4d35a",
+      "arms": [
+        "PV-A",
+        "PV-C"
+      ]
+    },
+    {
+      "architecture": "ViT-S/16",
+      "repo_path": "code/model_sources/full_scale_experiment_vits_bf16_sha_0fb623bf4c93.py",
+      "size_bytes": 65955,
+      "sha256": "0fb623bf4c9330b41f8d93de62dd25a3ffff04bf00ab9c8aa278cfc087f1e308",
+      "arms": [
+        "PV-B1",
+        "PV-B2"
+      ]
+    }
+  ]
+}

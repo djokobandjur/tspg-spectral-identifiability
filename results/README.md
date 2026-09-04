@@ -1,11 +1,14 @@
 # Results
 
-This directory contains the compact machine-readable public result layer for the reported M1--M5 findings.
+This directory is the compact machine-readable public result layer.
 
-`core_findings_v0_1.json` is the manuscript-level numerical index across all five findings. Exact primary-run result identities are bound to their authoritative runtime bytes by `../manifests/RUN_RESULTS_SHA256.txt`, and the corresponding compact evidence archives are bound by `../manifests/EVIDENCE_ARCHIVES_SHA256.txt`.
+The original v1.0.0 M1--M5 results remain unchanged. v1.1.0 adds:
 
-Currently promoted exact/diagnostic artifacts include the H1-0015 and H1-0017 primary result JSONs, the H1-0016 pre-compute gate and final static QA, H1-0017--H1-0019 static-QA outputs, the corrected H1-0018 primary T/U/eta decomposition, and the H1-0019 pre-AP fit-lock gate. Together with the compact M1--M5 index and the public audit records, these expose the numerical checks needed to interpret the reported findings without placing large raw arrays in Git.
+- H1-0012 original and zero-compute reporting-upgrade JSONs plus the exact top-1 trajectory CSV;
+- the archived H1-0007 ALiBi dense-control result and deterministic structural-reanalysis JSON;
+- four exact A52 arm result JSONs;
+- A52 primary-row, crossed-ImageNet, PV-C, conditioning, and panel-summary views.
 
-The original `TSPG_H1_0018_SUMMARY_CURVES_v1_0_20260829.csv` is intentionally **not** promoted: its sample-size column was a derived labeling error and the artifact is superseded. The corrected public H1-0018 T/U/eta decomposition is used instead; the authoritative H1-0018 result JSON remains SHA-bound inside its evidence archive.
+The result layer is intentionally compact. Authoritative runtime evidence archives and raw/reduced matrices are versioned as GitHub Release/Zenodo assets and identified by SHA-256 in `../manifests/`.
 
-Large `.npy`/`.npz` artifacts and the source ImageNet images are not stored in Git. Their SHA-256 identities and roles are recorded under `../manifests/`, and the immutable archival release will provide the versioned evidence package and reconstruction/acquisition instructions where appropriate.
+For M4, the corrected public T/U/orientation decomposition remains the reporting source; the superseded summary CSV with the sample-size labeling collision is not reintroduced.

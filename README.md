@@ -1,74 +1,70 @@
 # TSPG Spectral Identifiability
 
-Reproducibility repository supporting the study:
+Public reproducibility repository supporting the study:
 
-**Diagnosing Spectral Identifiability Failures in Task-Sensitive Parameter Geometry: A Vision Transformer Case Study**
+**Auditing Identifiability in Normalized Spectral Sensitivity: Separating Task Alignment from Denominator-Driven Selection**
 
 ## Scope
 
-This repository contains the code, configurations, manifests, derived results, diagnostics, and provenance records needed to reproduce the analyses reported in the study.
+This repository contains public code, locked configurations, compact results, diagnostics, manifests, numerical-certification records, and archival provenance for the reported TSPG analyses.
 
-**The manuscript itself is intentionally not published in this repository.** No manuscript PDF, LaTeX source, submission package, cover letter, reviewer material, or internal manuscript-development file is part of the public reproducibility release.
+The public evidence boundary now has four layers:
 
-The study examines finite-sample spectral identifiability of task-sensitive parameter geometry in one exhaustively instrumented Vision Transformer case. The public package is organized around the locked diagnostic sequence rather than the internal development history.
+1. the exact H1-0012 direction-level numerator/denominator decomposition used as the motivating example;
+2. the closed M1--M5 Learned-PE diagnostic sequence;
+3. the pre-existing H1-0007 exact 12-dimensional ALiBi structural control and its deterministic zero-compute reanalysis;
+4. the prespecified A52 diagnostic-portability panel, including the retrospective R0 anchor and four new case-wise arms.
 
-## Repository status
+The manuscript itself is intentionally **not** published in this repository. No manuscript PDF/TEX, submission package, cover letter, non-scientific publication correspondence, or internal manuscript-development/governance file is part of the public reproducibility release.
 
-**Release candidate `v1.0.0` is in final archival preparation.** The exact checkpoint model source, M1--M5 analysis code/config/result/audit layer, portable-runtime materialization, sequential clean-environment M1--M5 reproduction, and exact dependency capture have all passed their public verification gates. The complete 14-file non-Git payload has been SHA-verified before upload and is present in the saved Zenodo draft at 100% completion for all files.
+## Release status
 
-Zenodo DOI `10.5281/zenodo.22180107` is reserved for this release but is not registered/public until the draft is published. Remaining gates are the final frozen-tree SHA-256 manifest, the versioned GitHub Release with its six convenience assets, Zenodo publication, and post-publication asset verification.
+The original public package remains frozen as GitHub release `v1.0.0` and Zenodo version DOI `10.5281/zenodo.22180107` (all-versions DOI `10.5281/zenodo.22180106`).
 
-Track the remaining blockers in `docs/RELEASE_CHECKLIST.md`; the current machine-readable release state is `manifests/TSPG_RELEASE_STATUS_v1_0_20260830.json`.
+Branch `release/v1.1.0-alibi-a52` prepares the next archival version. It extends, rather than rewrites, the v1.0.0 provenance boundary. The v1.1.0 version DOI is reserved as `10.5281/zenodo.22308245`; it will become registered/public when the Zenodo draft is published. The stable all-versions DOI remains `10.5281/zenodo.22180106`.
+
+Current pre-publication blockers are limited to GitHub v1.1.0 tag/release creation, Zenodo v1.1.0 publication, post-publication remote byte verification, and persistent-link insertion. The public A52 compatibility overlay and the local 12-object Zenodo byte-staging gate are closed. No new scientific experiment is part of this release update.
 
 ## Structure
 
-- `code/` — analysis and operator implementations
-- `configs/` — locked analysis configurations
-- `manifests/` — split, checkpoint, and provenance manifests
-- `results/` — compact machine-readable result artifacts
-- `audits/` — reproducibility and numerical-certification reports
-- `environment/` — sanitized reference software/numerical environment
-- `docs/` — reproduction, acquisition, release, and artifact mapping documentation
+- `code/` — analysis/operator implementations, including A52 runtime code and the ALiBi zero-compute reanalysis;
+- `configs/` — locked analysis configurations;
+- `manifests/` — split/checkpoint/protocol/release and SHA-256 manifests;
+- `results/` — compact machine-readable result artifacts;
+- `audits/` — numerical-certification, formal-closeout, provenance, and release-integrity records;
+- `environment/` — sanitized reference software/numerical environment;
+- `docs/` — reproduction, acquisition, release, and artifact-mapping documentation.
 
-## Reproduction
+## Reproduction entry points
 
 Start with:
 
-- `docs/REPRODUCTION.md` — pre-release reproduction workflow and portable-path rules;
-- `docs/ARTIFACT_ACQUISITION.md` — checkpoint and large numerical artifact acquisition/reconstruction policy;
-- `docs/ARTIFACT_MAP.md` — bidirectional M1--M5 evidence map;
-- `environment/TSPG_PUBLIC_NUMERICAL_ENVIRONMENT_v1_0_20260829.json` — reference numerical environment;
-- `manifests/CODE_SHA256.txt`, `RUN_RESULTS_SHA256.txt`, `EVIDENCE_ARCHIVES_SHA256.txt`, and `LARGE_ARTIFACTS_SHA256.csv` — integrity identities.
+- `docs/REPRODUCTION.md` — public reproduction boundary and workflows;
+- `docs/ARTIFACT_MAP.md` — bidirectional map from reported evidence families to public artifacts;
+- `docs/TSPG_RELEASE_V1_1_0_PREPARATION_20260904.md` — v1.1.0 release-staging state;
+- `manifests/TSPG_RELEASE_ASSET_PLAN_v1_1_0_20260904.json` — exact new non-Git evidence-asset identities;
+- `manifests/TSPG_A52_CHECKPOINT_MANIFEST_PUBLIC_v1_0_20260904.json` — exact A52 checkpoint identities;
+- `manifests/TSPG_PROTOCOL_AMENDMENT_A52_DIAGNOSTIC_PORTABILITY_PANEL_PUBLIC_SCIENTIFIC_v1_0_20260904.md` — SHA-locked A52 protocol that fixes reported and primary rank ladders before arm execution.
 
-The committed configs are exact historical provenance artifacts. Host-local absolute paths in those files are not portable requirements and must not be edited in place; the release workflow uses a runtime path-only overlay while preserving all scientific parameters.
+## Data and checkpoints
 
-## Data and checkpoint
+Source ImageNet images are not redistributed. The existing public split/index manifest reconstructs the analyzed ImageNet-100 subsets from a legally obtained ImageNet copy.
 
-Source ImageNet images are not redistributed. The public split/index manifest reconstructs the analyzed ImageNet-100 subsets from a legally obtained ImageNet copy.
+The v1.0.0 package distributes the Learned ViT-B/16 seed-42 checkpoint used by M1--M5. A52 uses four additional exact checkpoints. Their SHA-256 identities, architectures, seeds, positional dimensions, and model-source hashes are recorded in `manifests/TSPG_A52_CHECKPOINT_MANIFEST_PUBLIC_v1_0_20260904.json`.
 
-All reported M1--M5 analyses use one instrumented checkpoint: ViT-B/16, Learned positional encoding, seed 42. Its authoritative identity is recorded in `manifests/TSPG_LEARNED_SEED42_CHECKPOINT_MANIFEST_v1_0_20260829.json`:
-
-- original filename: `best_model.pth`
-- planned GitHub Release asset: `TSPG_LEARNED_SEED42_best_model.pth`
-- size: 343,559,209 bytes
-- SHA-256: `7fcca75916c2d6f0f64aa5c381812ad3a305ba1a04672e9288f4251ab683c536`
-
-Because the checkpoint exceeds ordinary GitHub Git-history file limits, it is not committed to the repository tree. The SHA-verified checkpoint is already present in the saved Zenodo draft and will also be attached directly to the versioned **GitHub Release**, eliminating any dependency on a separate Google Drive/shared-folder download.
+Reporting-level and reduced-matrix A52 verification is supported by the compact evidence archives. Full model-level A52 re-execution additionally requires those four exact checkpoint binaries. Their source-to-staging byte identities are verified 4/4, and the exact ViT-B/ViT-S model-construction sources are hash-locked in the public tree; remaining work is archival publication and remote verification, not scientific rerunning.
 
 ## License
 
-The repository is released under the **MIT License**; see `LICENSE`. Third-party datasets and other external materials remain subject to their original terms and are not relicensed by this repository.
+The repository is released under the **MIT License**; see `LICENSE`. Third-party datasets and external materials remain subject to their original terms and are not relicensed by this repository.
 
 ## Authors
 
 - **Đoko Banđur** — Faculty of Technical Sciences, University of Pristina, Kosovska Mitrovica — ORCID: 0000-0001-9034-6854
 - **Miloš Banđur** — Faculty of Technical Sciences, University of Pristina, Kosovska Mitrovica — ORCID: 0009-0007-0124-3943
 
-Corresponding author: Đoko Banđur (`djoko.bandjur@pr.ac.rs`)
+Corresponding author: Đoko Banđur (`djoko.bandjur@pr.ac.rs`).
 
 ## Citation
 
-Release version: `1.0.0`  
-Reserved Zenodo DOI: `10.5281/zenodo.22180107`
-
-The DOI identifies the reproducibility package, not a copy of the manuscript. It becomes the registered public archival DOI when the saved Zenodo record is published. See `CITATION.cff` for the versioned citation metadata.
+Until v1.1.0 is published, the released v1.0.0 package remains identified by version DOI `10.5281/zenodo.22180107`, while the stable all-versions DOI `10.5281/zenodo.22180106` identifies the evolving reproducibility record. The reserved v1.1.0 version DOI is `10.5281/zenodo.22308245`; `CITATION.cff` records that exact release DOI and it becomes citable when v1.1.0 is published.
