@@ -1,0 +1,9 @@
+{
+  "schema": "TSPG_A52_PRIVATE_LOCK_IDENTITY_PUBLIC_v1_0",
+  "date": "2026-09-04",
+  "exact_locked_protocol_filename": "TSPG_PROTOCOL_AMENDMENT_A52_DIAGNOSTIC_PORTABILITY_PANEL_v1_5_LOCKED_20260903.md",
+  "exact_locked_protocol_sha256": "2fc2c8dbeca0ce0affe17055e7ba6e7a7ffd8c7b9ba7488c15bfcf7e32a89aeb",
+  "public_scientific_semantic_copy": "TSPG_PROTOCOL_AMENDMENT_A52_DIAGNOSTIC_PORTABILITY_PANEL_PUBLIC_SCIENTIFIC_v1_0_20260904.md",
+  "public_scientific_semantic_copy_sha256": "17772715e87052ed8d39c8837dbed98a1ff65f0b4a09f1cb8c1a700f4521f36e",
+  "policy": "Exact private lock digest is public; non-scientific publication-process governance text is not distributed. Scientific content is provided in the public semantic copy, and all four arm runtime-provenance records carry the exact locked digest."
+}
