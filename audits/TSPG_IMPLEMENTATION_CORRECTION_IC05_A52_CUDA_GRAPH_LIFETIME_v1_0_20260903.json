@@ -1,0 +1,39 @@
+{
+  "schema": "TSPG_IMPLEMENTATION_CORRECTION_IC05_A52_CUDA_GRAPH_LIFETIME_v1_0",
+  "date": "2026-09-03",
+  "run_id": "TSPG-RUN-PV-0001",
+  "arm": "PV-A",
+  "classification": "IMPLEMENTATION_ONLY_RESOURCE_CORRECTION",
+  "failure_status": "TECHNICAL_FAIL_CUDA_OOM",
+  "failure_stage": "adaptive_trace.trace_probe.torch_func_jvp",
+  "scientific_estimand_changed": false,
+  "checkpoint_bytes_changed": false,
+  "checkpoint_manifest_changed": false,
+  "dataset_split_changed": false,
+  "trace_seed_or_probe_schedule_changed": false,
+  "rank_or_numerical_gate_changed": false,
+  "task_gradients_completed_before_failure": 0,
+  "P2_outcome_observed_before_fix": false,
+  "P1_P3_outcome_observed_before_fix": false,
+  "ga_certification_executed_before_failure": true,
+  "partial_trace_from_failed_attempt_reused": false,
+  "technical_correction": [
+    "freeze model parameters because A52 differentiates only w.r.t. delta",
+    "detach accumulated clean/tangent energies",
+    "detach accumulated G_A/VJP products"
+  ],
+  "pre_ic05_runtime_core_sha256": "b3694a90d6a4df32aa50907f2aaf83727ad3cfb8ca6f29d365fdf2bd158bd8d4",
+  "post_ic05_runtime_core_sha256": "cc6ded7ff70f18b6cb36d0677e79ee361e13c41f55b58298800e775b5b542b41",
+  "failed_attempt_directory": "PV-A_FAILED_CUDA_OOM_PRE_IC05_20260903",
+  "failed_attempt_artifacts": {
+    "checkpoint_gate.json": {
+      "sha256": "bb20ad6753ed693c26afb62d1814449aa521ff254c6be10a1954aea8fb90b385",
+      "size_bytes": 828
+    },
+    "ga_certification.json": {
+      "sha256": "bccc9269f9bbfa57db3588240e15d1ad2d0c077eb21346bfb8e4351c8fabea2a",
+      "size_bytes": 991
+    }
+  },
+  "decision_rule": "rerun PV-A from the beginning with identical locked checkpoint, splits, trace seeds, probe schedule, ranks, thresholds and metrics"
+}

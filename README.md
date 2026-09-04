@@ -23,7 +23,7 @@ The original public package remains frozen as GitHub release `v1.0.0` and Zenodo
 
 Branch `release/v1.1.0-alibi-a52` prepares the next archival version. It extends, rather than rewrites, the v1.0.0 provenance boundary. The new v1.1.0 version DOI will be recorded only after the new Zenodo version is reserved/published and independently verified.
 
-Current pre-publication blockers are limited to archival staging/verification of the v1.1.0 non-Git assets, verification of the public A52 reproduction compatibility overlay, and final persistent-link insertion. No new scientific experiment is part of this release update.
+Current pre-publication blockers are limited to exact Git-tree promotion/freeze/tagging, Zenodo v1.1.0 DOI reservation/publication, post-publication remote byte verification, and persistent-link insertion. The public A52 compatibility overlay and the local 12-object Zenodo byte-staging gate are closed. No new scientific experiment is part of this release update.
 
 ## Structure
 
@@ -44,7 +44,7 @@ Start with:
 - `docs/TSPG_RELEASE_V1_1_0_PREPARATION_20260904.md` — v1.1.0 release-staging state;
 - `manifests/TSPG_RELEASE_ASSET_PLAN_v1_1_0_20260904.json` — exact new non-Git evidence-asset identities;
 - `manifests/TSPG_A52_CHECKPOINT_MANIFEST_PUBLIC_v1_0_20260904.json` — exact A52 checkpoint identities;
-- `manifests/TSPG_A52_PRIVATE_LOCK_IDENTITY_PUBLIC_v1_0_20260904.json` — public SHA bridge to the exact pre-execution A52 lock; the full public scientific semantic copy is carried inside the public A52 evidence archives.
+- `manifests/TSPG_PROTOCOL_AMENDMENT_A52_DIAGNOSTIC_PORTABILITY_PANEL_PUBLIC_SCIENTIFIC_v1_0_20260904.md` — SHA-locked A52 protocol that fixes reported and primary rank ladders before arm execution.
 
 ## Data and checkpoints
 
@@ -52,7 +52,7 @@ Source ImageNet images are not redistributed. The existing public split/index ma
 
 The v1.0.0 package distributes the Learned ViT-B/16 seed-42 checkpoint used by M1--M5. A52 uses four additional exact checkpoints. Their SHA-256 identities, architectures, seeds, positional dimensions, and model-source hashes are recorded in `manifests/TSPG_A52_CHECKPOINT_MANIFEST_PUBLIC_v1_0_20260904.json`.
 
-Reporting-level and reduced-matrix A52 verification is supported by the compact evidence archives. Full model-level A52 re-execution additionally requires those four exact checkpoint binaries plus a verified public host-compatibility overlay for the omitted non-scientific protocol text; neither requirement changes any scientific estimand or endpoint.
+Reporting-level and reduced-matrix A52 verification is supported by the compact evidence archives. Full model-level A52 re-execution additionally requires those four exact checkpoint binaries. Their source-to-staging byte identities are verified 4/4, and the exact ViT-B/ViT-S model-construction sources are hash-locked in the public tree; remaining work is archival publication and remote verification, not scientific rerunning.
 
 ## License
 

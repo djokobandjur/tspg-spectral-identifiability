@@ -2,18 +2,29 @@
 
 This branch prepares the next public reproducibility-package version. The existing `v1.0.0` GitHub/Zenodo release remains immutable and continues to identify the original M1--M5 package.
 
-The v1.1.0 candidate extends the public evidence boundary with three already-closed components: the H1-0012 direction-level numerator/denominator decomposition, the pre-existing H1-0007 ALiBi exact dense structural control, and the A52 diagnostic-portability panel.
+The v1.1.0 candidate extends the public evidence boundary with three already-closed components: H1-0012 direction-level numerator/denominator decomposition, the pre-existing H1-0007 ALiBi exact dense structural control, and the A52 diagnostic-portability panel.
 
-No manuscript PDF/TEX, submission material, editor/reviewer correspondence, or internal manuscript-governance documents are part of this public branch.
+No manuscript PDF/TEX, submission material, non-scientific publication correspondence, or internal manuscript-governance documents are part of this public branch.
 
-## Current staging state
+## Closed staging gates
 
-A SHA-verified local candidate tree has been assembled for H1-0012, H1-0007, and A52 public-safe code/config/result/audit/manifest additions, together with eight supplemental non-Git evidence objects. Promotion of the remaining candidate files into this branch is the next Git-tree gate.
+- recursive-clean public candidate: PASS;
+- A52 public scientific semantic copy vs exact private v1.5 lock: PASS, scientific fields unchanged;
+- four A52 checkpoints: `4/4 PASS`, aggregate `858,245,348` bytes;
+- eight supplemental evidence objects: exact identities locked;
+- complete new Zenodo payload: 12 objects, aggregate `871,089,498` bytes;
+- local Zenodo source -> copy verification: `12/12 PASS`.
 
-The four A52 checkpoints required for full model-level re-execution are staged and re-hashed: `PASS_STAGED_EXACT_4_OF_4`, aggregate `858,245,348` bytes. Public path-sanitized evidence is recorded in `manifests/TSPG_A52_CHECKPOINT_RELEASE_STAGING_MANIFEST_PUBLIC_v1_0_20260904.json`, `manifests/TSPG_A52_CHECKPOINT_RELEASE_STAGING_SHA256_v1_0_20260904.txt`, and `audits/TSPG_A52_CHECKPOINT_RELEASE_STAGING_VERIFICATION_v1_0_20260904.md`. These four checkpoint binaries are designated for the DOI-bearing Zenodo v1.1.0 payload; GitHub Release duplication is not required.
+The exact local Zenodo staging manifest SHA-256 is `ca942f8bf369c377ac5067b8e72f886a3cc1aa08f443880b6c0813c116b9c52b`; the corresponding SHA list SHA-256 is `472095d86616fc59b0aa4748cae8839dbeca1b281f38f11154f20f738573cfa5`.
 
-The complete new Zenodo v1.1.0 payload has now also been staged locally and verified source -> copy for all 12 objects: eight supplemental evidence objects plus the four A52 checkpoints, aggregate `871,089,498` bytes (`12/12 PASS`). The formal gate record is `audits/TSPG_ZENODO_V1_1_0_UPLOAD_STAGING_VERIFICATION_v1_0_20260904.md`.
+## Remaining release gates
 
-The current public version DOI is `10.5281/zenodo.22180107`; the stable all-versions DOI is `10.5281/zenodo.22180106`. The v1.1.0 version DOI will be recorded only after the new Zenodo version is reserved/published.
+1. promote and verify the exact public candidate Git tree;
+2. reserve the Zenodo v1.1.0 DOI;
+3. update DOI-bearing metadata (`CITATION.cff` and release docs only);
+4. freeze/tag GitHub `v1.1.0`;
+5. publish the exact 12-object Zenodo payload;
+6. independently download and SHA-verify all new archival objects;
+7. insert verified release links into manuscript v0.34 and run final freeze QA.
 
-Reporting-level/reduced-matrix A52 verification is already supported by the compact evidence archives. The checkpoint-binary and local Zenodo byte-staging gates for full model-level public reproduction are closed. Remaining blockers are exact public-tree promotion/verification, the public A52 compatibility-overlay verification, Zenodo DOI reservation/publication, and post-publication remote SHA verification.
+The current public version DOI is `10.5281/zenodo.22180107`; the stable all-versions DOI is `10.5281/zenodo.22180106`.

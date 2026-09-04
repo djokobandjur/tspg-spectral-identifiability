@@ -1,0 +1,121 @@
+{
+  "schema": "TSPG_A52_RUNTIME_BYTE_PROVENANCE_ADDENDUM_v1_0",
+  "date": "2026-09-04",
+  "run_id": "TSPG-RUN-PV-0001",
+  "zero_compute": true,
+  "items": [
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/TSPG_A52_RUNTIME_v1_0_20260903/TSPG_IMPLEMENTATION_CORRECTION_IC04_A52_CHECKPOINT_NAMESPACE_NORMALIZATION_v1_0_20260903.json",
+      "archived_as": "runtime_root/TSPG_IMPLEMENTATION_CORRECTION_IC04_A52_CHECKPOINT_NAMESPACE_NORMALIZATION_v1_0_20260903.json",
+      "sha256": "33646a6b25762f09d8e5c8f837849aeede6a3c57c0a7804b30a8ed74a0ba31de",
+      "size_bytes": 1609
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/TSPG_A52_RUNTIME_v1_0_20260903/TSPG_IMPLEMENTATION_CORRECTION_IC05_A52_CUDA_GRAPH_LIFETIME_v1_0_20260903.json",
+      "archived_as": "runtime_root/TSPG_IMPLEMENTATION_CORRECTION_IC05_A52_CUDA_GRAPH_LIFETIME_v1_0_20260903.json",
+      "sha256": "dec47d28e9e15433f2a950797b52078b6b370ce4186530041422c08221200a33",
+      "size_bytes": 1772
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/code/TSPG_A52_RUNTIME_CORE_v1_0_20260903.py",
+      "archived_as": "code/TSPG_A52_RUNTIME_CORE_v1_0_20260903.py",
+      "sha256": "cc6ded7ff70f18b6cb36d0677e79ee361e13c41f55b58298800e775b5b542b41",
+      "size_bytes": 21826
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/code/TSPG_A52_RUNTIME_CORE_v1_0_20260903_PRE_IC04.py",
+      "archived_as": "code/TSPG_A52_RUNTIME_CORE_v1_0_20260903_PRE_IC04.py",
+      "sha256": "48b7ae458bdaa71f2e46912fdd9e798eac4bf25b1a6407e3847dfe81e66eece0",
+      "size_bytes": 21325
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/code/TSPG_A52_RUNTIME_CORE_v1_0_20260903_PRE_IC05.py",
+      "archived_as": "code/TSPG_A52_RUNTIME_CORE_v1_0_20260903_PRE_IC05.py",
+      "sha256": "b3694a90d6a4df32aa50907f2aaf83727ad3cfb8ca6f29d365fdf2bd158bd8d4",
+      "size_bytes": 21672
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/code/TSPG_A52_RUN_ARM_v1_0_20260903.py",
+      "archived_as": "code/TSPG_A52_RUN_ARM_v1_0_20260903.py",
+      "sha256": "2ad0da53cbb267e631d94e335ee46a437295d78212332b21d8e8b403f73bc8e8",
+      "size_bytes": 490
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/code/TSPG_A52_AGGREGATE_AND_PACKAGE_v1_0_20260903.py",
+      "archived_as": "code/TSPG_A52_AGGREGATE_AND_PACKAGE_v1_0_20260903.py",
+      "sha256": "9765af062fd17b05d7e922f6b65cf99e4acfe166d4a75f930bf908fc599cfca1",
+      "size_bytes": 4946
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/TSPG_A52_RUNTIME_v1_0_20260903/PV-A_FAILED_CUDA_OOM_PRE_IC05_20260903/checkpoint_gate.json",
+      "archived_as": "failed_attempt/checkpoint_gate.json",
+      "sha256": "bb20ad6753ed693c26afb62d1814449aa521ff254c6be10a1954aea8fb90b385",
+      "size_bytes": 828
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/TSPG_A52_RUNTIME_v1_0_20260903/PV-A_FAILED_CUDA_OOM_PRE_IC05_20260903/ga_certification.json",
+      "archived_as": "failed_attempt/ga_certification.json",
+      "sha256": "bccc9269f9bbfa57db3588240e15d1ad2d0c077eb21346bfb8e4351c8fabea2a",
+      "size_bytes": 991
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/TSPG_A52_RUNTIME_v1_0_20260903/PV-A/TSPG_A52_PV-A_RESULT_v1_0_20260903.json",
+      "archived_as": "runtime_root/TSPG_A52_PV-A_RESULT_v1_0_20260903.json",
+      "sha256": "431d69e23a797cb637e478ec2fe79a39d42fa60ef4e4050152e4a64659e643fb",
+      "size_bytes": 51985
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/TSPG_A52_RUNTIME_v1_0_20260903/PV-A/reduced_matrices.npz",
+      "archived_as": "reduced/PV-A__reduced_matrices.npz",
+      "sha256": "c6114406d19c79321dd81f3772b430bed019f3118d37dbc0e9d1d69a7efbc51c",
+      "size_bytes": 3278022,
+      "verified_against_result_json": true
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/TSPG_A52_RUNTIME_v1_0_20260903/PV-B1/TSPG_A52_PV-B1_RESULT_v1_0_20260903.json",
+      "archived_as": "runtime_root/TSPG_A52_PV-B1_RESULT_v1_0_20260903.json",
+      "sha256": "136730bdffdc0cfa2158d1538157eb05c383d1b46f8f508f3bbd3dc08bc3eafc",
+      "size_bytes": 51766
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/TSPG_A52_RUNTIME_v1_0_20260903/PV-B1/reduced_matrices.npz",
+      "archived_as": "reduced/PV-B1__reduced_matrices.npz",
+      "sha256": "a97276763ffcee8b623a0a75487fd2f6b5aec5b847a99916ea9cdb99c8ae52e8",
+      "size_bytes": 3278022,
+      "verified_against_result_json": true
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/TSPG_A52_RUNTIME_v1_0_20260903/PV-B2/TSPG_A52_PV-B2_RESULT_v1_0_20260903.json",
+      "archived_as": "runtime_root/TSPG_A52_PV-B2_RESULT_v1_0_20260903.json",
+      "sha256": "20c61f11778d1ddf59774fd8459462cedf2c012c475dd4f25feb36d59f0015be",
+      "size_bytes": 51730
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/TSPG_A52_RUNTIME_v1_0_20260903/PV-B2/reduced_matrices.npz",
+      "archived_as": "reduced/PV-B2__reduced_matrices.npz",
+      "sha256": "0474c9d00bcec42dfeea8aed8a96d846d65cf6d13b99e4d873a93df007f9b061",
+      "size_bytes": 3278022,
+      "verified_against_result_json": true
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/TSPG_A52_RUNTIME_v1_0_20260903/PV-C/TSPG_A52_PV-C_RESULT_v1_0_20260903.json",
+      "archived_as": "runtime_root/TSPG_A52_PV-C_RESULT_v1_0_20260903.json",
+      "sha256": "304cef69320bd742670957f49ca5128d5414d2d2b61ec1f4edc954e52d8ddaa3",
+      "size_bytes": 51525
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/TSPG_A52_RUNTIME_v1_0_20260903/PV-C/reduced_matrices.npz",
+      "archived_as": "reduced/PV-C__reduced_matrices.npz",
+      "sha256": "4012df1b6d18cb54f7c528d8ba106a4e2e9a834fd0082f4d1ecd53eeb2a97e8d",
+      "size_bytes": 3278022,
+      "verified_against_result_json": true
+    },
+    {
+      "source": "/home/djoko.bandjur.ftnkm/Notebooks/TSPG/TSPG_A52_DIAGNOSTIC_PORTABILITY_EXECUTION_STARTER_v1_0_20260903/TSPG_A52_FMLE_STEP_BY_STEP_v1_0_20260903.ipynb",
+      "archived_as": "notebook/TSPG_A52_FMLE_STEP_BY_STEP_v1_0_20260903.ipynb",
+      "sha256": "61a5abfa4c795085f8663b4d5d6b8585cba40891421b85a09326877b2732719f",
+      "size_bytes": 70580
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "TSPG_A52_ZERO_COMPUTE_CLOSEOUT_DECISION_v1_0",
+  "date": "2026-09-04",
+  "run_id": "TSPG-RUN-PV-0001",
+  "scientific_execution_status": "PORTABILITY_COMPLETE",
+  "new_scientific_experiments_authorized": false,
+  "audit_findings": {
+    "PV_C_label_magnitude": "ACCEPTED_PRESENTATION_PATCH",
+    "cross_arm_structure": "PARKED_DESCRIPTIVE_ONLY_NO_POOLING",
+    "predictions_not_gates_nulls": "CLOSED_BY_OUTCOME_COMPANION",
+    "R0_REPRO_missing_from_compact_evidence": "CLOSED_IN_THIS_SELF_CONTAINED_PATCH",
+    "reconstructed_names": "DOCUMENTED_NO_RENAME"
+  },
+  "remaining_before_runtime_deletion": [
+    "Run byte-level runtime provenance collector on FMLE.",
+    "Archive exact post-IC05 runtime core and pre-IC04/pre-IC05 backups if present.",
+    "Archive IC04/IC05 provenance records.",
+    "Archive failed PV-A OOM attempt evidence.",
+    "Archive four reduced_matrices.npz and verify stored SHA-256.",
+    "Archive executed notebook snapshot."
+  ],
+  "next_phase_after_byte_addendum": "MANUSCRIPT_FIGURE_CLAIM_CLOSEOUT"
+}

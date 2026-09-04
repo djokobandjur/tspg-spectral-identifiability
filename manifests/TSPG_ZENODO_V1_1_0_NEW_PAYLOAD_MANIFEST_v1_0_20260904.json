@@ -2,9 +2,9 @@
   "schema": "TSPG_ZENODO_V1_1_0_NEW_PAYLOAD_MANIFEST_v1_0",
   "date": "2026-09-04",
   "version": "1.1.0",
-  "status": "PREPUBLIC_LOCKED_IDENTITIES",
+  "status": "LOCAL_UPLOAD_STAGING_VERIFIED_12_OF_12",
   "new_objects_count": 12,
-  "new_objects_aggregate_size_bytes": 871772599,
+  "new_objects_aggregate_size_bytes": 871089498,
   "objects": [
     {
       "category": "supplemental_evidence",
@@ -21,8 +21,8 @@
     {
       "category": "supplemental_evidence",
       "filename": "TSPG_A52_ZERO_COMPUTE_FINAL_CLOSEOUT_PATCH_PUBLIC_v1_1_0_20260904.zip",
-      "size_bytes": 778521,
-      "sha256": "b7196ef6d132f346a7333b14f02279689782868031d893377a791e8c1d13c6df"
+      "size_bytes": 95420,
+      "sha256": "f4ac1f76a7d4f7dba8fe878053889ccae171a3f0ec728049f92224af07a8d5fb"
     },
     {
       "category": "supplemental_evidence",
@@ -83,5 +83,7 @@
       "arm": "PV-C"
     }
   ],
-  "note": "These are the new v1.1.0 objects. The new Zenodo version should preserve the complete v1.0.0 archival payload and add these objects; verify the actual draft file list before publication."
+  "note": "These are the new v1.1.0 archival objects. The A52 closeout derivative is recursive-clean and omits nested private source archives while preserving their exact SHA identities in the public bridge manifest. Verify the actual Zenodo draft file list before publication.",
+  "local_staging_manifest_sha256": "ca942f8bf369c377ac5067b8e72f886a3cc1aa08f443880b6c0813c116b9c52b",
+  "local_staging_sha_list_sha256": "472095d86616fc59b0aa4748cae8839dbeca1b281f38f11154f20f738573cfa5"
 }
