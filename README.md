@@ -18,6 +18,8 @@ GitHub/Zenodo release `v1.0.0` is public and independently verified. Its version
 
 Branch `release/v1.1.0-alibi-a52` prepares the next archival version. It extends, rather than rewrites, the v1.0.0 provenance boundary. No new scientific experiment is part of this release update. The v1.1.0 version DOI will be recorded only after a new Zenodo version is reserved/published and independently verified.
 
+The four exact A52 checkpoint binaries required for full model-level re-execution have now passed source -> staging -> re-hash verification (`4/4 PASS`, aggregate `858,245,348` bytes). Their path-sanitized public manifest and exact SHA list are under `manifests/`; the binaries are designated for the Zenodo v1.1.0 archival payload rather than mandatory duplication as GitHub Release assets.
+
 Current preparation state is documented in `docs/TSPG_RELEASE_V1_1_0_PREPARATION_20260904.md` and `docs/RELEASE_CHECKLIST.md`.
 
 ## Structure
@@ -32,7 +34,7 @@ Current preparation state is documented in `docs/TSPG_RELEASE_V1_1_0_PREPARATION
 
 ## Data and checkpoints
 
-Source ImageNet images are not redistributed. The v1.0.0 package distributes the Learned ViT-B/16 seed-42 checkpoint used by M1--M5. Full model-level A52 reproduction additionally requires four exact SHA-locked checkpoints; their public manifest is part of the v1.1.0 candidate staging.
+Source ImageNet images are not redistributed. The v1.0.0 package distributes the Learned ViT-B/16 seed-42 checkpoint used by M1--M5. Full model-level A52 reproduction additionally requires four exact SHA-locked checkpoints; their source and staged copies have now been independently verified and their Zenodo v1.1.0 archival staging gate is closed.
 
 ## License
 
