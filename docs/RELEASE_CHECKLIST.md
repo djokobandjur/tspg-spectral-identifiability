@@ -10,11 +10,14 @@ GitHub release `v1.0.0` and Zenodo version DOI `10.5281/zenodo.22180107` are pub
 - [x] Create dedicated branch `release/v1.1.0-alibi-a52` from current `main`.
 - [x] Assemble and SHA-verify a local public-safe candidate set for H1-0012, H1-0007 ALiBi, and A52.
 - [x] Assemble and SHA-verify the eight supplemental evidence objects for the new release boundary.
-- [x] Exclude manuscript PDF/TEX, submission files, editor/reviewer material, and internal manuscript-governance artifacts from the public candidate.
+- [x] Exclude manuscript PDF/TEX, submission files, non-scientific publication correspondence, and internal manuscript-governance artifacts from the public candidate.
+- [x] Replace the two A52 evidence archives that contained non-scientific publication-process governance text with public scientific derivatives; preserve the exact private source-archive and exact pre-execution protocol identities by SHA-256 bridges.
 - [ ] Promote the remaining candidate public-safe code/config/result/audit/manifest files into the release branch and verify the branch tree.
 - [x] Obtain/stage the four exact A52 checkpoint binaries and verify source -> staged-copy SHA-256 identity (`4/4 PASS`; aggregate `858,245,348` bytes).
 - [x] Lock A52 checkpoint distribution policy: the four checkpoint binaries are Zenodo v1.1.0 archival payloads; GitHub Release duplication is not required because the public tree exposes their exact SHA identities and the DOI acquisition route.
-- [ ] Lock distribution of the eight small supplemental evidence objects (GitHub Release convenience assets, Zenodo, or both); preserve exact identities from `manifests/TSPG_RELEASE_ASSET_PLAN_v1_1_0_20260904.json`.
+- [x] Lock distribution of the eight small supplemental evidence objects: all eight go to the GitHub `v1.1.0` Release as convenience assets and to Zenodo `v1.1.0` as DOI-bearing archival objects.
+- [x] Lock the exact 12-object new Zenodo v1.1.0 payload identity set (eight small evidence objects + four A52 checkpoints), aggregate `871,772,599` bytes.
+- [ ] Verify the public A52 reproduction compatibility overlay for the omitted non-scientific protocol text; no scientific field may change.
 - [ ] Reserve the Zenodo new-version DOI for `1.1.0`; update `CITATION.cff` only after the DOI exists.
 - [ ] Freeze the v1.1.0 Git content tree; generate and verify the full tracked-file SHA-256 manifest.
 - [ ] Create/tag GitHub release `v1.1.0` at the frozen release-manifest commit.
