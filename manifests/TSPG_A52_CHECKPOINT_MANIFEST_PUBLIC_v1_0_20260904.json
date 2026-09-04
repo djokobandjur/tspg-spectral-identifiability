@@ -3,6 +3,7 @@
   "date": "2026-09-04",
   "purpose": "Public exact identities for the four A52 prospective/stress checkpoints. Absolute execution paths are intentionally omitted.",
   "locked_protocol_sha256": "2fc2c8dbeca0ce0affe17055e7ba6e7a7ffd8c7b9ba7488c15bfcf7e32a89aeb",
+  "model_source_manifest": "TSPG_A52_MODEL_SOURCE_MANIFEST_PUBLIC_v1_0_20260904.json",
   "checkpoints": [
     {
       "arm": "PV-A",
@@ -14,6 +15,7 @@
       "positional_shape": [1, 197, 768],
       "d_p": 151296,
       "sha256": "fbb8d70f72fb6ee1bb93b1d00cca663ffb222f489d16d8149f2e01efd65c351e",
+      "model_source_path": "code/model_sources/full_scale_experiment_vitb_a52_exact.py",
       "model_source_sha256": "ccd6df277ae7d60391ad26c554cec33b9a0263f08256211d144b88f5b0a4d35a"
     },
     {
@@ -26,6 +28,7 @@
       "positional_shape": [1, 197, 384],
       "d_p": 75648,
       "sha256": "a518ec4ba5478539e85b8a3841e847cd014e7f1eddc7e48752bfe105b68ace26",
+      "model_source_path": "code/model_sources/full_scale_experiment_vits_bf16_a52_exact.py",
       "model_source_sha256": "0fb623bf4c9330b41f8d93de62dd25a3ffff04bf00ab9c8aa278cfc087f1e308"
     },
     {
@@ -38,6 +41,7 @@
       "positional_shape": [1, 197, 384],
       "d_p": 75648,
       "sha256": "c04bd01615a897d713e5e0deb94afea0cdc0e0367d09a14846ab46b93bf82524",
+      "model_source_path": "code/model_sources/full_scale_experiment_vits_bf16_a52_exact.py",
       "model_source_sha256": "0fb623bf4c9330b41f8d93de62dd25a3ffff04bf00ab9c8aa278cfc087f1e308"
     },
     {
@@ -50,6 +54,7 @@
       "positional_shape": [1, 65, 768],
       "d_p": 49920,
       "sha256": "a65418972b2f3c9c68b5031d79159fa5141cfccab3d12454947321500d545cdd",
+      "model_source_path": "code/model_sources/full_scale_experiment_vitb_a52_exact.py",
       "model_source_sha256": "ccd6df277ae7d60391ad26c554cec33b9a0263f08256211d144b88f5b0a4d35a"
     }
   ],
