@@ -23,7 +23,7 @@ The original public package remains frozen as GitHub release `v1.0.0` and Zenodo
 
 Branch `release/v1.1.0-alibi-a52` prepares the next archival version. It extends, rather than rewrites, the v1.0.0 provenance boundary. The v1.1.0 version DOI is reserved as `10.5281/zenodo.22308245`; it will become registered/public when the Zenodo draft is published. The stable all-versions DOI remains `10.5281/zenodo.22180106`.
 
-Current pre-publication blockers are limited to final Git-tree freeze/manifest/tagging, Zenodo v1.1.0 publication, post-publication remote byte verification, and persistent-link insertion. The public A52 compatibility overlay and the local 12-object Zenodo byte-staging gate are closed. No new scientific experiment is part of this release update.
+Current pre-publication blockers are limited to GitHub v1.1.0 tag/release creation, Zenodo v1.1.0 publication, post-publication remote byte verification, and persistent-link insertion. The public A52 compatibility overlay and the local 12-object Zenodo byte-staging gate are closed. No new scientific experiment is part of this release update.
 
 ## Structure
 

@@ -18,7 +18,7 @@ GitHub release `v1.0.0` and Zenodo version DOI `10.5281/zenodo.22180107` are pub
 - [x] Build the local Zenodo v1.1.0 upload staging directory and verify source -> copy identity for all 12 objects (`12/12 PASS`).
 - [x] Promote the exact remaining public-safe candidate tree into the release branch and verify the branch tree (`a84740dabd4eb50f13e413624f8f586082ecee6a`; Git tree `1b98538c4f7c3cb93fe20dc58d4cd7c30d8f87a2`).
 - [x] Reserve the Zenodo new-version DOI for `1.1.0`: `10.5281/zenodo.22308245`; advance `CITATION.cff` only after reservation.
-- [ ] Freeze the v1.1.0 Git content tree; generate and verify the full tracked-file SHA-256 manifest.
+- [x] Freeze the v1.1.0 Git content tree; generate and verify `manifests/TSPG_GIT_TRACKED_FILES_SHA256_v1_1_0_20260904.txt` against canonical Git blob bytes (manifest self-excluded by construction; the final Git commit/tree binds the manifest itself).
 - [ ] Create/tag GitHub release `v1.1.0` at the frozen release-manifest commit.
 - [ ] Upload/publish the exact v1.1.0 Zenodo payload under the all-versions DOI lineage.
 - [ ] Independently download every new GitHub/Zenodo asset and verify byte count + SHA-256.
